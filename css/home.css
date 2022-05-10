@@ -382,7 +382,7 @@ template {
 :root {
   --neon-pink: rgb(255, 10, 210);
   --neon-red: hsl(348, 100%, 51%);
-  --neon-yellow: hsl(72 100% 50%);
+  --neon-blue: hsl(175, 94%, 56%);;
   --neon-green: chartreuse;
   --neon-orange: hsl(38.8,100%,50%);
 }
@@ -621,24 +621,24 @@ a {
 }
 
 #about-link {
-  border: 0.1em solid var(--neon-yellow);
-  color: var(--neon-yellow);
+  border: 0.1em solid var(--neon-blue);
+  color: var(--neon-blue);
 
-  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 0.08em var(--neon-yellow);
-  box-shadow: inset 0 0 0.5em var(--neon-yellow), 0 0 0.5em var(--neon-yellow);
+  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 0.08em var(--neon-blue);
+  box-shadow: inset 0 0 0.5em var(--neon-blue), 0 0 0.5em var(--neon-blue);
 }
 
 #about-link::before {
-  background-color: var(--neon-yellow);
+  background-color: var(--neon-blue);
 }
 
 #about-link::after {
-  box-shadow: 0 0 2em 0.2em var(--neon-yellow);
+  box-shadow: 0 0 2em 0.2em var(--neon-blue);
 }
 
 #about-link:hover,
 #about-link:focus {
-  background: var(--neon-yellow);
+  background: var(--neon-blue);
   color: var(--bg-clr);
 }
 
