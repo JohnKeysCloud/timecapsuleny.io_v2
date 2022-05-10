@@ -375,12 +375,16 @@ template {
 
 /* 
   ┌──────────────────────────────────────────────────────────────────────┐
-  │ I AM gROOT                                                                     │
+  │ I AM gROOT                                                           │
   └──────────────────────────────────────────────────────────────────────┘
  */
 
 :root {
   --neon-pink: rgb(255, 10, 210);
+  --neon-red: hsl(348, 100%, 51%);
+  --neon-yellow: hsl(72 100% 50%);
+  --neon-green: chartreuse;
+  --neon-orange: hsl(38.8,100%,50%);
 }
 
 @font-face {
@@ -547,21 +551,127 @@ a {
 }
 /* MENU-BTN ANIMATION gameOver */
 
+#home-link {
+  border: 0.1em solid var(--neon-red);
+  color: var(--neon-red);
+
+  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 0.08em var(--neon-red);
+  box-shadow: inset 0 0 0.5em var(--neon-red), 0 0 0.5em var(--neon-red);
+}
+
+#home-link::before {
+  background-color: var(--neon-red);
+}
+
+#home-link::after {
+  box-shadow: 0 0 2em 0.2em var(--neon-red);
+}
+
+#home-link:hover,
+#home-link:focus {
+  background: var(--neon-red);
+  color: var(--bg-clr);
+}
+
+#shop-link {
+  border: 0.1em solid var(--neon-green);
+  color: var(--neon-green);
+
+  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 0.08em var(--neon-green);
+  box-shadow: inset 0 0 0.5em var(--neon-green), 0 0 0.5em var(--neon-green);
+}
+
+#shop-link::before {
+  background-color: var(--neon-green);
+}
+
+#shop-link::after {
+  box-shadow: 0 0 2em 0.2em var(--neon-green);
+}
+
+#shop-link:hover,
+#shop-link:focus {
+  background: var(--neon-green);
+  color: var(--bg-clr);
+}
+
+#encap-link {
+  border: 0.1em solid var(--neon-pink);
+  color: var(--neon-pink);
+
+  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 0.08em var(--neon-pink);
+  box-shadow: inset 0 0 0.5em var(--neon-pink), 0 0 0.5em var(--neon-pink);
+}
+
+#encap-link::before {
+  background-color: var(--neon-pink);
+}
+
+#encap-link::after {
+  box-shadow: 0 0 2em 0.2em var(--neon-pink);
+}
+
+#encap-link:hover,
+#encap-link:focus {
+  background: var(--neon-pink);
+  color: var(--bg-clr);
+}
+
+#about-link {
+  border: 0.1em solid var(--neon-yellow);
+  color: var(--neon-yellow);
+
+  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 0.08em var(--neon-yellow);
+  box-shadow: inset 0 0 0.5em var(--neon-yellow), 0 0 0.5em var(--neon-yellow);
+}
+
+#about-link::before {
+  background-color: var(--neon-yellow);
+}
+
+#about-link::after {
+  box-shadow: 0 0 2em 0.2em var(--neon-yellow);
+}
+
+#about-link:hover,
+#about-link:focus {
+  background: var(--neon-yellow);
+  color: var(--bg-clr);
+}
+
+#contact-link {
+  border: 0.1em solid var(--neon-orange);
+  color: var(--neon-orange);
+
+  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 0.08em var(--neon-orange);
+  box-shadow: inset 0 0 0.5em var(--neon-orange), 0 0 0.5em var(--neon-orange);
+}
+
+#contact-link::before {
+  background-color: var(--neon-orange);
+}
+
+#contact-link::after {
+  box-shadow: 0 0 2em 0.2em var(--neon-orange);
+}
+
+#contact-link:hover,
+#contact-link:focus {
+  background: var(--neon-orange);
+  color: var(--bg-clr);
+}
+
 .nav-link {
   position: relative;
 
   font-size: 1.8rem;
   cursor: pointer;
-  color: var(--neon-pink);
-  border: 0.1em solid var(--neon-pink);
+
   border-radius: 0.3em;
   padding: 0.2em 0.8em;
   text-decoration: none;
   letter-spacing: -0.05em;
   margin: 0 33px 0 0;
-  
-  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 0.08em var(--neon-pink);
-  box-shadow: inset 0 0 0.5em var(--neon-pink), 0 0 0.5em var(--neon-pink);
 }
 
 .nav-link::before {
@@ -575,7 +685,6 @@ a {
   height: 100%;
   width: 100%;
 
-  background-color: var(--neon-pink);
   pointer-events: none;
 
   transform: perspective(0.2em) rotateX(10deg) scale(1, 0.8);
@@ -593,15 +702,12 @@ a {
   bottom: 0;
   left: 0;
   opacity: 0;
-  box-shadow: 0 0 2em 0.2em var(--neon-pink);
 
   transition: background-color 100ms linear;
 }
 
 .nav-link:hover,
 .nav-link:focus {
-  background: var(--neon-pink);
-  color: var(--bg-clr);
   text-shadow: none;
 }
 
