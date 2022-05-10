@@ -533,6 +533,8 @@ a {
 }
 
 #menu-btn.open #menu-btn-san::before {
+  background: black;
+
   transform: rotate(-45deg);
   transition: all 300ms ease-in-out;
   width: 38px;
@@ -540,6 +542,7 @@ a {
 }
 
 #menu-btn.open #menu-btn-san::after {
+  background: black;
   transform: rotate(45deg);
   transition: all 300ms ease-in-out;
   width: 38px;
@@ -690,8 +693,8 @@ a {
 
   pointer-events: none;
 
-  transform: perspective(0.2em) rotateX(10deg) scale(1, 0.8);
-  filter: blur(0.5em);
+  transform: perspective(0.3em) rotateX(10deg) scale(1, 0.8);
+  filter: blur(0.6em);
   opacity: 0.5;
 }
 
