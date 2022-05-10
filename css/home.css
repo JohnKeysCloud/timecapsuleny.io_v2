@@ -1,3 +1,10 @@
+/* 
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ NormCSS                                                              │
+  └──────────────────────────────────────────────────────────────────────┘
+ */
+
+
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -436,11 +443,10 @@ header {
 
 nav {
   max-width: 0px;
-  opacity: 0; 
-  margin: -200px 700px 0 0;
-
+  opacity: 0.1;
+  overflow: hidden;
   pointer-events: none;
-  transition: all 0.15s ease-out;
+  transition: all 2.2s ease-out;
 }
 
 ul {
@@ -529,22 +535,21 @@ a {
 #menu-btn.open #menu-btn-san {
   background: transparent;
   box-shadow: none;
-  transition: all 500ms ease-in-out;
+  transition: all 2.2s ease-out;
+  transform: rotate(-360deg);
 }
 
 #menu-btn.open #menu-btn-san::before {
   background: black;
-
-  transform: rotate(-45deg);
-  transition: all 300ms ease-in-out;
-  width: 38px;
-  
+  transform: rotate(405deg);
+  transition: all 2.2s ease-out;
+  width: 38px; 
 }
 
 #menu-btn.open #menu-btn-san::after {
   background: black;
-  transform: rotate(45deg);
-  transition: all 300ms ease-in-out;
+  transform: rotate(-405deg);
+  transition: all 2.2s ease-out;
   width: 38px;
 } 
 
@@ -682,27 +687,25 @@ a {
 
 .nav-link::before {
   content: '';
+  
   font-size: 1.8rem;
 
   position: absolute;
   top: 3rem;
   right: 0;
-
-  height: 100%;
-  width: 100%;
-
-  pointer-events: none;
-
-  transform: perspective(0.2em) rotateX(10deg) scale(1, 0.8);
+  
   filter: blur(0.6em);
+  height: 100%;
   opacity: 0.2;
+  pointer-events: none;
+  transform: perspective(0.2em) rotateX(10deg) scale(1, 0.8);
+  width: 100%;
 }
 
 .nav-link::after {
   content: '';
 
   position: absolute;
-
   top: 0;
   right: 0;
   bottom: 0;
@@ -743,9 +746,10 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.55;
+
   object-fit: cover;
-  min-width: 100vw;
+  opacity: 0.55;
   min-height: 100vh;
+  min-width: 100vw;
   z-index: -1;
 }
