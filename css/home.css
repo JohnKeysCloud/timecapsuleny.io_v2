@@ -426,7 +426,7 @@ body {
  */
 
 header {
-  padding: 21px;
+  padding: 18px 28px;
   
   display: flex;
 
@@ -478,7 +478,7 @@ a {
   width: 55px;
 
   position: absolute;
-  top: 51px;
+  top: 48px;
   right: 33px;
 }
 
@@ -544,11 +544,12 @@ a {
 } 
 
 #menu-btn.open~nav {
-  margin: 0 638px 0 0;
+  margin: 0 648px 0 0;
   opacity: 1;
   overflow: visible;
   pointer-events: auto;
 }
+
 /* MENU-BTN ANIMATION gameOver */
 
 #home-link {
