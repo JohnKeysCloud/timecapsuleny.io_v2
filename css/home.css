@@ -693,9 +693,9 @@ a {
 
   pointer-events: none;
 
-  transform: perspective(0.3em) rotateX(10deg) scale(1, 0.8);
+  transform: perspective(0.2em) rotateX(10deg) scale(1, 0.8);
   filter: blur(0.6em);
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 .nav-link::after {
