@@ -404,6 +404,49 @@ template {
     font-family: "PixeBoy";
 }
 
+@keyframes hover {
+  from {
+    transform: translateY(-11px);
+    opacity: 0.88;
+
+  }
+  25% {
+    transform: translateY(-5px) scale(0.9);
+    opacity: 0.4;
+
+  }
+  50% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(5px) scale(0.9);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateY(11px);
+    opacity: 0.88;
+  }
+}
+
+@keyframes rgb-pulse {
+  from {
+    filter: drop-shadow(0px 0px 0.13em var(--neon-red));
+  }
+  20% {
+    filter: drop-shadow(0px 0px 0.13em var(--neon-green));
+  }
+  40% {
+    filter: drop-shadow(0px 0px 0.13em var(--neon-pink));
+  }
+  60% {
+    filter: drop-shadow(0px 0px 0.13em var(--neon-blue));
+  }
+  to {
+    filter: drop-shadow(0px 0px 0.13em var(--neon-orange));
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -419,11 +462,31 @@ body {
   background-color: black;
   display: flex;
   flex-direction: column;
-  font-family: 'GoshaSansRegular', 'Roboto Mono', 'Courier New', Courier, monospace;
+  font-family: 'PixeBoy', 'GoshaSansRegular', 'Roboto Mono', 'Courier New', Courier, monospace;
   font-size: 1.8rem;
   justify-content: space-between;
   margin: 0;
   min-height: 100vh;
+}
+
+/* 
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ FULL HEIGHT HERO                                                     │
+  └──────────────────────────────────────────────────────────────────────┘
+ */
+
+#tcnyCommercial {
+  position: fixed;
+  right: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  object-fit: cover;
+  opacity: 0.38;
+  min-height: 100vh;
+  min-width: 100vw;
+  z-index: -1;
 }
 
 /* 
@@ -433,12 +496,14 @@ body {
  */
 
 header {
-  padding: 18px 28px;
-  
   display: flex;
-
   align-items: center;
   justify-content: space-between;
+  
+  margin-top: 33px;
+  padding: 18px 28px;
+  
+  position: relative;
 }
 
 nav {
@@ -462,15 +527,22 @@ a {
 }
 
 #header-logo {
-  height: 10rem;
-  opacity: 100%;
+  animation: rgb-pulse 2.2s linear infinite alternate, hover 3.3s linear infinite alternate ;
+  height: 11rem;
+  /* filter: drop-shadow(0px 0px 0.13em #fffce8); */
 
-  transition: all 0.3s ease-in-out;
+  position: absolute;
+  top: -4.5px;
+  left: 60px;
+
+  transition: all 0.5s ease-in-out;
+  transform-origin: center;
 }
 
 #header-logo:hover {
-  opacity: 44%;
-  transform: scale(1.15);
+  animation: rgb-pulse 0.3s linear infinite alternate, hover 0s linear infinite alternate;
+  opacity: 1;
+  transform: scale(1.08);
 }
 
 #menu-btn {
@@ -486,8 +558,8 @@ a {
   width: 55px;
 
   position: absolute;
-  top: 48px;
-  right: 77px;
+  top: 18.9px;
+  right: 60px;
 }
 
 #menu-btn-san {
@@ -532,6 +604,7 @@ a {
 }
 
 /* MENU-BTN ANIMATION pressStart */
+
 #menu-btn.open #menu-btn-san {
   background: transparent;
   box-shadow: none;
@@ -541,6 +614,7 @@ a {
 
 #menu-btn.open #menu-btn-san::before {
   background: black;
+  opacity: 0.8;
   transform: rotate(405deg);
   transition: all 1.8s ease-out;
   width: 38px; 
@@ -548,16 +622,22 @@ a {
 
 #menu-btn.open #menu-btn-san::after {
   background: black;
+  opacity: 0.8;
   transform: rotate(-405deg);
   transition: all 1.8s ease-out;
   width: 38px;
 } 
 
 #menu-btn.open~nav {
-  margin: 0 700px 0 0;
+  margin: 0 688px 0 0;
   opacity: 1;
   overflow: visible;
   pointer-events: auto;
+}
+
+#menu-btn.open~nav a {
+  font-size: 2rem;
+  letter-spacing: 1px;
 }
 
 /* MENU-BTN ANIMATION gameOver */
@@ -679,10 +759,10 @@ a {
   cursor: pointer;
 
   border-radius: 0.3em;
-  padding: 0.2em 0.8em;
+  padding: 0.4em 0.8em;
   text-decoration: none;
   letter-spacing: -0.05em;
-  margin: 0 33px 0 0;
+  margin: 0 18px 0 0;
 }
 
 .nav-link::before {
@@ -732,24 +812,4 @@ a {
 .nav-link:hover::after, 
 .nav-link:focus::after {
   opacity: 1;      
-}
-
-/* 
-  ┌──────────────────────────────────────────────────────────────────────┐
-  │ FULL HEIGHT HERO                                                     │
-  └──────────────────────────────────────────────────────────────────────┘
- */
-
-#tcnyCommercial {
-  position: fixed;
-  right: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  object-fit: cover;
-  opacity: 0.58;
-  min-height: 100vh;
-  min-width: 100vw;
-  z-index: -1;
 }
