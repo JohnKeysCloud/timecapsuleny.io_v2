@@ -443,10 +443,10 @@ header {
 
 nav {
   max-width: 0px;
-  opacity: 0.1;
+  opacity: 0;
   overflow: hidden;
   pointer-events: none;
-  transition: all 2.2s ease-out;
+  transition: all 1.8s ease-out;
 }
 
 ul {
@@ -535,21 +535,21 @@ a {
 #menu-btn.open #menu-btn-san {
   background: transparent;
   box-shadow: none;
-  transition: all 2.2s ease-out;
+  transition: all 1.8s ease-out;
   transform: rotate(-360deg);
 }
 
 #menu-btn.open #menu-btn-san::before {
   background: black;
   transform: rotate(405deg);
-  transition: all 2.2s ease-out;
+  transition: all 1.8s ease-out;
   width: 38px; 
 }
 
 #menu-btn.open #menu-btn-san::after {
   background: black;
   transform: rotate(-405deg);
-  transition: all 2.2s ease-out;
+  transition: all 1.8s ease-out;
   width: 38px;
 } 
 
@@ -748,7 +748,7 @@ a {
   bottom: 0;
 
   object-fit: cover;
-  opacity: 0.55;
+  opacity: 0.58;
   min-height: 100vh;
   min-width: 100vw;
   z-index: -1;
