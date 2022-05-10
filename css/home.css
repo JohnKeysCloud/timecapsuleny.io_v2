@@ -479,7 +479,7 @@ a {
 
   position: absolute;
   top: 48px;
-  right: 33px;
+  right: 77px;
 }
 
 #menu-btn-san {
@@ -487,10 +487,10 @@ a {
   justify-content: center;
   
   background: hsl(52, 100%, 95%);
-  border-radius: 3px;
+  border-radius: 8px;
   box-shadow: 0 0 8px 2px #fffce8;
   height: 3.3px;
-  width: 30px;
+  width: 25px;
 
   transition: all .3s ease-in-out;
 }
@@ -502,11 +502,11 @@ a {
   border-radius: 3px;
   box-shadow: 0 0 8px 2px #fffce8;
   height: 3.3px;
-  width: 38px;
+  width: 33px;
 
   position: absolute;
 
-  transform: translateY(-13px);
+  transform: translateY(-11px);
 }
 
 #menu-btn-san::after {
@@ -516,11 +516,11 @@ a {
   border-radius: 3px;
   box-shadow: 0 0 8px 2px #fffce8;
   height: 3.3px;
-  width: 43px;
+  width: 38px;
 
   position: absolute;
 
-  transform: translateY(13px);
+  transform: translateY(11px);
 }
 
 /* MENU-BTN ANIMATION pressStart */
@@ -544,7 +544,7 @@ a {
 } 
 
 #menu-btn.open~nav {
-  margin: 0 648px 0 0;
+  margin: 0 700px 0 0;
   opacity: 1;
   overflow: visible;
   pointer-events: auto;
