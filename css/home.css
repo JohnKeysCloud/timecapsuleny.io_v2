@@ -527,7 +527,7 @@ a {
 }
 
 #header-logo {
-  animation: rgb-pulse 2.2s linear infinite alternate, hover 3.3s linear infinite alternate ;
+  animation: rgb-pulse 2.2s linear infinite alternate, hover 1.8s linear infinite alternate ;
   height: 11rem;
   /* filter: drop-shadow(0px 0px 0.13em #fffce8); */
 
