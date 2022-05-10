@@ -535,15 +535,18 @@ a {
   top: -4.5px;
   left: 60px;
 
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   transform-origin: center;
 }
 
 #header-logo:hover {
   animation: rgb-pulse 0.3s linear infinite alternate, hover 0s linear infinite alternate;
   opacity: 1;
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
+
+/* #header-logo:active {
+} */
 
 #menu-btn {
   display: flex;
@@ -629,7 +632,7 @@ a {
 } 
 
 #menu-btn.open~nav {
-  margin: 0 688px 0 0;
+  margin: 0 758px 0 0;
   opacity: 1;
   overflow: visible;
   pointer-events: auto;
@@ -759,10 +762,10 @@ a {
   cursor: pointer;
 
   border-radius: 0.3em;
-  padding: 0.4em 0.8em;
+  padding: 0.7em 0.8em;
   text-decoration: none;
   letter-spacing: -0.05em;
-  margin: 0 18px 0 0;
+  margin: 0 33px 0 0;
 }
 
 .nav-link::before {
