@@ -522,7 +522,7 @@ a {
 }
 
 #header-logo {
-  animation: rgb-pulse 2.2s linear infinite alternate, game-float 5s linear infinite alternate ;
+  animation: rgb-pulse 2.2s linear infinite alternate, game-float 5s linear infinite alternate;
   height: 8rem;
   transition: all 0.3s ease-in-out;
   transform-origin: center;
@@ -599,7 +599,6 @@ a {
 }
 
 /* MENU-BTN ANIMATION pressStart */
-
 #menu-btn.open #menu-btn-san {
   background: transparent;
   box-shadow: none;
@@ -634,14 +633,13 @@ a {
   font-size: 2rem;
   letter-spacing: 1px;
 }
-
 /* MENU-BTN ANIMATION gameOver */
 
 #home-link {
   border: 0.1em solid var(--neon-red);
   box-shadow: inset 0 0 0.5em var(--neon-red), 0 0 0.5em var(--neon-red);
   color: var(--neon-red);
-  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 0.08em var(--neon-red);
+  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 1em var(--neon-red);
 }
 
 #home-link::before {
@@ -662,7 +660,7 @@ a {
   border: 0.1em solid var(--neon-green);
   box-shadow: inset 0 0 0.5em var(--neon-green), 0 0 0.5em var(--neon-green);
   color: var(--neon-green);
-  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 0.08em var(--neon-green);
+  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 1em var(--neon-green);
 }
 
 #shop-link::before {
@@ -683,7 +681,7 @@ a {
   border: 0.1em solid var(--neon-pink);
   box-shadow: inset 0 0 0.5em var(--neon-pink), 0 0 0.5em var(--neon-pink);
   color: var(--neon-pink);
-  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 0.08em var(--neon-pink);
+  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 1em var(--neon-pink);
 }
 
 #encap-link::before {
@@ -704,7 +702,7 @@ a {
   border: 0.1em solid var(--neon-blue);
   box-shadow: inset 0 0 0.5em var(--neon-blue), 0 0 0.5em var(--neon-blue);
   color: var(--neon-blue);
-  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 0.08em var(--neon-blue);
+  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 1em var(--neon-blue);
 }
 
 #about-link::before {
@@ -725,7 +723,7 @@ a {
   border: 0.1em solid var(--neon-orange);
   box-shadow: inset 0 0 0.5em var(--neon-orange), 0 0 0.5em var(--neon-orange);
   color: var(--neon-orange);
-  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 0.08em var(--neon-orange);
+  text-shadow: 0 0 0.08em hsl(0 0% 100% / 0.5), 0 0 1em var(--neon-orange);
 }
 
 #contact-link::before {
