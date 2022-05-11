@@ -494,7 +494,8 @@ body {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+
   padding: 18px 28px;
 }
 
@@ -508,6 +509,7 @@ nav {
 
 ul {
   display: flex;
+
   list-style: none;
   padding: 0;
   width: max-content;
