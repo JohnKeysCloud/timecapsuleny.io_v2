@@ -404,27 +404,23 @@ template {
     font-family: "PixeBoy";
 }
 
-@keyframes hover {
+@keyframes game-float {
   from {
-    transform: translateY(-11px);
     opacity: 0.88;
-
   }
   25% {
-    transform: translateY(-5px) scale(0.9);
-    opacity: 0.4;
-
+    transform: scale(0.8);
+    opacity: 0.55;
   }
   50% {
-    transform: translateY(0px) scale(1);
+    transform: scale(1);
     opacity: 1;
   }
   75% {
-    transform: translateY(5px) scale(0.9);
-    opacity: 0.4;
+    transform: scale(0.8);
+    opacity: 0.55;
   }
   to {
-    transform: translateY(11px);
     opacity: 0.88;
   }
 }
@@ -499,11 +495,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
-  margin-top: 33px;
   padding: 18px 28px;
-  
-  position: relative;
 }
 
 nav {
@@ -527,14 +519,8 @@ a {
 }
 
 #header-logo {
-  animation: rgb-pulse 2.2s linear infinite alternate, hover 1.8s linear infinite alternate ;
-  height: 11rem;
-  /* filter: drop-shadow(0px 0px 0.13em #fffce8); */
-
-  position: absolute;
-  top: -4.5px;
-  left: 60px;
-
+  animation: rgb-pulse 2.2s linear infinite alternate, game-float 5s linear infinite alternate ;
+  height: 10rem;
   transition: all 0.3s ease-in-out;
   transform-origin: center;
 }
@@ -548,6 +534,13 @@ a {
 /* #header-logo:active {
 } */
 
+#full-nav {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
 #menu-btn {
   display: flex;
   justify-content: center;
@@ -556,13 +549,8 @@ a {
   color: #fffce8;
   cursor: pointer;
   height: 55px;
-  margin: 0px 0 0 580px;
   padding: 5px;
   width: 55px;
-
-  position: absolute;
-  top: 18.9px;
-  right: 60px;
 }
 
 #menu-btn-san {
@@ -631,8 +619,8 @@ a {
   width: 38px;
 } 
 
-#menu-btn.open~nav {
-  margin: 0 758px 0 0;
+#menu-btn.open ~ nav {
+  margin-right: 655px;
   opacity: 1;
   overflow: visible;
   pointer-events: auto;
@@ -762,10 +750,10 @@ a {
   cursor: pointer;
 
   border-radius: 0.3em;
-  padding: 0.7em 0.8em;
+  padding: 0.3em 0.8em;
   text-decoration: none;
   letter-spacing: -0.05em;
-  margin: 0 33px 0 0;
+  margin: 0 28px 0 0;
 }
 
 .nav-link::before {
