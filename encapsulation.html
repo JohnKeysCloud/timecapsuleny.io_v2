@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TIME CAPSULE NY®</title>
+<link rel="stylesheet" href="css/home.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+<style>
+    @keyframes sb-hover {
+        from {
+            border: 3px solid chartreuse;
+            transform: scale(0.71);
+        }
+        50% {
+            border: 5px solid skyblue;
+        }
+        to {
+            border: 3.3px solid rgb(255, 132, 122);
+            transform: scale(0.75);
+        }
+    }
+    @keyframes sb-hover-2 {
+        from {
+            border: 5px solid chartreuse;
+            transform: scale(0.74);
+        }
+        50% {
+            border: 7px solid skyblue;
+        }
+        to {
+            border: 5.5px solid rgb(255, 132, 122);
+            transform: scale(0.77);
+        }
+    }    
+    @keyframes letter-spaz {
+        from {
+            letter-spacing: -1px;
+            transform: scale(1);
+        }
+        to {
+            letter-spacing: 0px;
+            transform: scale(1.1);
+            text-shadow: 0 0 8px red;
+        }
+    }
+    @keyframes letter-spaz-2 {
+        from {
+            letter-spacing: 0px;
+            transform: scale(1);
+            text-shadow: 0 0 5px black;
+        }
+        to {
+            letter-spacing: 3.3px;
+            transform: scale(1.1);
+            text-shadow: 0 0 8px black;
+
+        }
+    }
+    #capcoin {
+        width: 7rem;
+        transition: all 0.3s ease-in;
+
+        position: absolute;
+        left: 191px;
+        top: 67px;
+    }
+    #capcoin:hover {
+        transform: scale(1.5);
+
+        left: 191px;
+        top: 51px;
+    }
+    #capcoin1,
+    #capcoin2,
+    #capcoin3 {
+        height: 41px;
+        padding: 7px 11px 7px 0;
+        transform: scale(0);
+    }
+    #capcoin1 {
+        transform: scale(1.3);
+    }
+    #capcoin2 {
+        transform: scale(1.3);
+    }
+    #capcoin3 {
+        transform: scale(1.3);
+    }
+    .name_cells {
+        padding-left: 1.3rem;
+        text-align: start;
+    }
+    .name_col {
+        width: 44%;
+    }
+    .rank_cells,
+    .score_cells {
+        padding-right: 1.3rem;
+        text-align: end;
+    }
+    .rank_col {
+        width: 15%;
+    }
+    #sb_caption {
+        color: red;
+        text-shadow: 0 0 8px black;
+        font-size: 7rem;
+
+        position: absolute;
+        left: 333px;
+        top: 70px;
+    }
+    #sb_clouds {
+        position: absolute;
+        height: 333px;
+        width: 100%;
+        top: 500px;
+        z-index: 0;
+    }
+    .sb_header {
+        background: none;
+        border: none;
+        color: skyblue;
+        font-size: 4.5rem;
+        transition: all 0.3s ease-in;
+        vertical-align: 3.3px;
+
+        animation: 0.5s linear infinite alternate letter-spaz;
+    }
+    .sb_header:hover {
+        animation: none;
+        background: none;
+        border: none;
+        color: red;
+        letter-spacing: -1px;
+        text-shadow: 0 0 5px black;
+        transform: scale(1.3);
+        animation: 0.3s linear infinite alternate letter-spaz-2;
+    }
+    .score_col {
+        width: 20%;
+    }
+    table {
+        animation: 1.8s linear infinite alternate sb-hover;
+        background-size: cover;
+        border: 2px solid #fffce8;
+        border-spacing: 5.5px 7px;
+        /* border-collapse: collapse; */
+        border-radius: 21rem;
+        box-shadow: inset 0 0 18px skyblue, 0 0 55px chartreuse;
+        font-family: 'PixeBoy';
+        font-style: italic;
+        line-height: 0px;
+        /* TODO: adjust @media query for bigger than */
+        margin: 5rem auto 5rem auto;
+        padding: 11rem 15rem 10rem 15rem;
+        table-layout: fixed;
+        text-shadow: 0 0 3px black;
+        transition: all 5s ease-in;
+        /* transform: scale(0.8); */
+        width: 1000px;
+        z-index: 1;
+
+        position: relative;
+    }
+    table:hover {
+        animation: 0.7s linear infinite alternate sb-hover-2;
+    }
+    #table_container {
+        margin: 0 auto;
+    }
+    td {
+        background-color: rgb(55, 55, 55);
+        border: 3px solid skyblue;
+        border-radius: 33rem;
+        box-shadow: 0 0 18px skyblue;
+        font-size: 3.3rem;
+        letter-spacing: -1px;
+        overflow: hidden;
+        text-align: end;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    tr:nth-child(even) td {
+        background-color: rgb(55, 55, 55);
+    }
+    tr:nth-child(odd) td {
+        background-color: rgb(44, 44, 44);
+    }
+    tr:nth-child(odd) .coin_cells {
+        background-color: black;
+        border: none;
+        box-shadow: inset 0 0 20px red;
+    }
+    tr:nth-child(even) .coin_cells {
+        background-color: black;
+        border: none;
+        box-shadow: inset 0 0 20px red;
+    }
+    /* Font Gradients */
+    .first_place {
+        color: #FFFF33;
+        text-shadow: 0 0 8px #FFFF33;
+    }
+    .second_place {
+        color: #fff330;
+        text-shadow: 0 0 8px #fff330;
+    }
+    .third_place {
+        color: #ffe52c;
+        text-shadow: 0 0 8px #ffe52c;
+    }
+    .fourth_place {
+        color: #ffd728;
+        text-shadow: 0 0 8px #ffd728;
+    }
+    .fifth_place {
+        color: #ffac1e;
+        text-shadow: 0 0 8px #ffac1e;
+    }
+    .sixth_place {
+        color: #ff9c1a;
+        text-shadow: 0 0 8px #ff9c1a;
+    }
+    .seventh_place {
+        color: #ff8915;
+        text-shadow: 0 0 8px #ff8915;
+    }
+    .eigth_place {
+        color: #ff8a16;
+        text-shadow: 0 0 8px #ff8a16;
+    }
+    .ninth_place {
+        color: #ff700f;
+        text-shadow: 0 0 8px #ff700f;
+    }
+    .tenth_place {
+        color: #FF3300;
+        text-shadow: 0 0 8px #FF3300;
+    }
+</style>
+<script src="js/script.js"></script>
+</head>
+<body>
+
+  <video autoplay loop muted playsinline id="tcnyCommercial">
+    <source src="imgs/TCNYFulllHeightHero.mp4" type="video/mp4">
+  </video>
+
+  <header>
+    <a href="index.html">
+      <img id="header-logo" src="imgs/headerlogo.webp" alt="TIME CAPSULE NY LOGO®">
+    </a>
+    <div id="full-nav">
+      <div id="menu-btn">
+        <div id="menu-btn-san">
+          <!-- injected via css -->
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a id="home-link" class="nav-link" href="index.html">home</a>
+          </li>
+          <li>
+            <a id="shop-link" class="nav-link" href="shop.html">shop</a>
+          </li>
+          <li>
+            <a id="encap-link" class="nav-link" href="encapsulation.html">encapsulation</a>
+          </li>
+          <li>
+            <a id="about-link" class="nav-link" href="#">about</a>
+          </li>
+          <li>
+            <a id="contact-link" class="nav-link" href="#">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div> 
+  </header>
+
+  <main>
+    <section id="scoreBoard">
+        <div id="table_container">
+            <table>
+                <caption id="sb_caption">ENCAPSULATION™</caption>
+                <colgroup>
+                    <col span="1" class="coin_col">
+                    <col span="1" class="rank_col">
+                    <col span="1" class="name_col">
+                    <col span="1" class="score_col">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            <img id="capcoin" src="imgs/coin.gif" alt="CapCoin">
+                        </th>
+                        <th scope="col">
+                            <span class="sb_header" id="test">RANK</span>
+                        </th>
+                        <th scope="col">
+                            <span class="sb_header">PLAYER NAME</span>
+                        </th>
+                        <th scope="col">
+                            <span class="sb_header">SCORE</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="first_place">
+                        <td class="coin_cells">
+                            <div class="capcoin_container">
+                                <img id="capcoin1" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin2" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin3" src="imgs/coin.gif" alt="CapCoin">
+                            </div>
+                        </td>
+                        <td class="rank_cells">1st</td>
+                        <td class="name_cells">Player 1</td>
+                        <td class="score_cells">110000</td>
+                    </tr>
+                    <tr class="second_place">
+                        <td class="coin_cells">
+                            <div class="capcoin_container">
+                                <img id="capcoin1" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin2" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin3" src="imgs/coin.gif" alt="CapCoin">
+                            </div>
+                        </td>
+                        <td class="rank_cells">2nd</td>
+                        <td class="name_cells">Player 2</td>
+                        <td class="score_cells">109000</td>
+                    </tr>
+                    <tr class="third_place">
+                        <td class="coin_cells">
+                            <div class="capcoin_container">
+                                <img id="capcoin1" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin2" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin3" src="imgs/coin.gif" alt="CapCoin">
+                            </div>
+                        </td>
+                        <td class="rank_cells">3rd</td>
+                        <td class="name_cells">Player 3</td>
+                        <td class="score_cells">108000</td>
+                    </tr>
+                    <tr class="fourth_place">
+                        <td class="coin_cells">
+                            <div class="capcoin_container">
+                                <img id="capcoin1" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin2" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin3" src="imgs/coin.gif" alt="CapCoin">
+                            </div>
+                        </td>
+                        <td class="rank_cells">4th</td>
+                        <td class="name_cells">Player 4</td>
+                        <td class="score_cells">107000</td>
+                    </tr>
+                    <tr class="fifth_place">
+                        <td class="coin_cells">
+                            <div class="capcoin_container">
+                                <img id="capcoin1" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin2" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin3" src="imgs/coin.gif" alt="CapCoin">
+                            </div>
+                        </td>
+                        <td class="rank_cells">5th</td>
+                        <td class="name_cells">Player 5</td>
+                        <td class="score_cells">106000</td>
+                    </tr>
+                    <tr class="sixth_place">
+                        <td class="coin_cells">
+                            <div class="capcoin_container">
+                                <img id="capcoin1" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin2" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin3" src="imgs/coin.gif" alt="CapCoin">
+                            </div>
+                        </td>
+                        <td class="rank_cells">6th</td>
+                        <td class="name_cells">Player 6</td>
+                        <td class="score_cells">106000</td>
+                    </tr>
+                    <tr class="seventh_place">
+                        <td class="coin_cells">
+                            <div class="capcoin_container">
+                                <img id="capcoin1" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin2" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin3" src="imgs/coin.gif" alt="CapCoin">
+                            </div>
+                        </td>
+                        <td class="rank_cells">7th</td>
+                        <td class="name_cells">PLAYER 7</td>
+                        <td class="score_cells">106000</td>
+                    </tr>
+                    <tr class="eigth_place">
+                        <td class="coin_cells">
+                            <div class="capcoin_container">
+                                <img id="capcoin1" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin2" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin3" src="imgs/coin.gif" alt="CapCoin">
+                            </div>
+                        </td>
+                        <td class="rank_cells">8th</td>
+                        <td class="name_cells">PLAYER 8</td>
+                        <td class="score_cells">106000</td>
+                    </tr>
+                    <tr class="ninth_place">
+                        <td class="coin_cells">
+                            <div class="capcoin_container">
+                                <img id="capcoin1" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin2" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin3" src="imgs/coin.gif" alt="CapCoin">
+                            </div>
+                        </td>
+                        <td class="rank_cells">9th</td>
+                        <td class="name_cells">PLAYER 9</td>
+                        <td class="score_cells">106000</td>
+                    </tr>
+                    <tr class="tenth_place">
+                        <td class="coin_cells">
+                            <div class="capcoin_container">
+                                <img id="capcoin1" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin2" src="imgs/coin.gif" alt="CapCoin">
+                                <img id="capcoin3" src="imgs/coin.gif" alt="CapCoin">
+                            </div>
+                        </td>
+                        <td class="rank_cells">10th</td>
+                        <td class="name_cells">Player 10</td>
+                        <td class="score_cells">106000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <img id='sb_clouds' src="imgs/cloud1.webp" alt="Cartoon Clouds">
+        </div>
+    </section>   
+  </main>
+
+  <footer>
+    <p>
+        © 2022 Time Capsule NY®, LLC. All Rights Reserved
+    </p>
+    <a href="../index.html" alt="HOME">
+        As above... so below - ツkc 💭
+    </a>
+  </footer>
+  
+<script src="js/main.js"></script>  
+</body>
