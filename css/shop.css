@@ -905,9 +905,9 @@ footer p {
 
 main {
   display: flex;
-  margin: 125px 10vw 0 10vw;
+  margin-top: 5vh;
 
-  /* border: 2px solid purple; */
+  /* border: 8px solid purple; */
 }
 
 .item_container {
@@ -916,10 +916,14 @@ main {
   align-items: center;
   gap: 80px;
 
-  height: 100%;
+  height: max-content;
   width: 50%;
+  
+  /* border: 5px solid green; */
+}
 
-  /* border: 3px solid green; */
+.item_container > .item {
+  margin-left: 20%;
 }
 
 .item_container_2 {
@@ -927,13 +931,17 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 80px;
-
+  
   height: max-content;
   width: 50%;
+
+  padding: 270px 0 0 0;
   
-  padding: 300px 0 0 0;
-  
-  /* border: 3px solid green; */
+  /* border: 5px solid green; */
+}
+
+.item_container_2 > .item {
+  margin-right: 20%;
 }
 
 .item {
@@ -941,12 +949,15 @@ main {
   justify-content: center;
   align-items: center;
 
-  height: 400px;
-  width: 300px;
+  padding-top: 250px ;
+  margin-bottom: max(20vh, 3rem);
+
+  height: 200px;
+  width: 200px;
   
   transition: 0.3s ease-out;
 
-  /* border: 10px solid red; */
+  /* border: 3px solid red; */
 }
 
 .item:hover {
@@ -957,18 +968,18 @@ main {
   animation: rgb-pulse-item 2.2s linear infinite alternate;
 }
 
+.keychain {
+  width: max(7vw, 80px);
+}
+
 .hoodie {
-  height: 500px;
+  width: max(25vw, 250px);
 }
 
 .beanie {
-  height: 250px;
+  width: max(13vw, 200px);
 }
 
 .socks {
-  height: 300px;
-}
-
-.keychain {
-  height: 250px;
+  width: max(10vw, 150px);
 }
