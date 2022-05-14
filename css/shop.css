@@ -684,7 +684,6 @@ a {
   font-size: 2rem;
   letter-spacing: 1px;
 }
-
 /* MENU-BTN ANIMATION gameOver */
 
 #home-link {
@@ -852,52 +851,6 @@ a {
 }
 
 /* 
-  ┌─────────────────────────────────────────────────────────────────────────┐
-  │ |FOOTER|                                                                │
-  └─────────────────────────────────────────────────────────────────────────┘
- */
-
-footer {
-  background-color: transparent;
-  color: #fffce8;
-  font-weight: 200;
-  text-align: center;
-  transition: color 0.8s ease-in-out, background-color 0.5s ease-out;
-}
-
-footer:active {
-  transform: rotate(180deg);
-}
-
-footer:hover {
-  color: var(--neon-green);
-  text-shadow: 0px 0px 11px var(--neon-green);
-}
-
-footer a {
-  color: #fffce8;
-  font-size: 0.3rem;
-  font-weight: 800;
-  opacity: 0;
-  margin-top: 10px;
-  text-decoration: none;
-  transition: all 1.8s ease-in-out;
-}
-
-footer a:hover {
-  color: var(--neon-red);
-  font-size: 1.3rem;
-  opacity: 1;
-  text-shadow: 0px 0px 11px var(--neon-red);
-}
-
-footer p {
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-
-/* 
   ┌──────────────────────────────────────────────────────────────────────┐
   │ SHOP                                                    │
   └──────────────────────────────────────────────────────────────────────┘
@@ -985,4 +938,49 @@ main {
 
 .keychain {
   width: max(5.5vw, 80px);
+}
+
+/* 
+  ┌─────────────────────────────────────────────────────────────────────────┐
+  │ |FOOTER|                                                                │
+  └─────────────────────────────────────────────────────────────────────────┘
+ */
+
+footer {
+  background-color: transparent;
+  color: #fffce8;
+  font-weight: 200;
+  text-align: center;
+  transition: color 0.8s ease-in-out, background-color 0.5s ease-out;
+}
+
+footer:active {
+  transform: rotate(180deg);
+}
+
+footer:hover {
+  color: var(--neon-green);
+  text-shadow: 0px 0px 11px var(--neon-green);
+}
+
+footer a {
+  color: #fffce8;
+  font-size: 0.3rem;
+  font-weight: 800;
+  opacity: 0;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: all 1.8s ease-in-out;
+}
+
+footer a:hover {
+  color: var(--neon-red);
+  font-size: 1.3rem;
+  opacity: 1;
+  text-shadow: 0px 0px 11px var(--neon-red);
+}
+
+footer p {
+  font-size: 1.5rem;
+  margin: 0;
 }
