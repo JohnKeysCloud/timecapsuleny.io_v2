@@ -905,7 +905,8 @@ footer p {
 
 main {
   display: flex;
-  margin-top: 5vh;
+  
+  margin-top: 3vh;
 
   /* border: 8px solid purple; */
 }
@@ -923,7 +924,7 @@ main {
 }
 
 .item_container > .item {
-  margin-left: 20%;
+  margin-left: 45%;
 }
 
 .item_container_2 {
@@ -935,13 +936,13 @@ main {
   height: max-content;
   width: 50%;
 
-  padding: 270px 0 0 0;
+  padding: 325px 0 0 0;
   
   /* border: 5px solid green; */
 }
 
 .item_container_2 > .item {
-  margin-right: 20%;
+  margin-right: 45%;
 }
 
 .item {
@@ -949,37 +950,39 @@ main {
   justify-content: center;
   align-items: center;
 
-  padding-top: 250px ;
-  margin-bottom: max(20vh, 3rem);
+  padding-top: 100px ;
+  margin-bottom: 40vh;
 
   height: 200px;
   width: 200px;
   
-  transition: 0.3s ease-out;
-
   /* border: 3px solid red; */
-}
-
-.item:hover {
-  transform: scale(1.18);
 }
 
 .item > img {
   animation: rgb-pulse-item 2.2s linear infinite alternate;
+  transition: 0.3s ease-out;
 }
 
-.keychain {
-  width: max(7vw, 80px);
+.item:hover > img {
+  transform: scale(1.13);
 }
 
 .hoodie {
-  width: max(25vw, 250px);
+  margin: 0 0 -100px 0;
+  width: max(17vw, 250px);
 }
 
 .beanie {
-  width: max(13vw, 200px);
+  margin: -40px 0 -100px 0;
+  width: max(12vw, 200px);
 }
 
 .socks {
-  width: max(10vw, 150px);
+  margin: -40px 0 -100px 0;
+  width: max(8vw, 150px);
+}
+
+.keychain {
+  width: max(5.5vw, 80px);
 }
