@@ -516,22 +516,31 @@ body {
 
 /* 
   ┌──────────────────────────────────────────────────────────────────────┐
-  │ FULL HEIGHT HERO                                                     │
+  │ theWonderKid                                                         │
   └──────────────────────────────────────────────────────────────────────┘
  */
 
-#tcnyCommercial {
-  position: fixed;
-  right: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+#bg_wrapper {
+  position: relative;
+}
 
-  object-fit: cover;
-  opacity: 0.38;
-  min-height: 100vh;
-  min-width: 100vw;
-  z-index: -1;
+#bg_wrapper::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.55;
+  background-image: url('/imgs/theWonderKid.png');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+#page_content {
+  position: relative;
 }
 
 /* 
@@ -918,7 +927,7 @@ main {
 }
 
 .item:hover > img {
-  transform: scale(1.13);
+  transform: scale(1.3);
 }
 
 .hoodie {
