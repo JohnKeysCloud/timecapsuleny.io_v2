@@ -396,7 +396,7 @@ template {
 
   --neon-pink: rgb(255, 10, 210);
   --neon-red: hsl(348, 100%, 51%);
-  --neon-blue: hsl(175, 94%, 56%);;
+  --neon-blue: hsl(175, 94%, 56%);
   --neon-green: chartreuse;
   --neon-orange: hsl(38.8,100%,50%);
 
@@ -838,6 +838,7 @@ a {
       transform: scale(0.75);
   }
 }
+
 @keyframes sb-hover-2 {
   from {
       border: 5px solid chartreuse;
@@ -850,7 +851,8 @@ a {
       border: 5.5px solid rgb(255, 132, 122);
       transform: scale(0.77);
   }
-}    
+}
+
 @keyframes letter-spaz {
   from {
       letter-spacing: -1px;
@@ -862,6 +864,7 @@ a {
       text-shadow: 0 0 8px red;
   }
 }
+
 @keyframes letter-spaz-2 {
   from {
       letter-spacing: 0px;
@@ -874,49 +877,60 @@ a {
       text-shadow: 0 0 8px black;
   }
 }
+
 #capcoin {
   width: 7rem;
   transition: all 0.3s ease-in;
   position: absolute;
-  left: 191px;
+  left: 215px;
   top: 67px;
 }
+
 #capcoin:hover {
   transform: scale(1.5);
   left: 191px;
   top: 51px;
 }
+
 #capcoin1,
 #capcoin2,
 #capcoin3 {
   height: 41px;
-  padding: 7px 11px 7px 0;
+  padding: 7px 8.3px 7px 0;
   transform: scale(0);
 }
+
 #capcoin1 {
   transform: scale(1.3);
 }
+
 #capcoin2 {
   transform: scale(1.3);
 }
+
 #capcoin3 {
   transform: scale(1.3);
 }
+
 .name_cells {
   padding-left: 1.3rem;
   text-align: start;
 }
+
 .name_col {
   width: 44%;
 }
+
 .rank_cells,
 .score_cells {
   padding-right: 1.3rem;
   text-align: end;
 }
+
 .rank_col {
   width: 15%;
 }
+
 #sb_caption {
   color: red;
   text-shadow: 0 0 8px black;
@@ -925,6 +939,7 @@ a {
   left: 333px;
   top: 70px;
 }
+
 #sb_clouds {
   position: absolute;
   height: 333px;
@@ -932,6 +947,7 @@ a {
   top: 500px;
   z-index: 0;
 }
+
 .sb_header {
   background: none;
   border: none;
@@ -941,6 +957,7 @@ a {
   vertical-align: 3.3px;
   animation: 0.5s linear infinite alternate letter-spaz;
 }
+
 .sb_header:hover {
   animation: none;
   background: none;
@@ -951,9 +968,11 @@ a {
   transform: scale(1.3);
   animation: 0.3s linear infinite alternate letter-spaz-2;
 }
+
 .score_col {
   width: 20%;
 }
+
 table {
   animation: 1.8s linear infinite alternate sb-hover;
   background-size: cover;
@@ -967,7 +986,7 @@ table {
   line-height: 0px;
   /* TODO: adjust @media query for bigger than */
   margin: 5rem auto 5rem auto;
-  padding: 11rem 15rem 10rem 15rem;
+  padding: 11rem 18rem 8rem 18rem;
   table-layout: fixed;
   text-shadow: 0 0 3px black;
   transition: all 5s ease-in;
@@ -976,12 +995,15 @@ table {
   z-index: 1;
   position: relative;
 }
+
 table:hover {
   animation: 0.7s linear infinite alternate sb-hover-2;
 }
+
 #table_container {
   margin: 0 auto;
 }
+
 td {
   background-color: rgb(55, 55, 55);
   border: 3px solid skyblue;
@@ -994,63 +1016,78 @@ td {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 tr:nth-child(even) td {
   background-color: rgb(55, 55, 55);
 }
+
 tr:nth-child(odd) td {
   background-color: rgb(44, 44, 44);
 }
+
 tr:nth-child(odd) .coin_cells {
   background-color: black;
   border: none;
   box-shadow: inset 0 0 20px red;
 }
+
 tr:nth-child(even) .coin_cells {
   background-color: black;
   border: none;
   box-shadow: inset 0 0 20px red;
 }
-/* Font Gradients */
+
+/* fontGradients pressStart */
 .first_place {
   color: #FFFF33;
   text-shadow: 0 0 8px #FFFF33;
 }
+
 .second_place {
   color: #fff330;
   text-shadow: 0 0 8px #fff330;
 }
+
 .third_place {
   color: #ffe52c;
   text-shadow: 0 0 8px #ffe52c;
 }
+
 .fourth_place {
   color: #ffd728;
   text-shadow: 0 0 8px #ffd728;
 }
+
 .fifth_place {
   color: #ffac1e;
   text-shadow: 0 0 8px #ffac1e;
 }
+
 .sixth_place {
   color: #ff9c1a;
   text-shadow: 0 0 8px #ff9c1a;
 }
+
 .seventh_place {
   color: #ff8915;
   text-shadow: 0 0 8px #ff8915;
 }
+
 .eigth_place {
   color: #ff8a16;
   text-shadow: 0 0 8px #ff8a16;
 }
+
 .ninth_place {
   color: #ff700f;
   text-shadow: 0 0 8px #ff700f;
 }
+
 .tenth_place {
   color: #FF3300;
   text-shadow: 0 0 8px #FF3300;
 }
+/* fontGradients gameOver */
 
 /* 
   ┌─────────────────────────────────────────────────────────────────────────┐
