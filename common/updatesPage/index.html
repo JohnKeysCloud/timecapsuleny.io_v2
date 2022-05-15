@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+  <head>
+    <title>TEXT/MAILING LIST</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="example.css">
+    <script src="example.js"></script>
+    <style>
+      @font-face {
+        font-family: 'Gosha';
+        src: url(fonts/GoshaReg.woff2);
+      }
+      @font-face {
+        font-family: 'GoshaBold';
+        src: url(fonts/GoshaBold.woff2);
+      }
+      @font-face {
+        font-family: 'Pixel';
+        src: url(fonts/Pix.woff2);
+      }
+      * {
+        box-sizing: border-box;
+        font-size: 62.5%;
+      }
+      body {
+        align-items: center;
+        background-color: #fffce8;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Pixel';
+        height: 100vh;
+        justify-content: center;
+        margin: 0;
+        padding: 1em;
+      }
+      button,
+      input,
+      select {
+        -webkit-appearance: none;
+        appearance: none;
+        font-family: 'Gosha';
+        margin: 0;
+        padding: 0;
+      }  
+      #center {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 3.3rem;
+        justify-content: center;
+        width: 75%;
+      }
+      #c_logo {
+        transform-origin: center;
+        transition: all 0.8s ease-out;
+      }
+      #c_logo:hover {
+        margin-bottom: 3rem;   
+        transform: scale(1.5) rotate(360deg);    
+      }
+      #c_logo > img {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        height: 13rem;
+        pointer-events: none;
+        transition: all 1s ease-out;
+        user-select: none;
+        width: 13rem;
+      }
+      #email,
+      #phone_number,
+      #name {
+        border-radius: 3rem ;
+        border: none;
+        box-shadow: 0 0 10px black, inset 0 0 5px chartreuse;
+        font-size: 1.5rem;
+        height: 3.3rem;
+        padding: 1rem 3rem 1rem 3rem;
+        text-align: center;
+        transform-origin: center;
+        width: 33.3rem;
+      }
+      .container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 5rem;
+        gap: 0.8rem;
+        transition: all 0.3s ease-in;
+        width: 100%;
+      }
+      .container:hover {
+        transform: scale(1.3);    
+      }
+      #contact_form {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      #contact_form_div {
+        /* background: linear-gradient(to bottom, green, #fffce8); */
+        box-shadow: 0 0 10rem red, inset  0 0 8rem chartreuse;
+        border: 1rem ridge silver;
+        border-radius: 33rem;
+        padding: 7rem 7rem 7rem 7rem;
+        transition: all 0.8s ease-out;
+      }
+      #contact_form_div:hover {
+        padding: 6rem 10rem 6rem 10rem;
+        border: 1rem ridge silver;
+        
+      }
+      #header {
+        color: chartreuse;
+        font-family: 'Pixel';
+        font-size: 4rem;
+        margin: 0;
+        text-align: center;
+        text-shadow: 0 0 4px black;
+      }
+      #press_start_btn {
+        align-items: center;
+        background: none;
+        border-radius: 10rem;
+        border: none;
+        box-shadow: 3px 3px 18px red, inset 0 0 18px black;
+        color: black;
+        display: flex;
+        font-family: "Pixel";
+        height: 3.3rem;
+        margin-top: 1.8rem;
+        padding: 0rem 2.2rem;
+        transition: all 0.05s ease-out;
+        transition: all 0.3s ease-out;
+      }
+      #press_start_btn:hover {
+        border-radius: 10rem;
+        box-shadow: 5px 5px 10px red, inset 0 0 27px black;
+        color: chartreuse;
+        transform: scale(1.2); 
+        /* margin-top: 1rem; */
+      }
+      #press_start_btn:active {
+        background-color: gray;
+        transform: scale(1.15); 
+        box-shadow: 3px 3px 3px red, inset 0 0 22px black;
+      }
+      #press_start_btn > a {
+        color: inherit;
+        font-size: 3rem;
+        transition: all 0.08s ease-out;
+        text-decoration: none;
+        text-shadow: 0 0 5px chartreuse;
+      }
+      #press_start_btn > a:hover {
+        text-shadow: 0 0 3px red;
+      }
+      #press_start_btn > a:active {
+        color: red;
+        text-shadow: 0 0 10px chartreuse;
+        
+      }
+    </style>
+  </head>
+  <body>
+
+    <section id="center">
+      <h1 id="header">subscribe and vibe</h1>
+      <div id="c_logo">
+        <img src="img/cyclone_studios_c.gif" alt="Cyclone Studios Logo">
+      </div>
+      <div id="contact_form_div">
+        <form id="contact_form">
+
+          <div class="container">
+            <label for="name">name</label>
+            <input type="text" name="name" id="name">
+          </div>  
+          <div class="container">
+            <label for="email">email</label>
+            <input type="email" name="email" id="email" pattern="^([\w\.-_]+)@([\w-]+)\.([a-zA-Z]{2,5})([\.][a-zA-Z]{2,5})?$">
+          </div>     
+          <div class="container">
+            <label for="number">phone number</label>
+            <input type="tel" name="phone_number" id="phone_number">
+          </div>    
+            <button id="press_start_btn">
+              <a href="" class="button_links">press start</a>
+            </button>
+        </form>
+      </div>   
+    </section>
+
+  </body>
+</html>

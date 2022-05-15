@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>TCNY Form</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="example.js"></script>
+  <style>
+    @font-face {
+      font-family: 'Gosha';
+      src: url(fonts/GoshaReg.woff2);
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0px 1000px #fffce8 inset !important;
+      /* gets rid of autocomplete blue background sh*t */
+    }
+    html {
+      font-size: 62.5%;
+    }
+    body {
+      font-family: 'Gosha';
+    }
+    form {
+      max-width: 450px;
+    }
+    div {
+      position: relative;
+    }  
+    label {
+      color: chartreuse;
+      left: 18px;
+      opacity: 0.5;
+      position: absolute;
+      font-size: 18px;
+      font-weight: bolder;
+      top: 20.5px;
+      text-shadow: 0 0 3px black;
+    }
+    input {
+      margin: 10px auto;
+      appearance: none;
+      -webkit-appearance: none;
+      background-color: #FFFCE8;
+      border: 4px ridge red;
+      border-radius: 33px;
+      height: 25px;
+      font-family: inherit;
+      font-size: 1.5rem;
+      padding: 5px 30px 5px 18px;
+      position: relative;
+      text-align: center;
+      width: 110px;
+    }
+    input[type="email"] {
+      width: 190px;
+    }
+    input:valid {
+      border: 4px ridge chartreuse;
+      background-color: #fffce8;
+    }
+    input[type="text"]:valid+label,
+    input[type="email"]:valid+label,
+    input[type="password"]:valid+label {
+      opacity: 0;
+    }
+    input:focus {
+      outline: none;
+    }
+    input[type="text"]:focus+label,
+    input[type="email"]:focus+label,
+    input[type="password"]:focus+label {
+      opacity: 0;
+    }
+    
+    input[type="text"]:valid,
+    input[type="password"]:valid {
+      border-color: green;
+      background: #fffce8 url("img/checkmark.png");
+      background-size: 13px;
+      background-repeat: no-repeat;
+      background-position: 135px 11px;
+    }
+    input[type="email"]:valid {
+      border-color: green;
+      background: #fffce8 url("img/checkmark.png");
+      background-size: 13px;
+      background-repeat: no-repeat;
+      background-position: 215px 11px;
+    }
+    input[type="text"]:valid:not(:focus):not(:placeholder-shown),
+    input[type="password"]:valid:not(:focus):not(:placeholder-shown) {
+      border-color: green;
+      background: #fffce8 url("img/checkmark.gif");
+      background-size: 18px;
+      background-repeat: no-repeat;
+      background-position: 132px 8px;
+    }
+    input[type="email"]:valid:not(:focus):not(:placeholder-shown) {
+      border-color: green;
+      background: #fffce8 url("img/checkmark.gif");
+      background-size: 18px;
+      background-repeat: no-repeat;
+      background-position: 213px 8px;
+    }   
+    input[type="text"]:valid+label,
+    input[type="email"]:valid+label,
+    input[type="password"]:valid+label {
+      opacity: 0;
+    }    
+    input[type="text"]:invalid:not(:focus):not(:placeholder-shown),
+    input[type="email"]:invalid:not(:focus):not(:placeholder-shown),
+    input[type="password"]:invalid:not(:focus):not(:placeholder-shown) {
+      background: pink;
+    }    
+    input[type="text"]:invalid:not(:focus):not(:placeholder-shown) + label,
+    input[type="email"]:invalid:not(:focus):not(:placeholder-shown) + label,
+    input[type="password"]:invalid:not(:focus):not(:placeholder-shown) + label {
+      opacity: 0;
+    }    
+    input[type="text"]:invalid:not(:focus):not(:placeholder-shown) ~ .requirements,
+    input[type="email"]:invalid:not(:focus):not(:placeholder-shown) ~ .requirements,
+    input[type="password"]:invalid:not(:focus):not(:placeholder-shown) ~ .requirements {
+      max-height: 200px;
+    }    
+    .requirements {
+      color: #999;
+      max-height: 0;
+      -webkit-transition: 0.28s;
+      transition: 0.28s;
+      overflow: hidden;
+      color: red;
+      font-style: italic;
+      font-size: 1.5rem;
+
+      position: absolute;
+      top: 60px;
+      left: 18px;
+    }
+    textarea {
+      margin-top: 50px
+    }
+  </style>
+</head>
+
+<body>
+<form action="#0" method="post">
+
+  <div>
+    <input type="text" id="first_name" name="first_name" required placeholder=" "/>
+    <label for="first_name">First Name</label>
+  </div>
+  
+  <div>
+    <input type="text" id="last_name" name="last_name" required placeholder=" "/>
+    <label for="last_name">Last Name</label>
+  </div>
+  
+  <div>
+    <input type="email" id="email" name="email" required placeholder=" " pattern="([\w\.-]+)@([\w-]+)\.([a-zA-Z]{2,3})([\.][a-zA-Z]{2,3})?">
+    <label for="email">Email Address</label>
+    <div class="requirements">
+      Must be a valid email address.
+    </div>
+  </div>
+  <div>
+    <textarea name="email_regex" id="" cols="58" rows="1">/^([\w\.-]+)@([\w-]+)\.([a-zA-Z]{2,3})([\.][a-zA-Z]{2,3})?$/</textarea>
+  </div>
+
+</body>
+
+</html>
