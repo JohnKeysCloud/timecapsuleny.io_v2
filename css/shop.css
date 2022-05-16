@@ -493,9 +493,15 @@ template {
 @keyframes bg-float {
   from {
     transform: scale(1);
+    opacity: 0.33;
+  }
+  70% {
+    transform: scale(1.03);
+    opacity: 0.55;
   }
   to {
-    transform: scale(1.05);
+    transform: scale(1.03);
+    opacity: 1;
   } 
 }
 
@@ -542,13 +548,15 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  opacity: 0.3;
+  /* opacity: 0.3; */
+  
   background-image: url('../imgs/logos/theWonderKid.png');
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: cover;
-  animation: bg-float 3.3s linear infinite alternate;
 
+  animation: bg-float 7s linear infinite alternate;
+  transform-origin: bottom;
 }
 
 #page_content {
