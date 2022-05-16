@@ -1,3 +1,10 @@
+/* 
+  ┌─────────────────────────────────────────────────────────────────────────┐
+  │ opensNavMenuBtnAndDisplaysThemeBtn // homePageOnly                      │
+  │ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇                                                    │
+  └─────────────────────────────────────────────────────────────────────────┘
+ */
+
 const menuBtn = document.querySelector('#menu-btn');
 const themeBtn = document.querySelector('#theme-toggle');
 let menuOpen = false;
@@ -20,6 +27,13 @@ menuBtn.addEventListener('click', () => {
   }
 }); 
 
+/* 
+  ┌─────────────────────────────────────────────────────────────────────────┐
+  │ opensThemeBtn // homePageOnly                                           │
+  │ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇                                                    │
+  └─────────────────────────────────────────────────────────────────────────┘
+ */
+
 const clrBtn = document.querySelector('#theme-toggle-btn');
 let clrBtnOpen = false;
 
@@ -32,6 +46,41 @@ clrBtn.addEventListener('click', () => {
     clrBtnOpen = false;
   }
 }); 
+
+/* 
+  ┌─────────────────────────────────────────────────────────────────────────┐
+  │ 1. onClickAddedInlineHTMLtoNavLinks. I don't like it -_- // homePageOnly|
+  | 2. removesEveryIDFromNavLinks                                           │
+  │ 3. containsNavLinksInVariable                                           │
+  │ 4. addsNewIDtoNavLinks                                                  |
+  | // the NewID's mentioned above are currently CLASSES in CSS             |
+  |     -> commented out until better method is found                       │
+  │ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇                                                    | 
+  └─────────────────────────────────────────────────────────────────────────┘
+ */
+
+// function myFunction() {
+//   document.querySelectorAll('#home-link', '#shop-link', '#encap-link', '#about-link', '#contact-link').forEach(e => e.removeAttribute('id'));
+//   const element = document.getElementsByClassName('nav-link');
+//   if (element && element[0] && element[0].setAttribute && element[0].setAttribute) {
+//     element[0].setAttribute('id', 'nav-link-red');
+//   }
+// }
+
+/* 
+  ┌─────────────────────────────────────────────────────────────────────────┐
+  │ 1. storesNavLinksInVariable (themeBtn)                                  │
+  │ 2. storesRedBtnInVariable (redBtn)                                      │
+  │ 3. addsClickEventListenerToRedBtn                                       │
+  │ 4. OnClick -> TRUE -> conditionalRemovesIDFromNavLinks                  │
+  │ 5. OnClick -> TRUE -> addsThemeClassToThemeBtnVariables                 │
+  │ 6. OnClick -> FALSE -> removesNewClass                                  │
+  │ // It does not function properly. It currently doesn't re-add the old   │
+  │    ID's or remove old classes along with other issues.SMH.              │
+  │    issues.SMH.                                                          │
+  │ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇                                                    │
+  └─────────────────────────────────────────────────────────────────────────┘
+ */
 
 // const themeColor = document.getElementsByClassName('nav-link');
 // const redBtn = document.querySelector('#btn-theme-red')
@@ -46,20 +95,4 @@ clrBtn.addEventListener('click', () => {
 //     themeColor.classList.remove('.nav-item.red');
 //     colorChange = false;
 //   }
-// }); 
-
-// function myFunction() {
-//   document.querySelectorAll('#home-link', '#shop-link', '#encap-link', '#about-link', '#contact-link').forEach(e => e.removeAttribute('id'));
-
-//   let red = ".red";
-//   let result = ".nav-link".concat(red); 
-  
-//   let navLink = document.querySelector(result); 
-//   console.log(navLink)
-// }
-
-// kimagure - blue
-// machibuse - pink
-// oikake - red
-// otoboke - orange 
-// fankii - green
+// });
