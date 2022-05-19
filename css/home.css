@@ -882,7 +882,8 @@ footer {
   align-items: center;
   justify-content:flex-end;
 
-  height: 5rem;
+  height: 98.195px;
+  /* same height as header */
   
   transition: color 0.8s ease-in-out, background-color 0.5s ease-out;
 }

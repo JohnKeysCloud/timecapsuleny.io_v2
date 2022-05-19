@@ -485,7 +485,7 @@ body {
 }
 
 .content-wrapper {
-  padding-bottom: 5rem;
+  padding-bottom: 98.195px;
 }
 
 /* 
@@ -1111,7 +1111,7 @@ footer {
   align-items: center;
   justify-content:flex-end;
 
-  height: 5rem;
+  height: 98.195px;
 }
 
 footer:hover {

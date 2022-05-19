@@ -988,6 +988,8 @@ footer {
 
   align-items: center;
   justify-content:flex-end;
+
+  height: 98.195px;
 }
 
 footer:hover {
