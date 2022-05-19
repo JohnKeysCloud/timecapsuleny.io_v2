@@ -856,12 +856,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -1;
 }
 
 main > img {
