@@ -485,26 +485,6 @@ body {
 
 /* 
   ┌──────────────────────────────────────────────────────────────────────┐
-  │ FULL HEIGHT HERO                                                     │
-  └──────────────────────────────────────────────────────────────────────┘
- */
-
-#tcnyCommercial {
-  position: fixed;
-  right: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  object-fit: cover;
-  opacity: 0.38;
-  min-height: 100vh;
-  min-width: 100vw;
-  z-index: -1;
-}
-
-/* 
-  ┌──────────────────────────────────────────────────────────────────────┐
   │ HEADER                                                               │
   └──────────────────────────────────────────────────────────────────────┘
  */
@@ -819,6 +799,13 @@ a {
   opacity: 1;      
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* 
   ┌──────────────────────────────────────────────────────────────────────┐
   │ scoreBoard                                                                      │
@@ -935,17 +922,6 @@ a {
   color: red;
   text-shadow: 0 0 8px black;
   font-size: 7rem;
-      position: absolute;
-  left: 333px;
-  top: 70px;
-}
-
-#sb_clouds {
-  position: absolute;
-  height: 333px;
-  width: 100%;
-  top: 500px;
-  z-index: 0;
 }
 
 .sb_header {
@@ -985,15 +961,13 @@ table {
   font-style: italic;
   line-height: 0px;
   /* TODO: adjust @media query for bigger than */
-  margin: 5rem auto 5rem auto;
-  padding: 11rem 18rem 8rem 18rem;
+  margin: 0rem auto 0rem auto;
+  padding: 8rem 11rem 8rem 11rem;
   table-layout: fixed;
   text-shadow: 0 0 3px black;
   transition: all 5s ease-in;
   /* transform: scale(0.8); */
-  width: 1000px;
-  z-index: 1;
-  position: relative;
+  width: 80vw;
 }
 
 table:hover {
@@ -1089,6 +1063,29 @@ tr:nth-child(even) .coin_cells {
 }
 /* fontGradients gameOver */
 
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+
+  /* border: 1px solid #ff0000; */
+  
+  font-family: 'GoshaSansRegular' ;
+  color: #fffce8;
+  padding: 1.5rem clamp(1rem, 5%, 3rem);
+  /* The example from SmolCSS uses the following 
+  padding definition, where the padding will grow 
+  and shrink relative to the element's width. 
+  It will never be less than 1rem, and never 
+  greater than 3rem   */
+  text-align: center;
+  width: min(80ch, 100vw - 2rem);
+}
+.text-content h1 {
+  font-size: clamp(1.75rem, 4vw + 1rem, 3rem);
+}
+
+
 /* 
   ┌─────────────────────────────────────────────────────────────────────────┐
   │ |FOOTER|                                                                │
@@ -1096,11 +1093,6 @@ tr:nth-child(even) .coin_cells {
  */
 
 footer {
-  position: absolute;
-  bottom: 0;
-  left: auto;
-  width: 100vw;
-
   display: flex;
   flex-direction: column;
 
@@ -1165,7 +1157,7 @@ footer p {
   opacity: 0.88;
   margin: 15px 0 15px 0;
 
-  transform: scale(1.5) rotate(-1080deg);
+  transform: scale(1.3) rotate(-1080deg);
 }
 
 #cyclone-container > p {
