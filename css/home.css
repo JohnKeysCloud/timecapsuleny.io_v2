@@ -489,6 +489,8 @@ html {
 }
 
 body {
+  position: relative;
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -496,8 +498,11 @@ body {
   background-color: black;
   font-family: 'PixeBoy', 'GoshaSansRegular', 'Roboto Mono', 'Courier New', Courier, monospace;
   font-size: 1.8rem;
-  margin: 0;
   min-height: 100vh;
+}
+
+.content-wrapper {
+  padding-bottom: 5rem;
 }
 
 /* 
@@ -851,6 +856,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 main > img {
@@ -876,6 +887,8 @@ footer {
 
   align-items: center;
   justify-content:flex-end;
+
+  height: 5rem;
   
   transition: color 0.8s ease-in-out, background-color 0.5s ease-out;
 }
@@ -961,7 +974,7 @@ footer p:hover ~ a {
   justify-content: center;
 
   filter: drop-shadow(0 0px 3px #fffce8);
-  opacity: 0.55;
+  opacity: 0.38;
   padding-bottom: 5px;
 
   transition: all 0.8s ease-in;

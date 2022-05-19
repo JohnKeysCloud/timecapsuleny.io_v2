@@ -472,6 +472,8 @@ html {
 }
 
 body {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -479,8 +481,11 @@ body {
   background-color: black;
   font-family: 'PixeBoy', 'GoshaSansRegular', 'Roboto Mono', 'Courier New', Courier, monospace;
   font-size: 1.8rem;
-  margin: 0;
   min-height: 100vh;
+}
+
+.content-wrapper {
+  padding-bottom: 5rem;
 }
 
 /* 
@@ -865,117 +870,33 @@ main {
   }
 }
 
-#capcoin {
-  width: 7rem;
-  transition: all 0.3s ease-in;
-  position: absolute;
-  left: 215px;
-  top: 67px;
-}
-
-#capcoin:hover {
-  transform: scale(1.5);
-  left: 191px;
-  top: 51px;
-}
-
-#capcoin1,
-#capcoin2,
-#capcoin3 {
-  height: 41px;
-  padding: 7px 8.3px 7px 0;
-  transform: scale(0);
-}
-
-#capcoin1 {
-  transform: scale(1.3);
-}
-
-#capcoin2 {
-  transform: scale(1.3);
-}
-
-#capcoin3 {
-  transform: scale(1.3);
-}
-
-.name_cells {
-  padding-left: 1.3rem;
-  text-align: start;
-}
-
-.name_col {
-  width: 44%;
-}
-
-.rank_cells,
-.score_cells {
-  padding-right: 1.3rem;
-  text-align: end;
-}
-
-.rank_col {
-  width: 15%;
-}
-
-#sb_caption {
-  color: red;
-  text-shadow: 0 0 8px black;
-  font-size: 7rem;
-}
-
-.sb_header {
-  background: none;
-  border: none;
-  color: skyblue;
-  font-size: 4.5rem;
-  transition: all 0.3s ease-in;
-  vertical-align: 3.3px;
-  animation: 0.5s linear infinite alternate letter-spaz;
-}
-
-.sb_header:hover {
-  animation: none;
-  background: none;
-  border: none;
-  color: red;
-  letter-spacing: -1px;
-  text-shadow: 0 0 5px black;
-  transform: scale(1.3);
-  animation: 0.3s linear infinite alternate letter-spaz-2;
-}
-
-.score_col {
-  width: 20%;
+#table_container {
+  height: 654.844px; 
+  /* max-content height to prevent transform scale element pushing */
 }
 
 table {
-  animation: 1.8s linear infinite alternate sb-hover;
   background-size: cover;
-  border: 2px solid #fffce8;
-  border-spacing: 5.5px 7px;
+  border-spacing: 28px 3px;
   /* border-collapse: collapse; */
   border-radius: 21rem;
   box-shadow: inset 0 0 18px skyblue, 0 0 55px chartreuse;
   font-family: 'PixeBoy';
   font-style: italic;
   line-height: 0px;
-  /* TODO: adjust @media query for bigger than */
   margin: 0rem auto 0rem auto;
-  padding: 8rem 11rem 8rem 11rem;
+  padding: 5rem 11rem 8rem 11rem;
   table-layout: fixed;
   text-shadow: 0 0 3px black;
   transition: all 5s ease-in;
-  /* transform: scale(0.8); */
   width: 80vw;
+
+  animation: 1.8s linear infinite alternate sb-hover;
+
 }
 
 table:hover {
   animation: 0.7s linear infinite alternate sb-hover-2;
-}
-
-#table_container {
-  margin: 0 auto;
 }
 
 td {
@@ -1011,7 +932,95 @@ tr:nth-child(even) .coin_cells {
   box-shadow: inset 0 0 20px red;
 }
 
-/* fontGradients pressStart */
+#sb_caption {
+  color: red;
+  text-shadow: 0 0 8px black;
+  font-size: 7rem;
+}
+
+.sb_header {
+  color: skyblue;
+  font-size: 4.5rem;
+  transition: all 0.3s ease-in;
+  vertical-align: 3.3px;
+
+  animation: 0.5s linear infinite alternate letter-spaz;
+}
+
+.sb_header:hover {
+  color: red;
+  letter-spacing: -1px;
+  text-shadow: 0 0 5px black;
+  transform: scale(1.3);
+  animation: 0.3s linear infinite alternate letter-spaz-2;
+}
+
+.rank_col {
+  width: 15%;
+}
+
+.name_col {
+  width: 44%;
+}
+
+.score_col {
+  width: 20%;
+}
+
+#capcoin {
+  width: 7rem;
+
+  transition: all 0.3s ease-in;
+}
+
+#capcoin:hover {
+  margin-bottom: 21px;
+  
+  transform: scale(1.8);
+}
+
+.capcoin_container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  padding: 3px 0 3px 0;
+}
+
+.capcoin1,
+.capcoin2,
+.capcoin3 {
+  height: 33px;
+  /* padding: 7px 8.3px 7px 0; */
+  transform: scale(0);
+  transform-origin: center;
+  transition: all 0.8s ease-in-out;
+}
+
+.capcoin1 {
+  transform: scale(1);
+}
+
+.capcoin2 {
+  transform: scale(1);
+}
+
+.capcoin3 {
+  transform: scale(1);
+}
+
+.rank_cells,
+.score_cells {
+  padding-right: 1.3rem;
+  text-align: end;
+}
+
+.name_cells {
+  padding-left: 1.3rem;
+  text-align: start;
+}
+
+/* textGradients pressStart */
 .first_place {
   color: #FFFF33;
   text-shadow: 0 0 8px #FFFF33;
@@ -1061,8 +1070,13 @@ tr:nth-child(even) .coin_cells {
   color: #FF3300;
   text-shadow: 0 0 8px #FF3300;
 }
-/* fontGradients gameOver */
+/* textGradients gameOver */
 
+/* 
+  ┌─────────────────────────────────────────────────────────────────────────┐
+  │ TEXT CONTENT                                                            │
+  └─────────────────────────────────────────────────────────────────────────┘
+ */
 
 .text-content {
   display: flex;
@@ -1085,7 +1099,6 @@ tr:nth-child(even) .coin_cells {
   font-size: clamp(1.75rem, 4vw + 1rem, 3rem);
 }
 
-
 /* 
   ┌─────────────────────────────────────────────────────────────────────────┐
   │ |FOOTER|                                                                │
@@ -1095,9 +1108,10 @@ tr:nth-child(even) .coin_cells {
 footer {
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content:flex-end;
+
+  height: 5rem;
 }
 
 footer:hover {
@@ -1146,7 +1160,7 @@ footer p {
   justify-content: center;
 
   filter: drop-shadow(0 0px 3px #fffce8);
-  opacity: 0.55;
+  opacity: 0.38;
   padding-bottom: 5px;
 
   transition: all 0.8s ease-in;
@@ -1155,7 +1169,7 @@ footer p {
 #cyclone-container:hover {
   filter: drop-shadow(0 3px 10px #fffce8);
   opacity: 0.88;
-  margin: 15px 0 15px 0;
+  margin: 25px 0 15px 0;
 
   transform: scale(1.3) rotate(-1080deg);
 }

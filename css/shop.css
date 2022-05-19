@@ -517,6 +517,8 @@ html {
 }
 
 body {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1034,7 +1036,7 @@ footer p {
   justify-content: center;
 
   filter: drop-shadow(0 0px 3px #fffce8);
-  opacity: 0.55;
+  opacity: 0.38;
   padding-bottom: 5px;
 
   transition: all 0.8s ease-in;
