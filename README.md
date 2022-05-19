@@ -8,7 +8,9 @@ Garments cozy enough for a fully immersive Metaverse experience && || extensive 
 
 Powered by Cyclone Studios, this site is designed to provide the visual concept representing the community to be established. 
 
-LANG: HTML // CSS (FLEXBOX) // JS 
+internalFramework
+vanilla HTML // vanilla CSS (FLEXBOX) // vanilla JS 
+
 
 HANDWRITTEN WITH LOVE
 

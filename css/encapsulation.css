@@ -1096,39 +1096,132 @@ tr:nth-child(even) .coin_cells {
  */
 
 footer {
-  background-color: transparent;
-  color: #fffce8;
-  font-weight: 200;
-  text-align: center;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content:flex-end;
+  
   transition: color 0.8s ease-in-out, background-color 0.5s ease-out;
 }
 
-footer:active  {
+#footer-center {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  
+  align-items: center;
+  justify-content: center;
+}
+
+#footer-center:active  {
+  margin-bottom: 25px;
+
   transform: rotate(180deg);
 }
 
-footer:hover {
+#footer-center > p {
+  color: #fffce8;
+
+  transition: all 0.8s ease-out;
+}
+
+#footer-center > p:hover {
   color: var(--neon-green);
-  text-shadow: 0px 0px 11px var(--neon-green);
+
+  transform: scale(1.1);
+}
+
+footer:hover {
+  color: var(--neon-red);
 }
 
 footer a {
   color: #fffce8;
-  font-size: 0.3rem;
   font-weight: 800;
-  opacity: 0;
-  text-decoration: none;
-  transition: all 1.8s ease-in-out;
-}
-  
-footer a:hover {
-  color: var(--neon-red);
   font-size: 1.3rem;
+  text-decoration: none;
+
+  transform: scale(0);
+  transition: all 0.8s ease-in-out;
+}
+
+footer a:hover {
+  color: var(--neon-green);
+  font-size: 1.8rem;
   opacity: 1;
-  text-shadow: 0px 0px 11px var(--neon-red);
+  margin-bottom: 10px;
+  text-shadow: 0px 0px 11px black;
+
+  transform: scale(1);
+}
+
+footer p:hover ~ a {
+  color: var(--neon-red);
+  font-size: 1.5rem;
+  opacity: 1;
+  margin-bottom: 10px;
+  text-shadow: 0px 0px 11px black;
+
+  transform: scale(1);
 }
 
 footer p {
   font-size: 1.5rem;
   margin: 0;
+}
+
+#cyclone-container {
+  position: absolute;
+  bottom: 70px;
+  right: auto;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+
+  align-items: center;
+  justify-content: center;
+
+  filter: drop-shadow(0 0px 3px #fffce8);
+  opacity: 0.55;
+  padding: 8px 8px 0 8px;
+
+  transition: all 800ms ease-out;
+}
+
+#cyclone-container:hover {
+  bottom: 77px;
+  right: auto;
+
+  filter: drop-shadow(0 3px 10px #fffce8);
+  opacity: 0.88;
+
+  transform: scale(1.5) rotate(-1080deg);
+}
+
+#cyclone-container > p {
+  color: var(--neon-red);
+  text-shadow: 0 0 3px black;
+} 
+
+#cyclone-container:hover > p {
+  color: var(--neon-green);
+  opacity: 1;
+}
+
+#cyclone-container > p {
+  font-size: 1.3rem;
+
+  transition: all 1.3s ease-in-out;
+}
+
+#cyclone-container > img {
+  height: 22px;
+}
+
+#cyclone-container:hover > img {
+  filter: drop-shadow(0 0px 5px #fffce8);
 }
