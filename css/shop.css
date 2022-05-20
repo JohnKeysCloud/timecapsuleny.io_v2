@@ -577,6 +577,9 @@ header {
   justify-content: space-around;
 
   padding-top: 13px;
+
+  position: sticky;
+  top: 0px
 }
 
 nav {
@@ -978,9 +981,10 @@ main {
  */
 
 footer {
-  position: absolute;
+  position: sticky;
   bottom: 0;
   left: auto;
+  right: auto;
   width: 100vw;
 
   display: flex;
