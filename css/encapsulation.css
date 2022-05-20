@@ -876,23 +876,20 @@ main {
 }
 
 table {
-  background-size: cover;
-  border-spacing: 28px 3px;
+  /* background-size: cover; */
+  border-spacing: 0px 3px;
   /* border-collapse: collapse; */
   border-radius: 21rem;
   box-shadow: inset 0 0 18px skyblue, 0 0 55px chartreuse;
   font-family: 'PixeBoy';
   font-style: italic;
   line-height: 0px;
-  margin: 0rem auto 0rem auto;
   padding: 5rem 11rem 8rem 11rem;
   table-layout: fixed;
   text-shadow: 0 0 3px black;
-  transition: all 5s ease-in;
-  width: 80vw;
-
+  
   animation: 1.8s linear infinite alternate sb-hover;
-
+  transition: all 5s ease-in;
 }
 
 table:hover {
