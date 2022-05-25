@@ -568,7 +568,6 @@ main {
   
   transition: all 0.8s ease-out;
   width: 55vw;
-  position: relative;
 }
 
 .item-container:hover {
@@ -635,6 +634,8 @@ main {
 } */
 
 .item-header {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   
@@ -735,7 +736,7 @@ main {
 .item_description {
   position: absolute;
   top: 0px;
-  right: 300px;
+  right: auto;
   
   background: rgba(0, 0, 0, 0.535);
   border-radius: 50px;
@@ -750,10 +751,10 @@ main {
   transform-origin: center;
 }
 
-.item-container:hover > .item_description {
+.item-container:hover > .item-header > .item_description {
   position: absolute;
-  top: 210px;
-  right: 46.5%;
+  top: 113px;
+  right: auto;
 
   height: 300px;
   width: 300px;
@@ -829,7 +830,7 @@ main {
 /* rocketSh*t pressStart */
 #rocket_and_words {
   position: absolute;
-  right: 250px;
+  right: 265px;
   top: 140px;
   z-index: 0;
 
@@ -853,7 +854,7 @@ main {
 #rocket_and_words:after {
   position: absolute;
   top: -100px;
-  right: -3.8px;
+  right: -11px;
   z-index: 0;
 
   content: '🚀';
@@ -875,16 +876,19 @@ main {
 }
 /* ROCKET gameOver */
 
+/* WARNING pressStart */
 #rocket_and_words::before {
   position: absolute;
-  top: -162px;
-  left: -220px;
-
+  top: -155px;
+  left: -190px;
+  
   content: url(../imgs/misc/warning.gif);
   
-  transform: scale(0.06) rotate(1deg);
+  transform: scale(0.07);
 }
+/* WARNING gameOver */
 
+/* SMOKE pressStart */
 #rocket_container::before {
   position: absolute;
   bottom: 260px;
@@ -910,6 +914,7 @@ main {
 
   transform: scale(0.7) rotate(-110deg);
 }
+/* SMOKE gameOver */
 
 #here {
   font-size: 2.5rem;
@@ -927,7 +932,7 @@ main {
 /* scentBox pressStart */
 #scent_box {
   position: absolute;
-  top: 22px;
+  top: 24px;
   left: -145px;
   z-index: 1;
 
@@ -947,10 +952,10 @@ main {
 }
 
 #scent_box:hover {
-  top: 3px;
-  left: -165px;
+  top: 7px;
+  left: -160px;
   
-  transform: scale(1.1);
+  transform: rotate(0) scale(1.1);
 }   
 
 #twk_scentbox {
