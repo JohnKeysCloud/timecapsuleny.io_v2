@@ -590,16 +590,12 @@ main {
   transition: 0.3s ease-out;
 }
 
-.item:hover > img {
-  transform: scale(1.3);
-}
-
 .item-container:hover > .item:nth-of-type(even) > img {
-  transform: rotate(18deg); 
+  transform: rotate(18deg) scale(1.2); 
 }
 
 .item-container:hover > .item:nth-of-type(odd) > img {
-  transform: rotate(-18deg); 
+  transform: rotate(-18deg) scale(1.2); 
 }
 
 /* .item-container:hover > .item-header:nth-of-type(even) {
