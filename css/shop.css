@@ -544,11 +544,13 @@ main {
   margin-bottom: 8vh;
   width: 55vw;
 
-  transition: all 0.8s ease-out;
+  transition: all 0.5s ease-out;
+
+  /* border: 1px solid red; */
 }
 
 .item-container:hover {
-  margin-bottom: 200px;
+  margin-bottom: 275px;
 }
 
 .item-container:nth-of-type(odd) {
@@ -725,7 +727,7 @@ main {
 
 .item-container:hover > .item-header > .item_description {
   position: absolute;
-  top: 125px;
+  top: 100px;
   right: auto;
 
   height: 300px;
