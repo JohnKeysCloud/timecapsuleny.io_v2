@@ -172,9 +172,8 @@ body {
   top: 0;
   
   display: block;
-  width: 100%;
-  height: 100%;
-  /* opacity: 0.3; */
+  min-width: 100%;
+  min-height: 100%;
   
   background-image: url('../imgs/logos/theWonderKid.png');
   background-position: 50% 0;
@@ -538,13 +537,14 @@ main {
 
 .item-container {
   display: flex;
+  gap: 33px;
 
   align-items: center;
-  justify-content: center;
-  /* margin-bottom: 30px; */
   
-  transition: all 0.8s ease-out;
+  margin-bottom: 8vh;
   width: 55vw;
+
+  transition: all 0.8s ease-out;
 }
 
 .item-container:hover {
@@ -552,19 +552,19 @@ main {
 }
 
 .item-container:nth-of-type(odd) {
-  margin-right: 383px;
+  justify-content: flex-start;
 }
 
 .item-container:nth-of-type(odd):hover {
-  margin-right: 500px;
+  margin-right: 333px;
 }
 
 .item-container:nth-of-type(even) {
-  margin-right: -380px;
+  justify-content: flex-end;
 }
 
 .item-container:nth-of-type(even):hover {
-  margin-right: -500px;
+  margin-right: -333px;
 }
 
 .item {
@@ -615,15 +615,14 @@ main {
 
   display: flex;
   flex-direction: column;
-  
+
   align-items: center;
   
-  padding: 20px 21px 15px 21px;
   text-align: center;
 
-  animation: item-des-bg 1.3s linear infinite alternate;
-  
   transition: all 0.8s ease-out;
+
+  animation: item-des-bg 1.3s linear infinite alternate;
 }
 
 .item-header > h1 {
