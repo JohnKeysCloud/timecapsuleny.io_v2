@@ -558,7 +558,7 @@ main {
 }
 
 .item-container:nth-of-type(odd):hover {
-  margin-right: 333px;
+  margin-right: 222px;
 }
 
 .item-container:nth-of-type(even) {
@@ -566,7 +566,7 @@ main {
 }
 
 .item-container:nth-of-type(even):hover {
-  margin-right: -333px;
+  margin-right: -222px;
 }
 
 .item {
