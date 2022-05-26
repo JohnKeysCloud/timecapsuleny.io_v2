@@ -1258,26 +1258,26 @@ footer p {
   } */
 }
 
-/* @media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
 
-  @keyframes game-float {
+    @keyframes game-float {
     from {
       opacity: 0.8;
     }
 
     25% {
-      transform: scale(0.9);
       opacity: 0.55;
+      transform: scale(0.55);
     }
 
     50% {
-      transform: scale(1);
       opacity: 1;
+      transform: scale(0.8);
     }
 
     75% {
-      transform: scale(0.9);
       opacity: 0.55;
+      transform: scale(0.55);
     }
 
     to {
@@ -1285,29 +1285,12 @@ footer p {
     }
   }
 
+    #menu-btn.open ~ nav ul {
+      height: 333px;
+      width: 333px;
+    }
+
   header {
-    width: max-content;
-    overflow-x: hidden;
     justify-content: center;
   }
-
-  #header-logo {
-    animation: rgb-pulse 2.2s linear infinite alternate, game-float 5s linear infinite alternate;
-    height: 7rem;
-  } 
-
-  ul {
-    display: flex;
-    flex-direction: column;
-
-    list-style: none;
-    padding: 0;
-  }
-
-  #menu-btn.open~nav {
-    margin-right: 0px;
-    opacity: 1;
-    overflow: hidden;
-    pointer-events: auto;
-  }
-} */
+}
