@@ -1173,13 +1173,13 @@ footer p {
   #menu-btn.open ~ nav ul {
     display: flex;
     flex-direction: column;
-    
+
     align-items: center;
     justify-content: center;
     gap: 55px;
     
     /* background: linear-gradient(to bottom, black, var(--neon-red)); */
-    background: url('/imgs/logos/c.gif'), linear-gradient(to bottom, black, var(--neon-red));
+    background: url('../imgs/logos/c.gif'), linear-gradient(to bottom, black, var(--neon-red));
     background-position: center;
     
     border: 2px solid var(--neon-red);
