@@ -1096,7 +1096,7 @@ footer p {
   filter: drop-shadow(0 0px 5px #fffce8);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 875px) {
 
   .item-container:nth-of-type(odd), 
   .item-container:nth-of-type(even) {
