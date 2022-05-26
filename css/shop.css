@@ -540,6 +540,7 @@ main {
   gap: 33px;
 
   align-items: center;
+  justify-content: center;
   
   margin-bottom: 8vh;
   width: 55vw;
@@ -554,7 +555,7 @@ main {
 }
 
 .item-container:nth-of-type(odd) {
-  justify-content: flex-start;
+  flex-direction: row-reverse;
 }
 
 .item-container:nth-of-type(odd):hover {
@@ -562,7 +563,8 @@ main {
 }
 
 .item-container:nth-of-type(even) {
-  justify-content: flex-end;
+  flex-direction: row;  
+  /* default */
 }
 
 .item-container:nth-of-type(even):hover {
@@ -580,11 +582,11 @@ main {
 }
 
 .item:nth-of-type(even) {
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .item:nth-of-type(odd) {
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .item > img {
@@ -592,11 +594,11 @@ main {
   transition: 0.3s ease-out;
 }
 
-.item-container:hover > .item:nth-of-type(even) > img {
+.item-container:hover:nth-of-type(even) > .item > img {
   transform: rotate(18deg) scale(1.2); 
 }
 
-.item-container:hover > .item:nth-of-type(odd) > img {
+.item-container:hover:nth-of-type(odd) > .item > img {
   transform: rotate(-18deg) scale(1.2); 
 }
 
@@ -709,7 +711,7 @@ main {
 
 .item_description {
   position: absolute;
-  top: 0px;
+  top: -100px;
   right: auto;
   
   background: rgba(0, 0, 0, 0.535);
@@ -734,7 +736,7 @@ main {
   width: 300px;
   
   opacity: 1;
-  transform: scale(1) rotate(720deg);
+  transform: scale(1) rotate(-720deg);
 }
 
 #hoodie_ul {
@@ -1092,4 +1094,41 @@ footer p {
 
 #cyclone-container:hover > img {
   filter: drop-shadow(0 0px 5px #fffce8);
+}
+
+@media only screen and (max-width: 768px) {
+
+  .item-container:nth-of-type(odd), 
+  .item-container:nth-of-type(even) {
+    flex-direction: column;
+  }
+
+  .item-container:nth-of-type(odd):hover,
+  .item-container:nth-of-type(even):hover {
+    margin-right: 0;
+    margin-bottom: 375px;
+  }
+  .item-container:hover:nth-of-type(odd) > .item > img,
+  .item-container:hover:nth-of-type(even) > .item > img {
+    transform: rotate(0) scale(1); 
+  }
+  .item-container:hover > .item-header > .item_description {
+    top: 450px;
+  }
+  .item_description {
+    transform: scale(0.05);
+  }
+  #scent_box {
+    transform: scale(0.73) rotate(-18deg);
+    top: 18px;
+    left: -110px;
+  }
+  #scent_box:hover {
+    top: 58px;
+    left: 31.5px;
+    transform: rotate(0) scale(1.2);
+  }   
+  #scent_box:hover ~ #rocket_smoke::before {
+    opacity: 0;
+  }
 }
