@@ -1262,7 +1262,7 @@ footer p {
   } */
 }
 
-@media only screen and (max-width: 480px) {
+/* @media only screen and (max-width: 480px) {
 
   @keyframes game-float {
     from {
@@ -1314,4 +1314,4 @@ footer p {
     overflow: hidden;
     pointer-events: auto;
   }
-}
+} */
