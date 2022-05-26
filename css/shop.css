@@ -217,6 +217,7 @@ header {
 
   position: sticky;
   top: 0px;
+  z-index: 2;
 }
 
 nav {
@@ -225,6 +226,7 @@ nav {
   overflow: hidden;
   pointer-events: none;
   transition: all 1.8s ease-out;
+
 }
 
 nav ul {
@@ -597,11 +599,11 @@ main {
   transform: rotate(-18deg) scale(1.2); 
 }
 
-/* .item-container:hover > .item-header:nth-of-type(even) {
+/* .item-container:nth-of-type(even) > .item-header {
   transform: rotate(-18deg);
 }
 
-.item-container:hover > .item-header:nth-of-type(odd) {
+.item-container:nth-of-type(odd) > .item-header {
   transform: rotate(18deg);
 } */
 
@@ -1110,18 +1112,18 @@ footer p {
     }
 
     25% {
-      transform: scale(0.9);
       opacity: 0.55;
+      transform: scale(0.9);
     }
 
     50% {
-      transform: scale(1);
       opacity: 1;
+      transform: scale(1);
     }
 
     75% {
-      transform: scale(0.9);
       opacity: 0.55;
+      transform: scale(0.9);
     }
 
     to {
@@ -1134,91 +1136,85 @@ footer p {
   }
 
   #header-logo {
-    animation: rgb-pulse 2.2s linear infinite alternate, game-float 5s linear infinite alternate;
     height: 7rem;
+    
+    animation: rgb-pulse 2.2s linear infinite alternate, game-float 5s linear infinite alternate;
   } 
 
   nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
+  }
+
+  #menu-btn.open ~ nav {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1); 
     z-index: 1;
 
-    background-color: hsla(0, 0%, 0%, 0.7);
-    max-width: 100%;
-    height: 100vh;
-    width: 100vw;
+    display: flex;
 
-    opacity: 0;
-    overflow: hidden;
-    pointer-events: none;
+    justify-content: center;
+    align-items: center;
 
-    transition: all 0.3s ease-in-out;
+    background-color: rgba(49, 32, 43, 0.888);
+    min-height: 100vh;
+    min-width: 100vw;
+
+    opacity: 1;
+    overflow: visible;   
+    
+    transition: none;
   }
 
-  nav a {
-    filter: drop-shadow(0 0 1px black);
-
-  }
-
-  nav ul {
+  #menu-btn.open ~ nav ul {
     display: flex;
     flex-direction: column;
+    
     align-items: center;
     justify-content: center;
-    gap: 33px;
-
-    background: linear-gradient(to bottom, black, #fffce8);
+    gap: 55px;
+    
+    /* background: linear-gradient(to bottom, black, var(--neon-red)); */
+    background: url('/imgs/logos/c.gif'), linear-gradient(to bottom, black, var(--neon-red));
     background-position: center;
-    background-size: cover;
-
-
+    
     border: 2px solid var(--neon-red);
     border-radius: 50%;
     box-shadow: 0 0 55px var(--neon-red), inset 0 0 55px var(--neon-pink);
-    height: 333px;
-    width: 333px;
+    height: 475px;
+    width: 475px;
+    
+    transform: rotate(-360deg) scale(1);
+    transition: transform 1.5s ease-in-out;
+
 
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
   }
-
-  nav ul > li:nth-of-type(even) {
-    transform: rotate(5deg);
+  
+  #menu-btn.open ~ nav ul > li:nth-of-type(even) {
+    transform: rotate(365deg) scale(1.5);
+    transition: all 1.8s ease-in-out;
   }
-  nav ul > li:nth-of-type(odd) {
-    transform: rotate(-5deg);
+  
+  #menu-btn.open ~ nav ul > li:nth-of-type(odd) {
+    transform: rotate(-365deg) scale(1.5);
+    transition: all 1.8s ease-in-out;
+  }
+
+  #menu-btn.open ~ nav ul > li:nth-of-type(even):hover {
+    transform: rotate(360deg) scale(2.2);
+  }
+
+  #menu-btn.open ~ nav ul > li:nth-of-type(odd):hover {
+    transform: rotate(-360deg) scale(2.2);
   }
 
   .nav-link {
     margin: 0;
-  }
-
-  #menu-btn.open~nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    z-index: 1;
-
-    background-color: hsla(0, 0%, 0%, 0.7);
-    max-width: 100%;
-    height: 100vh;
-    width: 100vw;
-
-    opacity: 1;
-    overflow: visible;
-    pointer-events: auto;
   }
   
   .item-container:nth-of-type(odd), 
