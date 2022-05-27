@@ -1235,6 +1235,7 @@ footer p {
   .item-container:nth-of-type(odd), 
   .item-container:nth-of-type(even) {
     flex-direction: column;
+    margin-bottom: 100px;
   }
 
   .item-container:nth-of-type(odd):hover,
