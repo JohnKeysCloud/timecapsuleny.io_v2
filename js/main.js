@@ -1,6 +1,6 @@
 /* 
   ┌─────────────────────────────────────────────────────────────────────────┐
-  │ opensNavMenuBtnAndDisplaysThemeBtn // homePageOnly                      │
+  │ opensNavMenuBtnAndDisplaysThemeBtn                     │
   │ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇                                                    │
   └─────────────────────────────────────────────────────────────────────────┘
  */

@@ -119,6 +119,10 @@ header {
   justify-content: space-around;
 
   padding-top: 13px;
+
+  position: sticky;
+  top: 0px;
+  z-index: 2;
 }
 
 nav {
@@ -722,12 +726,21 @@ tr:nth-child(even) .coin_cells {
  */
 
 footer {
+  position: sticky;
+  bottom: 0;
+  left: auto;
+  right: auto;
+  width: 100vw;
+
   display: flex;
   flex-direction: column;
+
   align-items: center;
   justify-content:flex-end;
 
   height: 98.195px;
+
+  z-index: 2;
 }
 
 footer:hover {
