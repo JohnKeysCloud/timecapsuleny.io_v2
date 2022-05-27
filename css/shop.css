@@ -1285,12 +1285,36 @@ footer p {
     }
   }
 
-    #menu-btn.open ~ nav ul {
-      height: 333px;
-      width: 333px;
-    }
+  #menu-btn.open ~ nav ul {
+    height: 255px;
+    width: 255px;
+  }
 
   header {
     justify-content: center;
+  }
+
+  #menu-btn.open ~ nav ul {
+    gap: 18px;
+    
+    background-size: 300px 300px;
+  }
+
+  #menu-btn.open ~ nav ul > li:nth-of-type(even) {
+    transform: rotate(365deg) scale(0.8);
+    transition: all 1.8s ease-in-out;
+  }
+  
+  #menu-btn.open ~ nav ul > li:nth-of-type(odd) {
+    transform: rotate(-365deg) scale(0.8);
+    transition: all 1.8s ease-in-out;
+  }
+
+  #menu-btn.open ~ nav ul > li:nth-of-type(even):hover {
+    transform: rotate(360deg) scale(2.2);
+  }
+
+  #menu-btn.open ~ nav ul > li:nth-of-type(odd):hover {
+    transform: rotate(-360deg) scale(2.2);
   }
 }
