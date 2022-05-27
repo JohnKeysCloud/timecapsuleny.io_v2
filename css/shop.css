@@ -1283,7 +1283,7 @@ footer p {
   } */
 }
 
-/* @media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
 
     @keyframes game-float {
     from {
@@ -1342,4 +1342,4 @@ footer p {
   #menu-btn.open ~ nav ul > li:nth-of-type(odd):hover {
     transform: rotate(-360deg) scale(1.3);
   }
-} */
+}
