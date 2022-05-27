@@ -1286,8 +1286,8 @@ footer p {
   }
 
   #menu-btn.open ~ nav ul {
-    height: 255px;
-    width: 255px;
+    height: 288px;
+    width: 288px;
   }
 
   header {
@@ -1295,18 +1295,18 @@ footer p {
   }
 
   #menu-btn.open ~ nav ul {
-    gap: 23px;
+    gap: 28px;
     
     background-size: 300px 300px;
   }
 
   #menu-btn.open ~ nav ul > li:nth-of-type(even) {
-    transform: rotate(365deg) scale(1);
+    transform: rotate(365deg) scale(1.15);
     transition: all 1.8s ease-in-out;
   }
   
   #menu-btn.open ~ nav ul > li:nth-of-type(odd) {
-    transform: rotate(-365deg) scale(1);
+    transform: rotate(-365deg) scale(1.15);
     transition: all 1.8s ease-in-out;
   }
 
