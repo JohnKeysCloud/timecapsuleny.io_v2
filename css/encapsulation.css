@@ -817,3 +817,235 @@ footer p {
 #cyclone-container:hover > img {
   filter: drop-shadow(0 0px 5px #fffce8);
 }
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+  @keyframes game-float {
+    from {
+      opacity: 0.8;
+    }
+
+    25% {
+      opacity: 0.55;
+      transform: scale(0.9);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    75% {
+      opacity: 0.55;
+      transform: scale(0.9);
+    }
+
+    to {
+      opacity: 0.8;
+    }
+  }
+
+  header {
+    z-index: 2;
+  }
+
+  #header-logo {
+    height: 7rem;
+    
+    animation: rgb-pulse 2.2s linear infinite alternate, game-float 5s linear infinite alternate;
+  } 
+
+  nav {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+
+  #menu-btn.open ~ nav {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1); 
+    z-index: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(49, 32, 43, 0.888);
+    min-height: 100vh;
+    min-width: 100vw;
+
+    opacity: 1;
+    overflow: visible;   
+    
+    transition: none;
+  }
+
+  #menu-btn.open ~ nav ul {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+    
+    /* background: linear-gradient(to bottom, black, var(--neon-red)); */
+    background: url('../imgs/logos/c.gif'), linear-gradient(to bottom, black, var(--neon-red));
+    background-position: center;
+    
+    border: 2px solid var(--neon-red);
+    border-radius: 50%;
+    box-shadow: 0 0 55px var(--neon-red), inset 0 0 55px var(--neon-pink);
+    height: 475px;
+    width: 475px;
+    
+    transform: rotate(-360deg) scale(1);
+    transition: transform 1.5s ease-in-out;
+
+
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  }
+  
+  #menu-btn.open ~ nav ul > li:nth-of-type(even) {
+    transform: rotate(365deg) scale(1.5);
+    transition: all 1.8s ease-in-out;
+  }
+  
+  #menu-btn.open ~ nav ul > li:nth-of-type(odd) {
+    transform: rotate(-365deg) scale(1.5);
+    transition: all 1.8s ease-in-out;
+  }
+
+  #menu-btn.open ~ nav ul > li:nth-of-type(even):hover {
+    transform: rotate(360deg) scale(2.2);
+  }
+
+  #menu-btn.open ~ nav ul > li:nth-of-type(odd):hover {
+    transform: rotate(-360deg) scale(2.2);
+  }
+
+  .nav-link {
+    margin: 0;
+  }
+  
+  .item-container:nth-of-type(odd), 
+  .item-container:nth-of-type(even) {
+    flex-direction: column;
+  }
+
+  .item-container:nth-of-type(odd):hover,
+  .item-container:nth-of-type(even):hover {
+    margin-right: 0;
+    margin-bottom: 375px;
+  }
+
+  .item-container:hover:nth-of-type(odd) > .item > img,
+  .item-container:hover:nth-of-type(even) > .item > img {
+    transform: rotate(0) scale(1); 
+  }
+
+  .item-container:hover > .item-header > .item_description {
+    top: 450px;
+  }
+
+  .item_description {
+    transform: scale(0.05);
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+
+    height: max-content;
+    width: max-content;
+
+    transition: all 0.8s ease-out;
+  }
+
+  /* #scent_box {
+    transform: scale(0.73) rotate(-18deg);
+    top: 18px;
+    left: -110px;
+  }
+
+  #scent_box:hover {
+    top: 58px;
+    left: 31.5px;
+    transform: rotate(0) scale(1.2);
+  }   */
+
+  /* #scent_box:hover ~ #rocket_smoke::before {
+  
+  } */
+}
+
+@media only screen and (max-width: 480px) {
+
+    @keyframes game-float {
+    from {
+      opacity: 0.8;
+    }
+
+    25% {
+      opacity: 0.55;
+      transform: scale(0.55);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(0.8);
+    }
+
+    75% {
+      opacity: 0.55;
+      transform: scale(0.55);
+    }
+
+    to {
+      opacity: 0.8;
+    }
+  }
+
+  #menu-btn.open ~ nav ul {
+    height: 288px;
+    width: 288px;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  #menu-btn.open ~ nav ul {
+    gap: 28px;
+    
+    background-size: 300px 300px;
+  }
+
+  #menu-btn.open ~ nav ul > li:nth-of-type(even) {
+    transform: rotate(365deg) scale(1.15);
+    transition: all 1.8s ease-in-out;
+  }
+  
+  #menu-btn.open ~ nav ul > li:nth-of-type(odd) {
+    transform: rotate(-365deg) scale(1.15);
+    transition: all 1.8s ease-in-out;
+  }
+
+  #menu-btn.open ~ nav ul > li:nth-of-type(even):hover {
+    transform: rotate(360deg) scale(1.3);
+  }
+
+  #menu-btn.open ~ nav ul > li:nth-of-type(odd):hover {
+    transform: rotate(-360deg) scale(1.3);
+  }
+}

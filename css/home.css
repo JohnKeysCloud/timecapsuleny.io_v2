@@ -151,13 +151,15 @@ body {
  */
 
 header {
-  position: relative;
-
   display: flex;
   align-items: center;
   justify-content: space-around;
 
   padding-top: 13px;
+
+  position: sticky;
+  top: 0px;
+  z-index: 2;
 }
 
 nav {
@@ -166,9 +168,10 @@ nav {
   overflow: hidden;
   pointer-events: none;
   transition: all 1.8s ease-out;
+
 }
 
-ul {
+nav ul {
   display: flex;
 
   list-style: none;
@@ -176,14 +179,13 @@ ul {
   width: max-content;
 }
 
-header a {
-  padding: 6px 12px;
-  text-decoration: none;
-}
-
 #header-logo {
   animation: rgb-pulse 2.2s linear infinite alternate, game-float 5s linear infinite alternate;
+  padding: 6px 12px;
   height: 8rem;
+
+  position: relative;
+  z-index: 2;
 }
 
 #header-logo:hover {
@@ -212,6 +214,8 @@ header a {
   padding: 5px;
   width: 55px;
   transition: 0.5s all ease-in;
+
+  z-index: 2;
 }
 
 #menu-btn:hover {
@@ -221,19 +225,19 @@ header a {
 #menu-btn-san {
   display: flex;
   justify-content: center;
-  
+
   background: hsl(52, 100%, 95%);
   border-radius: 8px;
   box-shadow: 0 0 8px 2px #fffce8;
   height: 3px;
   width: 20px;
-  
+
   transition: all .3s ease-in-out;
 }
 
 #menu-btn-san::before {
   content: '';
-  
+
   background: hsl(52, 100%, 95%);
   border-radius: 3px;
   box-shadow: 0 0 8px 2px #fffce8;
@@ -247,7 +251,7 @@ header a {
 
 #menu-btn-san::after {
   content: '';
-  
+
   background: hsl(52, 100%, 95%);
   border-radius: 3px;
   box-shadow: 0 0 8px 2px #fffce8;
@@ -272,7 +276,7 @@ header a {
   opacity: 0.8;
   transform: rotate(405deg);
   transition: all 1.8s ease-out;
-  width: 33px; 
+  width: 33px;
 }
 
 #menu-btn.open #menu-btn-san::after {
@@ -281,9 +285,9 @@ header a {
   transform: rotate(-405deg);
   transition: all 1.8s ease-out;
   width: 33px;
-} 
+}
 
-#menu-btn.open ~ nav {
+#menu-btn.open~nav {
   margin-right: 655px;
   opacity: 1;
   overflow: visible;
@@ -401,16 +405,11 @@ header a {
   color: var(--bg-clr);
 }
 
-.nav-link { 
-  border: var(--border);
-  box-shadow: var(--box-shadow);
-  color: var(--color);
-  text-shadow: var(--text-shadow);
-
+.nav-link {
   position: relative;
 
   font-size: 1.8rem;
-  
+
   border-radius: 0.3em;
   padding: 0.3em 0.8em;
   text-decoration: none;
@@ -420,30 +419,17 @@ header a {
 
 .nav-link::before {
   content: '';
-  
+
   position: absolute;
-  top: 3rem;
+  top: 30px;
   right: 0;
-  
+
   filter: blur(0.6em);
   height: 100%;
   opacity: 0.2;
   pointer-events: none;
   transform: perspective(0.2em) rotateX(10deg) scale(1, 0.8);
   width: 100%;
-}
-
-.nav-link::after {
-  content: '';
-
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-
-  transition: background-color 333ms linear;
 }
 
 .nav-link:hover,
@@ -455,14 +441,9 @@ header a {
   outline: none;
 }
 
-.nav-link:hover::before, 
+.nav-link:hover::before,
 .nav-link:focus::before {
   opacity: 1;
-}
-
-.nav-link:hover::after, 
-.nav-link:focus::after {
-  opacity: 1;      
 }
 
 /* 
@@ -919,4 +900,234 @@ footer p:hover ~ a {
   font-size: 2rem;
   letter-spacing: 1px;
   text-shadow: 0 0 10px;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+  @keyframes game-float {
+    from {
+      opacity: 0.8;
+    }
+
+    25% {
+      opacity: 0.55;
+      transform: scale(0.9);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    75% {
+      opacity: 0.55;
+      transform: scale(0.9);
+    }
+
+    to {
+      opacity: 0.8;
+    }
+  }
+
+  header {
+    z-index: 2;
+  }
+
+  #header-logo {
+    height: 7rem;
+    
+    animation: rgb-pulse 2.2s linear infinite alternate, game-float 5s linear infinite alternate;
+  } 
+
+  nav {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+
+  #menu-btn.open ~ nav {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1); 
+    z-index: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(49, 32, 43, 0.888);
+    min-height: 100vh;
+    min-width: 100vw;
+
+    opacity: 1;
+    overflow: visible;   
+    
+    transition: none;
+  }
+
+  #menu-btn.open ~ nav ul {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+    
+    /* background: linear-gradient(to bottom, black, var(--neon-red)); */
+    background: url('../imgs/logos/c.gif'), linear-gradient(to bottom, black, var(--neon-red));
+    background-position: center;
+    
+    border: 2px solid var(--neon-red);
+    border-radius: 50%;
+    box-shadow: 0 0 55px var(--neon-red), inset 0 0 55px var(--neon-pink);
+    height: 475px;
+    width: 475px;
+    
+    transform: rotate(-360deg) scale(1);
+    transition: transform 1.5s ease-in-out;
+
+
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  }
+  
+  #menu-btn.open ~ nav ul > li:nth-of-type(even) {
+    transform: rotate(365deg) scale(1.5);
+    transition: all 1.8s ease-in-out;
+  }
+  
+  #menu-btn.open ~ nav ul > li:nth-of-type(odd) {
+    transform: rotate(-365deg) scale(1.5);
+    transition: all 1.8s ease-in-out;
+  }
+
+  #menu-btn.open ~ nav ul > li:nth-of-type(even):hover {
+    transform: rotate(360deg) scale(2.2);
+  }
+
+  #menu-btn.open ~ nav ul > li:nth-of-type(odd):hover {
+    transform: rotate(-360deg) scale(2.2);
+  }
+
+  .nav-link {
+    margin: 0;
+  }
+  
+  .item-container:nth-of-type(odd), 
+  .item-container:nth-of-type(even) {
+    flex-direction: column;
+  }
+
+  .item-container:nth-of-type(odd):hover,
+  .item-container:nth-of-type(even):hover {
+    margin-right: 0;
+    margin-bottom: 375px;
+  }
+
+  .item-container:hover:nth-of-type(odd) > .item > img,
+  .item-container:hover:nth-of-type(even) > .item > img {
+    transform: rotate(0) scale(1); 
+  }
+
+  .item-container:hover > .item-header > .item_description {
+    top: 450px;
+  }
+
+  .item_description {
+    transform: scale(0.05);
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+
+    height: max-content;
+    width: max-content;
+
+    transition: all 0.8s ease-out;
+  }
+
+  /* #scent_box {
+    transform: scale(0.73) rotate(-18deg);
+    top: 18px;
+    left: -110px;
+  }
+
+  #scent_box:hover {
+    top: 58px;
+    left: 31.5px;
+    transform: rotate(0) scale(1.2);
+  }   */
+
+  /* #scent_box:hover ~ #rocket_smoke::before {
+  
+  } */
+}
+
+@media only screen and (max-width: 480px) {
+
+    @keyframes game-float {
+    from {
+      opacity: 0.8;
+    }
+
+    25% {
+      opacity: 0.55;
+      transform: scale(0.55);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(0.8);
+    }
+
+    75% {
+      opacity: 0.55;
+      transform: scale(0.55);
+    }
+
+    to {
+      opacity: 0.8;
+    }
+  }
+
+  #menu-btn.open ~ nav ul {
+    height: 288px;
+    width: 288px;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  #menu-btn.open ~ nav ul {
+    gap: 28px;
+    
+    background-size: 300px 300px;
+  }
+
+  #menu-btn.open ~ nav ul > li:nth-of-type(even) {
+    transform: rotate(365deg) scale(1.15);
+    transition: all 1.8s ease-in-out;
+  }
+  
+  #menu-btn.open ~ nav ul > li:nth-of-type(odd) {
+    transform: rotate(-365deg) scale(1.15);
+    transition: all 1.8s ease-in-out;
+  }
+
+  #menu-btn.open ~ nav ul > li:nth-of-type(even):hover {
+    transform: rotate(360deg) scale(1.3);
+  }
+
+  #menu-btn.open ~ nav ul > li:nth-of-type(odd):hover {
+    transform: rotate(-360deg) scale(1.3);
+  }
 }
