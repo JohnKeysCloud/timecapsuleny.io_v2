@@ -744,7 +744,7 @@ main {
   top: 100px;
   right: auto;
 
-  height: 300px;
+  height: 275px;
   width: 300px;
   
   opacity: 1;
@@ -759,8 +759,8 @@ main {
 
   font-weight: bold;
   list-style-type: '\1F4AD';
-  margin: 0 0 13px 40px;
-  padding-top: 10px;
+  margin: 0 0 13px 0px;
+  padding-top: 18px;
   width: 90%;
   
   transition: all 0.3s ease-in-out;
@@ -769,9 +769,9 @@ main {
 .hoodie_li {
   color: #fffce8;
   font-family: "GoshaSansRegular";
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 100;
-  text-indent: 10px;
+  text-indent: 3px;
   text-shadow: 0px 0 3px var(--neon-red);
 }
 
@@ -819,12 +819,12 @@ main {
 #rocket::before {
   position: absolute;
   top: 55px;
-  right: 269px;
+  right: 295px;
   
   content: '🚀';
   filter: drop-shadow(0 0 3px var(--neon-red));
   
-  transform: scale(3.3) rotate(-55deg);
+  transform: scale(2.8) rotate(-55deg);
   transition: top, right, transform, 3.3s ease-in;
 
   z-index: 0;
@@ -839,28 +839,28 @@ main {
 
 #rocket_smoke::before {
   position: absolute;
-  right: 65px;
-  bottom: 260px;
+  right: 88px;
+  bottom: 211px;
   
   content: url(../imgs/misc/rocketSmoke.gif);
   filter: drop-shadow(0 0 3px #fffce8);
   
   opacity: 0;
   
-  transform: scale(0.1) rotate(-93deg);
+  transform: scale(0.1) rotate(-94deg);
   transform-origin: bottom;
-  transition: all 1.03s ease-in;
+  transition: all 0.92s ease-in;
 
   z-index: 1;
 }
 
 #scent_box:hover ~ #rocket_smoke::before {
-  right: 60px;
-  bottom: 450px;
+  right: 77px;
+  bottom: 388px;
   
   opacity: 0.5;
 
-  transform: scale(0.55) rotate(-98deg);
+  transform: scale(0.55) rotate(-95deg);
 }
 /* rocketSh*t gameOver */
 
@@ -868,7 +868,7 @@ main {
 #scent_box {
   position: absolute;
   top: 20px;
-  left: -110px; 
+  left: -145px; 
   z-index: 2;
 
   display: flex;
@@ -887,15 +887,15 @@ main {
 }
 
 #scent_box:hover {
-  top: 7px;
-  left: -130px;
+  top: 8px;
+  left: -155px;
   
   transform: rotate(0) scale(1);
 }   
 
 #twk_scentbox {
   position: absolute;
-  bottom: 111px;
+  bottom: 117px;
   right: 45px;
   z-index: 2;
 
@@ -915,8 +915,8 @@ main {
 }
 
 #twk_scentbox:hover {
-  bottom: 10.8rem;
-  right: 3.8rem;
+  bottom: 118px;
+  right: 38px;
 
   border-bottom: 5.8px dotted #67e0f8;
   box-shadow: inset -6px 3px 3px silver, 0 -3px 30px chartreuse;
@@ -928,7 +928,7 @@ main {
 
 #sb_essenced_scentbox {
   position: absolute;
-  bottom: 100px;
+  bottom: 107px;
   left: 45px;
   z-index: 0;
 
@@ -948,7 +948,7 @@ main {
 }
 
 #sb_essenced_scentbox:hover {
-  bottom: 95px;
+  bottom: 105px;
   left: 47px;
 
   font-size: 1.8rem;
@@ -960,19 +960,28 @@ main {
   transform: rotate(11deg);
 }
 
-#scent_des {
-  color: rgb(77, 77, 77);
+#scent_des:hover {
+  color: rgb(188, 189, 190);
   font-family: "PixeBoy";
-  font-size: 1.6rem; 
-  text-shadow: 0 0 3px var(--neon-red);
+  font-size: 1.8rem;
+  line-height: 0.8; 
+  /* text-shadow: 0 0 3px var(--neon-red); */
 
   transition: all 0.5 ease-in;
 }
 
-#scent_des:hover {
-  color: #67e0f8;
+#scent_des > p {
+  color: rgb(77, 77, 77);
   font-family: "PixeBoy";
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  line-height: 0.8; 
+
+  transition: all 0.5 ease-in;
+  margin: 0;
+}
+
+#scent_des > p:hover {
+  color: black;
 }
 
 #vanilla_select {
@@ -982,7 +991,7 @@ main {
   box-shadow: 0px 3px 5px red;
   font-family: "GoshaSansRegular";
   font-size: 1.5rem;
-  height: 22px;
+  /* height: 22px; */
   margin: 8px 0 20px 0;
   padding: 0 50px;
   text-align: center;
@@ -995,6 +1004,10 @@ main {
   box-shadow: 0px 3px 8px red;
 
   transform: scale(1.1);
+}
+
+#scent_box:hover  #vanilla_select {
+  padding: 0 11px;
 }
 /* scentBox gameOver */
 
