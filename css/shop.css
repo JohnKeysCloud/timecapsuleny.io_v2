@@ -819,12 +819,12 @@ main {
 #rocket::before {
   position: absolute;
   top: 55px;
-  right: 299px;
+  right: 269px;
   
   content: '🚀';
   filter: drop-shadow(0 0 3px var(--neon-red));
   
-  transform: scale(4) rotate(-55deg);
+  transform: scale(3.3) rotate(-55deg);
   transition: top, right, transform, 3.3s ease-in;
 
   z-index: 0;
@@ -834,12 +834,12 @@ main {
   top: -1700px;
   right: 700px;
 
-  transform: scale(0) rotate(-60deg);
+  transform: scale(4) rotate(-60deg);
 }
 
 #rocket_smoke::before {
   position: absolute;
-  right: 95px;
+  right: 65px;
   bottom: 260px;
   
   content: url(../imgs/misc/rocketSmoke.gif);
@@ -855,20 +855,20 @@ main {
 }
 
 #scent_box:hover ~ #rocket_smoke::before {
-  right: 88px;
+  right: 60px;
   bottom: 450px;
   
   opacity: 0.5;
 
-  transform: scale(0.55) rotate(-95deg);
+  transform: scale(0.55) rotate(-98deg);
 }
 /* rocketSh*t gameOver */
 
 /* scentBox pressStart */
 #scent_box {
   position: absolute;
-  top: 24px;
-  left: -145px;
+  top: 20px;
+  left: -110px; 
   z-index: 2;
 
   display: flex;
@@ -881,16 +881,16 @@ main {
   border: 1px ridge silver;
   padding: 30px 3px 0 7px;
   text-align: center;
-  transform: rotate(-18deg) scale(1);
+  transform: rotate(-18deg) scale(0.88);
   transition: all 0.7s ease-out;
   width: 230px;
 }
 
 #scent_box:hover {
   top: 7px;
-  left: -160px;
+  left: -130px;
   
-  transform: rotate(0) scale(1.1);
+  transform: rotate(0) scale(1);
 }   
 
 #twk_scentbox {
