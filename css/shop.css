@@ -743,7 +743,19 @@ main {
   /* magic card here */
 }
 
-.item-container:hover > .item-description > .item-description-card {
+.item-container:nth-of-type(even):hover > .item-description > .item-description-card {
+  position: absolute;
+  top: 100px;
+  right: auto;
+
+  height: 275px;
+  width: 300px;
+  
+  opacity: 1;
+  transform: scale(1) rotate(720deg);
+}
+
+.item-container:nth-of-type(odd):hover > .item-description > .item-description-card {
   position: absolute;
   top: 100px;
   right: auto;
@@ -818,55 +830,6 @@ main {
 }
 
 /* TODO: .size_and_submit */
-
-/* rocketSh*t pressStart */
-#rocket::before {
-  position: absolute;
-  top: 55px;
-  right: 295px;
-  
-  content: '🚀';
-  filter: drop-shadow(0 0 3px var(--neon-red));
-  
-  transform: scale(2.8) rotate(-55deg);
-  transition: top, right, transform, 3.3s ease-in;
-
-  z-index: 0;
-}
-
-.scent-box:hover ~ #rocket::before {
-  top: -1700px;
-  right: 700px;
-
-  transform: scale(4) rotate(-60deg);
-}
-
-#rocket_smoke::before {
-  position: absolute;
-  right: 88px;
-  bottom: 211px;
-  
-  content: url(../imgs/misc/rocketSmoke.gif);
-  filter: drop-shadow(0 0 3px #fffce8);
-  
-  opacity: 0;
-  
-  transform: scale(0.1) rotate(-94deg);
-  transform-origin: bottom;
-  transition: all 0.92s ease-in;
-
-  z-index: 1;
-}
-
-.scent-box:hover ~ #rocket_smoke::before {
-  right: 77px;
-  bottom: 388px;
-  
-  opacity: 0.5;
-
-  transform: scale(0.55) rotate(-95deg);
-}
-/* rocketSh*t gameOver */
 
 /* scentBox LEFT pressStart */
 .scent-box {
@@ -1016,27 +979,114 @@ main {
 /* scentBox LEFT gameOver */
 
 /* scentBox RIGHT pressStart */
-#sb-right {
-  position: absolute;
-  top: 20px;
+#sb-right { 
   left: 211px; 
-  z-index: 2;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  background: white;
-  box-shadow: inset -30px -17px 3px silver, -3px 3px 10px 2px var(--neon-red);
-  border-radius: 100px;
-  border: 1px ridge silver;
-  padding: 30px 3px 0 7px;
-  text-align: center;
   transform: rotate(18deg) scale(0.88);
-  transition: all 0.7s ease-out;
-  width: 230px;
+}
+
+#sb-right:hover { 
+  transform: rotate(0deg) scale(0.88);
 }
 /* scentBox RIGHT gameOver */
+
+/* rocketSh*t LEFT pressStart */
+.rocket-left::before {
+  position: absolute;
+  top: 55px;
+  right: 295px;
+  
+  content: '🚀';
+  filter: drop-shadow(0 0 3px var(--neon-red));
+  
+  transform: scale(2.8) rotate(-55deg);
+  transition: top, right, transform, 3.3s ease-in;
+
+  z-index: 0;
+}
+
+.scent-box:hover ~ .rocket-left::before {
+  top: -1700px;
+  right: 700px;
+
+  transform: scale(4) rotate(-50deg);
+}
+
+.rocket-smoke-left::before {
+  position: absolute;
+  right: 88px;
+  bottom: 211px;
+  
+  content: url(../imgs/misc/rocketSmoke.gif);
+  filter: drop-shadow(0 0 3px #fffce8);
+  
+  opacity: 0;
+  
+  transform: scale(0.1) rotate(-94deg);
+  transform-origin: bottom;
+  transition: all 0.92s ease-in;
+
+  z-index: 1;
+}
+
+.scent-box:hover ~ .rocket-smoke-left::before {
+  right: 77px;
+  bottom: 388px;
+  
+  opacity: 0.5;
+
+  transform: scale(0.55) rotate(-95deg);
+}
+/* rocketSh*t LEFT gameOver */
+
+/* rocketSh*t RIGHT pressStart */
+.rocket-right::before {
+  position: absolute;
+  top: 55px;
+  right: -21px;
+  
+  content: '🚀';
+  filter: drop-shadow(0 0 3px var(--neon-red));
+  
+  transform: scale(2.8) rotate(-40deg);
+  transition: top, right, transform, 3.3s ease-in;
+
+  z-index: 0;
+}
+
+.scent-box:hover ~ .rocket-right::before {
+  top: -1700px;
+  right: -421px;
+
+  transform: scale(4) rotate(-35deg);
+}
+
+.rocket-smoke-right::before {
+  position: absolute;
+  right: -227px;
+  bottom: 211px;
+  
+  content: url(../imgs/misc/rocketSmoke.gif);
+  filter: drop-shadow(0 0 3px #fffce8);
+  
+  opacity: 0;
+  
+  transform: scale(0.1) rotate(-74deg);
+  transform-origin: bottom;
+  transition: all 0.92s ease-in;
+
+  z-index: 1;
+}
+
+.scent-box:hover ~ .rocket-smoke-right::before {
+  right: -323px;
+  bottom: 377px;
+  
+  opacity: 0.5;
+
+  transform: scale(0.55) rotate(-75deg);
+}
+/* rocketSh*t RIGHT gameOver */
 
 /* 
   ┌─────────────────────────────────────────────────────────────────────────┐
@@ -1148,16 +1198,13 @@ footer p {
 
 #cyclone-container:hover > img {
   filter: drop-shadow(0 0px 5px #fffce8);
-}
+} 
 
-
-
-
-
-
-
-
-
+/* 
+  ┌─────────────────────────────────────────────────────────────────────────┐
+  │ tabletBreakpoint                                                        │
+  └─────────────────────────────────────────────────────────────────────────┘
+ */
 
 @media only screen and (max-width: 768px) {
 
@@ -1323,6 +1370,12 @@ footer p {
   
   } */
 }
+
+/* 
+  ┌─────────────────────────────────────────────────────────────────────────┐
+  │ mobileBreakpoint                                                        │
+  └─────────────────────────────────────────────────────────────────────────┘
+ */
 
 @media only screen and (max-width: 480px) {
 
