@@ -834,7 +834,7 @@ main {
   z-index: 0;
 }
 
-#scent_box:hover ~ #rocket::before {
+.scent-box:hover ~ #rocket::before {
   top: -1700px;
   right: 700px;
 
@@ -858,7 +858,7 @@ main {
   z-index: 1;
 }
 
-#scent_box:hover ~ #rocket_smoke::before {
+.scent-box:hover ~ #rocket_smoke::before {
   right: 77px;
   bottom: 388px;
   
@@ -869,7 +869,7 @@ main {
 /* rocketSh*t gameOver */
 
 /* scentBox LEFT pressStart */
-#scent_box {
+.scent-box {
   position: absolute;
   top: 20px;
   left: -145px; 
@@ -890,14 +890,14 @@ main {
   width: 230px;
 }
 
-#scent_box:hover {
+.scent-box:hover {
   top: 8px;
   left: -155px;
   
   transform: rotate(0) scale(1);
 }   
 
-#twk_scentbox {
+.twk-scentbox {
   position: absolute;
   bottom: 117px;
   right: 45px;
@@ -918,7 +918,7 @@ main {
   transition: all 0.1s ease-in-out;
 }
 
-#twk_scentbox:hover {
+.twk-scentbox:hover {
   bottom: 118px;
   right: 38px;
 
@@ -930,7 +930,7 @@ main {
   transform: rotate(-20deg);
 }
 
-#sb_essenced_scentbox {
+.sb-essenced-scentbox {
   position: absolute;
   bottom: 107px;
   left: 45px;
@@ -951,7 +951,7 @@ main {
   transition: all 0.1s ease-in;
 }
 
-#sb_essenced_scentbox:hover {
+.sb-essenced-scentbox:hover {
   bottom: 105px;
   left: 47px;
 
@@ -964,7 +964,7 @@ main {
   transform: rotate(11deg);
 }
 
-#scent_des:hover {
+.scent-des:hover {
   color: rgb(188, 189, 190);
   font-family: "PixeBoy";
   font-size: 1.8rem;
@@ -974,7 +974,7 @@ main {
   transition: all 0.5 ease-in;
 }
 
-#scent_des > p {
+.scent-des > p {
   color: rgb(77, 77, 77);
   font-family: "PixeBoy";
   font-size: 1.8rem;
@@ -984,11 +984,11 @@ main {
   margin: 0;
 }
 
-#scent_des > p:hover {
+.scent-des > p:hover {
   color: black;
 }
 
-#vanilla_select {
+.vanilla-select {
   background: linear-gradient(to bottom, #fffce8, white, skyblue);
   border: 1px ridge silver;
   border-radius: 20px;
@@ -1004,19 +1004,19 @@ main {
   transition: all 0.5s ease-in-out;
 }
 
-#vanilla_select:hover {
+.vanilla-select:hover {
   box-shadow: 0px 3px 8px red;
 
   transform: scale(1.1);
 }
 
-#scent_box:hover  #vanilla_select {
+.scent-box:hover  .vanilla-select {
   padding: 0 11px;
 }
 /* scentBox LEFT gameOver */
 
 /* scentBox RIGHT pressStart */
-#scent_box_right {
+#scent-box-right {
   position: absolute;
   top: 20px;
   left: -145px; 
@@ -1037,16 +1037,12 @@ main {
   width: 230px;
 }
 
-#scent_box_right:hover {
+#scent-box-right:hover {
   top: 8px;
   left: -155px;
   
   transform: rotate(0) scale(1);
 }   
-
-#scent_box:hover  #vanilla_select {
-  padding: 0 11px;
-}
 /* scentBox RIGHT gameOver */
 
 
