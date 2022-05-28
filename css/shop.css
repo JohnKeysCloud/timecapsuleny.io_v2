@@ -1016,10 +1016,10 @@ main {
 /* scentBox LEFT gameOver */
 
 /* scentBox RIGHT pressStart */
-#scent-box-right {
+#sb-right {
   position: absolute;
   top: 20px;
-  left: -145px; 
+  left: 211px; 
   z-index: 2;
 
   display: flex;
@@ -1032,20 +1032,11 @@ main {
   border: 1px ridge silver;
   padding: 30px 3px 0 7px;
   text-align: center;
-  transform: rotate(-18deg) scale(0.88);
+  transform: rotate(18deg) scale(0.88);
   transition: all 0.7s ease-out;
   width: 230px;
 }
-
-#scent-box-right:hover {
-  top: 8px;
-  left: -155px;
-  
-  transform: rotate(0) scale(1);
-}   
 /* scentBox RIGHT gameOver */
-
-
 
 /* 
   ┌─────────────────────────────────────────────────────────────────────────┐
