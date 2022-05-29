@@ -1342,14 +1342,39 @@ footer p {
   }
 
   /* beanieCardTopPositioning pressStart */
-  .item-container:nth-of-type(1):hover > .item-description > .item-description-card {
-    top: 300px;
-  }
-
-  .item-container:nth-of-type(2):hover > .item-description > .item-description-card {
+  .item-container:nth-of-type(1):hover > .item-description > .item-description-card,
+  .item-container:nth-of-type(2):hover > .item-description > .item-description-card,
+  .item-container:nth-of-type(3):hover > .item-description > .item-description-card {
     top: 300px;
   }
   /* beanieCardTopPositioning pressStart */
+  
+  /* hoodieCardTopPositioning pressStart */
+  .item-container:nth-of-type(4):hover > .item-description > .item-description-card,
+  .item-container:nth-of-type(5):hover > .item-description > .item-description-card {
+    top: 458px;
+  }
+  /* hoodieCardTopPositioning gameOver */
+
+  /* sockCardTopPositioning pressStart */
+  .item-container:nth-of-type(6):hover > .item-description > .item-description-card,
+  .item-container:nth-of-type(7):hover > .item-description > .item-description-card,
+  .item-container:nth-of-type(8):hover > .item-description > .item-description-card {
+    top: 388px;
+  }
+  /* sockCardTopPositioning gameOver */
+  
+  /* keychainCardTopPositioning pressStart */
+  .item-container:nth-of-type(9):hover > .item-description > .item-description-card {
+    top: 300px;
+  }
+  /* keychainCardTopPositioning gameOver */
+
+  /* shovelCardTopPositioning pressStart */
+  .item-container:nth-of-type(10):hover > .item-description > .item-description-card {
+    /* top: ?; */
+  }
+  /* shovelCardTopPositioning gameOver */
 
   .item {
     display: flex;
@@ -1360,22 +1385,6 @@ footer p {
 
     transition: all 0.8s ease-out;
   }
-
-  /* #scent_box {
-    transform: scale(0.73) rotate(-18deg);
-    top: 18px;
-    left: -110px;
-  }
-
-  #scent_box:hover {
-    top: 58px;
-    left: 31.5px;
-    transform: rotate(0) scale(1.2);
-  }   */
-
-  /* #scent_box:hover ~ #rocket_smoke::before {
-  
-  } */
 }
 
 /* 
