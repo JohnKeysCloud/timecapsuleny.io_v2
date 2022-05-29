@@ -1331,18 +1331,25 @@ footer p {
     margin-bottom: 375px;
   }
 
+  /* stopsRotation */
   .item-container:hover:nth-of-type(odd) > .item > img,
   .item-container:hover:nth-of-type(even) > .item > img {
     transform: rotate(0) scale(1); 
   }
 
-  .item-container:hover > .item-description > .item-description-card {
-    top: 450px;
-  }
-
   .item-description-card {
     transform: scale(0.05);
   }
+
+  /* beanieCardTopPositioning pressStart */
+  .item-container:nth-of-type(1):hover > .item-description > .item-description-card {
+    top: 300px;
+  }
+
+  .item-container:nth-of-type(2):hover > .item-description > .item-description-card {
+    top: 300px;
+  }
+  /* beanieCardTopPositioning pressStart */
 
   .item {
     display: flex;
