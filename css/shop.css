@@ -767,7 +767,7 @@ main {
   transform: scale(1) rotate(-720deg);
 }
 
-#hoodie_ul {
+.item-des-ul {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -782,7 +782,7 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
-.hoodie_li {
+.item-des-li {
   color: #fffce8;
   font-family: "GoshaSansRegular";
   font-size: 1.7rem;
