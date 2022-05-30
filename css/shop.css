@@ -632,9 +632,10 @@ main {
 /* keychainCardTopPositioning gameOver */
 
 /* shovelCardTopPositioning pressStart */
-.item-container:nth-of-type(10):hover > .item-description > .item-description-card {
-  /* top: ?; */
-}
+/* .item-container:nth-of-type(10):hover > .item-description > .item-description-card {
+  top: ?;
+} */
+/* shovelCardTopPositioning gameOver */
 
 .item-container:hover:nth-of-type(even) > .item > img {
   transform: rotate(13deg) scale(1.2); 
@@ -791,11 +792,21 @@ main {
   transform-origin: center;
 }
 
-/* .item-description-card::before {
-  height: ;
-  width: ;
-} */
+.item-container:hover .item-description-card::before {
+  content: '';
+  
+  position: absolute;
+  top: -9px; 
+  right: -10px;
+  
+  border-radius: 50px;
+  background: linear-gradient(to bottom, var(--neon-pink), var(--neon-red));
+  height: 107% ;
+  opacity: 0.11;
+  width:  107%;
 
+  z-index: -1;
+}
 
 .item-des-ul {
   display: flex;
