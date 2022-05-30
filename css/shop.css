@@ -580,6 +580,80 @@ main {
   margin-right: -222px;
 }
 
+.item-container:nth-of-type(odd):hover > .item-description > .item-description-card {
+  position: absolute;
+  right: auto;
+
+  height: 275px;
+  width: 300px;
+  
+  opacity: 1;
+  transform: scale(1) rotate(-720deg);
+}
+
+.item-container:nth-of-type(even):hover > .item-description > .item-description-card {
+  position: absolute;
+  right: auto;
+
+  height: 275px;
+  width: 300px;
+  
+  opacity: 1;
+  transform: scale(1) rotate(720deg);
+}
+
+/* beanieCardTopPositioning pressStart */
+.item-container:nth-of-type(1):hover > .item-description > .item-description-card,
+.item-container:nth-of-type(2):hover > .item-description > .item-description-card,
+.item-container:nth-of-type(3):hover > .item-description > .item-description-card {
+  top: 65px;
+}
+/* beanieCardTopPositioning gameOver */
+
+/* hoodieCardTopPositioning pressStart */
+.item-container:nth-of-type(4):hover > .item-description > .item-description-card,
+.item-container:nth-of-type(5):hover > .item-description > .item-description-card {
+  top: 95px;
+}
+/* hoodieCardTopPositioning gameOver */
+
+/* socksCardTopPositioning pressStart */
+.item-container:nth-of-type(6):hover > .item-description > .item-description-card,
+.item-container:nth-of-type(7):hover > .item-description > .item-description-card,
+.item-container:nth-of-type(8):hover > .item-description > .item-description-card {
+  top: 95px;
+}
+/* socksCardTopPositioning gameOver */
+
+/* keychainCardTopPositioning pressStart */
+.item-container:nth-of-type(9):hover > .item-description > .item-description-card {
+  top: 62px;
+}
+/* keychainCardTopPositioning gameOver */
+
+/* shovelCardTopPositioning pressStart */
+.item-container:nth-of-type(10):hover > .item-description > .item-description-card {
+  /* top: ?; */
+}
+
+.item-container:hover:nth-of-type(even) > .item > img {
+  transform: rotate(18deg) scale(1.2); 
+}
+
+.item-container:hover:nth-of-type(odd) > .item > img {
+  transform: rotate(-18deg) scale(1.2); 
+}
+
+/* .item-container:nth-of-type(even) > .item-description {
+  transform: rotate(-18deg);
+}
+
+.item-container:nth-of-type(odd) > .item-description {
+  transform: rotate(18deg);
+} */
+
+/* shovelCardTopPositioning gameOver */
+
 .item {
   display: flex;
   align-items: center;
@@ -602,22 +676,6 @@ main {
   animation: rgb-pulse-item 2.2s linear infinite alternate;
   transition: 0.3s ease-out;
 }
-
-.item-container:hover:nth-of-type(even) > .item > img {
-  transform: rotate(18deg) scale(1.2); 
-}
-
-.item-container:hover:nth-of-type(odd) > .item > img {
-  transform: rotate(-18deg) scale(1.2); 
-}
-
-/* .item-container:nth-of-type(even) > .item-description {
-  transform: rotate(-18deg);
-}
-
-.item-container:nth-of-type(odd) > .item-description {
-  transform: rotate(18deg);
-} */
 
 .item-description {
   position: relative;
@@ -715,12 +773,6 @@ main {
   width: max(5.5vw, 80px);
 }
 
-/* 
-  ┌─────────────────────────────────────────────────────────────────────────┐
-  │ HOODIE                                                                  │
-  └─────────────────────────────────────────────────────────────────────────┘
- */
-
 .item-description-card {
   position: absolute;
   top: -100px;
@@ -739,33 +791,11 @@ main {
   transform-origin: center;
 }
 
-.item-description-card::before {
-  /* magic card here */
-}
+/* .item-description-card::before {
+  height: ;
+  width: ;
+} */
 
-.item-container:nth-of-type(even):hover > .item-description > .item-description-card {
-  position: absolute;
-  top: 100px;
-  right: auto;
-
-  height: 275px;
-  width: 300px;
-  
-  opacity: 1;
-  transform: scale(1) rotate(720deg);
-}
-
-.item-container:nth-of-type(odd):hover > .item-description > .item-description-card {
-  position: absolute;
-  top: 100px;
-  right: auto;
-
-  height: 275px;
-  width: 300px;
-  
-  opacity: 1;
-  transform: scale(1) rotate(-720deg);
-}
 
 .item-des-ul {
   display: flex;

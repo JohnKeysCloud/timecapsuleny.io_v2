@@ -733,7 +733,6 @@ footer p:hover ~ a {
 /* themeChange gameOver */
 
 #theme-toggle {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -889,13 +888,16 @@ footer p:hover ~ a {
 } 
 
 #theme-toggle-btn.open ~ #btn-theme-list {
+  position: absolute;
+  right: 18px;
+
   opacity: 1;
   overflow: visible;
   pointer-events: auto;
-  position: absolute;
-  right: 18px;
-  transform: rotate(90deg);
+  
   margin: 80px 0 0 0;
+  
+  transform: rotate(90deg);
 }
 
 #theme-toggle-btn.open ~ #btn-theme-list > li {
