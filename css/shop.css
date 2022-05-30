@@ -637,11 +637,11 @@ main {
 }
 
 .item-container:hover:nth-of-type(even) > .item > img {
-  transform: rotate(18deg) scale(1.3); 
+  transform: rotate(13deg) scale(1.2); 
 }
 
 .item-container:hover:nth-of-type(odd) > .item > img {
-  transform: rotate(-18deg) scale(1.3); 
+  transform: rotate(-13deg) scale(1.2); 
 }
 
 /* .item-container:nth-of-type(even) > .item-description {
@@ -1517,5 +1517,4 @@ footer p {
     /* top: ?; */
   }
   /* shovelCardTopPositioning gameOver */
-
 }
