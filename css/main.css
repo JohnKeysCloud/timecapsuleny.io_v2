@@ -167,7 +167,7 @@ nav {
   opacity: 0;
   overflow: hidden;
   pointer-events: none;
-  transition: all 1.8s ease-out;
+  transition: all 0.38s ease-out;
 }
 
 nav ul {
