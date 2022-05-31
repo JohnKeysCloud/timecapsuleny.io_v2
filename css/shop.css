@@ -562,7 +562,9 @@ main {
 }
 
 .item-container:hover {
-  margin-bottom: 222px;
+  height: 388px;
+  margin-bottom: 15vh;
+
   width: 77vw;
 }
 
