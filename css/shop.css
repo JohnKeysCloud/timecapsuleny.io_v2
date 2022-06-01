@@ -108,6 +108,26 @@
   }
 }
 
+@keyframes gray2green-card {
+  from {
+    border: 2.1px solid yellow;
+    box-shadow: 0 0 13px yellow;
+
+    
+  }
+  70% {
+    border: 2.1px solid rgb(188, 189, 190);
+    box-shadow: 0 0 8px rgb(188, 189, 190);
+
+
+  }
+  to {
+    border: 2.1px solid yellow;
+    box-shadow: 0 0 18px yellow;
+
+  }
+}
+
 @keyframes rgb-pulse {
   from {
     filter: drop-shadow(0px 0px 0.13em var(--neon-red));
@@ -150,6 +170,19 @@
   to {
     filter: drop-shadow(0px 0px 5px var(--neon-orange));
   }
+}
+
+@keyframes warning {
+  from {
+    filter: drop-shadow(5px 5px 55px yellow);
+  }
+  50% {
+    filter: drop-shadow(5px 5px 33px black);
+  }
+  to {
+    filter: drop-shadow(5px 5px 77px yellow);
+  }
+  
 }
 
 *,
@@ -563,7 +596,7 @@ main {
 
 .item-container:hover {
   height: 388px;
-  margin-bottom: 15vh;
+  margin-bottom: 18vh;
 
   width: 77vw;
 }
@@ -614,14 +647,14 @@ main {
 .item-container:nth-of-type(1):hover > .item-description > .item-description-card,
 .item-container:nth-of-type(2):hover > .item-description > .item-description-card,
 .item-container:nth-of-type(3):hover > .item-description > .item-description-card {
-  top: 75px;
+  top: 68px;
 }
 /* beanieCardTopPositioning gameOver */
 
 /* hoodieCardTopPositioning pressStart */
 .item-container:nth-of-type(4):hover > .item-description > .item-description-card,
 .item-container:nth-of-type(5):hover > .item-description > .item-description-card {
-  top: 105px;
+  top: 98px;
 }
 /* hoodieCardTopPositioning gameOver */
 
@@ -629,13 +662,13 @@ main {
 .item-container:nth-of-type(6):hover > .item-description > .item-description-card,
 .item-container:nth-of-type(7):hover > .item-description > .item-description-card,
 .item-container:nth-of-type(8):hover > .item-description > .item-description-card {
-  top: 105px;
+  top: 98px;
 }
 /* socksCardTopPositioning gameOver */
 
 /* keychainCardTopPositioning pressStart */
 .item-container:nth-of-type(9):hover > .item-description > .item-description-card {
-  top: 72px;
+  top: 65px;
 }
 /* keychainCardTopPositioning gameOver */
 
@@ -691,12 +724,12 @@ main {
 
   display: flex;
   flex-direction: column;
-
   align-items: center;
   
+  max-height: 67px;
   text-align: center;
 
-  transition: all 0.8s ease-out;
+  /* transition: all 0.8s ease-out; */
 
   animation: item-des-bg 1.3s linear infinite alternate;
 }
@@ -708,40 +741,40 @@ main {
   min-width: max-content;
   text-shadow: 0 0 0.5em rgb(255, 255, 255);
 
-  filter: drop-shadow(0 0 8px black);
+  filter: drop-shadow(0 0 33px black);
   animation: gray2green 0.8s linear infinite alternate
-}
-
-.item-description > p::before {
-  transition: all 1s ease-out;
 }
 
 .item-description > p {
   font-family: 'GoshaSansBold';
   font-size: 2.2rem;
-  font-weight: bold;
+  padding: 0;
   margin: 0;
-  min-width: max-content;
-  padding: 5px 50px;
-  text-shadow: 0 0 0.5em var(--neon-green);
+  
+  height: 70px;
+  width: 200px;
+  
+  filter: drop-shadow(0 0 33px black);
+  
+  transform-origin: center;
+  transition: all 0.8s ease-out;
 }
 
 .item-description > p:hover {
-  font-size: 2.2rem;
+  transform: scale(1.3);
 }
 
 .curomame_p::before {
   content: 'CUROMAME';
   color: black;
-  text-shadow: 0 0 0.4em #fffce8;
+  text-shadow: 0 0 0.4em #fffce8;  
 }
 
 .curomame_p:hover::before {
   content: '黒豆';
   color: var(--neon-red);
-  text-shadow: 0 0 0.3em var(--neon-red);
-  padding: 20px 18px 15px 18px;
-
+  text-shadow: 0 0 0.3em black;
+  vertical-align:top;
 }
 
 .nimbus_p::before {
@@ -754,6 +787,7 @@ main {
   content: '筋斗雲';
   color: var(--neon-orange);
   text-shadow: 0 0 0.5em var(--neon-orange);
+  vertical-align:top;
 }
 
 .sora_p::before {
@@ -766,6 +800,8 @@ main {
   content: '空';
   color: var(--neon-pink);
   text-shadow: 0 0 0.5em var(--neon-pink);
+  vertical-align:top;
+
 }
 
 .hoodie {
@@ -790,9 +826,8 @@ main {
   right: auto;
   
   background: rgba(0, 0, 0, 0.535);
-  border-radius: 50px;
-  border: 2px solid var(--neon-red);
-  box-shadow: 0 0 30px var(--neon-red);
+  filter: drop-shadow(0 22px 55px black);
+  border-radius: 55px;
   height: 300px;
   width: 300px;
   
@@ -800,22 +835,60 @@ main {
   transform: scale(0) rotate(18deg);
   transition: all 0.8s ease-in-out;
   transform-origin: center;
+
+  animation: gray2green-card 0.8s linear infinite alternate;
 }
 
 .item-container:hover .item-description-card::before {
   content: '';
   
   position: absolute;
-  top: -9px; 
-  right: -10px;
+  top: 0; 
+  right: 0;
+
+  height: 100%;
+  width:  100%;
   
   border-radius: 50px;
-  background: linear-gradient(to bottom, var(--neon-pink), var(--neon-red));
-  height: 107% ;
-  opacity: 0.11;
-  width:  107%;
+  background: url('../imgs/misc/cloudy.gif');
+  opacity: 0.38;
 
   z-index: -1;
+}
+
+.item-container:nth-of-type(odd) .item-description-card::after {
+  content: url('../imgs/misc/warning.gif');
+
+  position: absolute;
+  bottom: 68px;
+  right: -215px;
+
+  transform: scale(0.11) rotate(8deg);
+  
+  
+  animation: warning 0.8s linear infinite alternate;
+  transition: transform 0.38s ease-in;
+}
+
+.item-container:nth-of-type(odd) .item-description-card:hover::after {
+  transform: scale(0.13) rotate(8deg);
+}
+
+.item-container:nth-of-type(even) .item-description-card::after {
+  content: url('../imgs/misc/warning.gif');
+
+  position: absolute;
+  bottom: 68px;
+  right: 68px;
+
+  transform: scale(0.11) rotate(-8deg);
+  
+  animation: warning 0.8s linear infinite alternate;
+  transition: transform 0.38s ease-in;
+}
+
+.item-container:nth-of-type(even) .item-description-card:hover::after {
+  transform: scale(0.13) rotate(-8deg);
 }
 
 .item-des-ul {
@@ -827,7 +900,7 @@ main {
   font-weight: bold;
   list-style-type: '\1F4AD';
   margin: 0 0 13px 0px;
-  padding-top: 18px;
+  padding-top: 25px;
   width: 90%;
   
   transition: all 0.3s ease-in-out;
@@ -839,14 +912,14 @@ main {
   font-size: 1.7rem;
   font-weight: 100;
   text-indent: 3px;
-  text-shadow: 0px 0 3px var(--neon-red);
+  text-shadow: 0px 0 10px gray;
 }
 
 /* TODO: #send_to_moon {
   position: relative;
 } */
 
-.size_and_submit {
+.size-and-add {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -854,38 +927,41 @@ main {
   /* height: 77px; */
 }
 
-.size_and_submit select,
-.size_and_submit button {
+.size-and-add select,
+.size-and-add button {
   display: flex;
-  background: linear-gradient(to bottom, #fffce8, white, silver);
-  border: 2px solid var(--neon-red);
-  box-shadow: 0 0 11px var(--neon-red);
-  justify-content: center;
   align-items: center;
-  border-radius: 33px;
+  justify-content: center;
+  
   height: 75px;
   width: 100px;
+
+  background: linear-gradient(to bottom, #fffce8, white, silver);
+  border: 2px solid var(--neon-red);
+  border-radius: 33px;
+  box-shadow: 0 0 11px var(--neon-red);
+  color: black;
   padding: 20px;
 }
 
-.size_and_submit select {
+.size-and-add select {
   font-family: 'Pixeboy';
   font-size: 3.3rem;
   padding: 0 0 0px 0;
   text-indent: 30px;
 }
 
-.size_and_submit button {
+.size-and-add button {
   font-family: 'GoshaSansRegular';
   font-size: 1.8rem;
 }
 
-/* TODO: .size_and_submit */
+/* TODO: .size-and-add */
 
 /* scentBox LEFT pressStart */
 .scent-box {
   position: absolute;
-  top: 20px;
+  top: 27px;
   left: -145px; 
   z-index: 2;
 
@@ -905,7 +981,7 @@ main {
 }
 
 .scent-box:hover {
-  top: 8px;
+  top: 15px;
   left: -155px;
   
   transform: rotate(0) scale(1);
