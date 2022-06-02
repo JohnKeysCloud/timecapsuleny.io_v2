@@ -892,22 +892,25 @@ main {
 }
 
 .item-container:nth-of-type(4) .warning-right::before {
-  bottom: -40px;
-  right: -225px;
+  bottom: -11px;
+  right: -180px;
 
   transform: scale(0.11) rotate(8deg);
 }
 
+.item-container:nth-of-type(4) .item-description-card:hover .warning-right::before {
+  transform: scale(0.15) rotate(8deg) ;
+}
+
 .item-container:nth-of-type(5) .warning-left::before {
-  bottom: -40px;
-  right: 78px;
+  bottom: -11px;
+  right: 38px;
 
   transform: scale(0.11) rotate(-8deg);
 }
 
-.item-description-card:hover .warning-left::before,
-.item-description-card:hover .warning-right::before {
-  transform: scale(0.15);
+.item-container:nth-of-type(5) .item-description-card:hover .warning-left::before {
+  transform: scale(0.15) rotate(-8deg);
 }
 
 .item-des-ul {
