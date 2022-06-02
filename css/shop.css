@@ -207,7 +207,6 @@ body {
   font-family: 'PixeBoy', 'GoshaSansRegular', 'Roboto Mono', 'Courier New', Courier, monospace;
   font-size: 1.8rem;
   margin: 0;
-  overflow-x: hidden;
   min-height: 100vh;
 }
 
@@ -218,7 +217,7 @@ body {
  */
 
 #bg_wrapper {
-  position: relative;  
+  position: relative;
 }
 
 #bg_wrapper::before {
@@ -227,6 +226,9 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+  bottom: 0;
+  right: 0;
+
   
   display: block;
   min-width: 100%;
@@ -258,7 +260,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-
   padding-top: 13px;
 
   position: sticky;
@@ -400,7 +401,7 @@ nav ul {
 
 #menu-btn.open~nav a {
   font-size: 2rem;
-  letter-spacing: 1px;
+  letter-spacing: 1.8px;
 }
 /* MENU-BTN ANIMATION gameOver */
 
@@ -512,13 +513,10 @@ nav ul {
 .nav-link {
   position: relative;
 
-  font-size: 1.8rem;
-
   border-radius: 0.3em;
   padding: 0.3em 0.8em;
   text-decoration: none;
-  letter-spacing: -0.05em;
-  margin: 0 28px 0 0;
+  margin: 0 18px 0 0;
 }
 
 .nav-link::before {
@@ -1355,7 +1353,7 @@ footer p {
   └─────────────────────────────────────────────────────────────────────────┘
  */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 881px) {
 
   @keyframes game-float {
     from {
