@@ -891,22 +891,22 @@ main {
   transform: scale(0.15) rotate(-8deg);
 }
 
-#warning-left::before {
-  bottom: -50px;
-  right: 78px;
-
-  transform: scale(0.11) rotate(-8deg);
-}
-
-#warning-right::before {
-  bottom: -50px;
+.item-container:nth-of-type(4) .warning-right::before {
+  bottom: -40px;
   right: -225px;
 
   transform: scale(0.11) rotate(8deg);
 }
 
-.item-description-card:hover #warning-left::before,
-.item-description-card:hover #warning-right::before {
+.item-container:nth-of-type(5) .warning-left::before {
+  bottom: -40px;
+  right: 78px;
+
+  transform: scale(0.11) rotate(-8deg);
+}
+
+.item-description-card:hover .warning-left::before,
+.item-description-card:hover .warning-right::before {
   transform: scale(0.15);
 }
 
