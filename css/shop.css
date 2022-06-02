@@ -108,7 +108,7 @@
   }
 }
 
-@keyframes gray2green-card {
+@keyframes warning-card {
   from {
     border: 2.1px solid yellow;
     box-shadow: 0 0 13px yellow;
@@ -647,14 +647,14 @@ main {
 .item-container:nth-of-type(1):hover > .item-description > .item-description-card,
 .item-container:nth-of-type(2):hover > .item-description > .item-description-card,
 .item-container:nth-of-type(3):hover > .item-description > .item-description-card {
-  top: 68px;
+  top: 70px;
 }
 /* beanieCardTopPositioning gameOver */
 
 /* hoodieCardTopPositioning pressStart */
 .item-container:nth-of-type(4):hover > .item-description > .item-description-card,
 .item-container:nth-of-type(5):hover > .item-description > .item-description-card {
-  top: 98px;
+  top: 100px;
 }
 /* hoodieCardTopPositioning gameOver */
 
@@ -662,13 +662,13 @@ main {
 .item-container:nth-of-type(6):hover > .item-description > .item-description-card,
 .item-container:nth-of-type(7):hover > .item-description > .item-description-card,
 .item-container:nth-of-type(8):hover > .item-description > .item-description-card {
-  top: 98px;
+  top: 100px;
 }
 /* socksCardTopPositioning gameOver */
 
 /* keychainCardTopPositioning pressStart */
 .item-container:nth-of-type(9):hover > .item-description > .item-description-card {
-  top: 65px;
+  top: 67px;
 }
 /* keychainCardTopPositioning gameOver */
 
@@ -836,7 +836,7 @@ main {
   transition: all 0.8s ease-in-out;
   transform-origin: center;
 
-  animation: gray2green-card 0.8s linear infinite alternate;
+  animation: warning-card 0.8s linear infinite alternate;
 }
 
 .item-container:hover .item-description-card::before {
@@ -856,7 +856,7 @@ main {
   z-index: -1;
 }
 
-.item-container:nth-of-type(odd) .item-description-card::after {
+.item-container:nth-of-type(odd) .warning::before {
   content: url('../imgs/misc/warning.gif');
 
   position: absolute;
@@ -866,15 +866,15 @@ main {
   transform: scale(0.11) rotate(8deg);
   
   
-  animation: warning 0.8s linear infinite alternate;
-  transition: transform 0.38s ease-in;
+  animation: warning 1.6s linear infinite alternate;
+  transition: transform 0.27s ease-in;
 }
 
-.item-container:nth-of-type(odd) .item-description-card:hover::after {
-  transform: scale(0.13) rotate(8deg);
+.item-container:nth-of-type(odd) .item-description-card:hover .warning::before {
+  transform: scale(0.15) rotate(8deg);
 }
 
-.item-container:nth-of-type(even) .item-description-card::after {
+.item-container:nth-of-type(even) .warning::before {
   content: url('../imgs/misc/warning.gif');
 
   position: absolute;
@@ -883,12 +883,31 @@ main {
 
   transform: scale(0.11) rotate(-8deg);
   
-  animation: warning 0.8s linear infinite alternate;
-  transition: transform 0.38s ease-in;
+  animation: warning 1.6s linear infinite alternate;
+  transition: transform 0.27s ease-in;
 }
 
-.item-container:nth-of-type(even) .item-description-card:hover::after {
-  transform: scale(0.13) rotate(-8deg);
+.item-container:nth-of-type(even) .item-description-card:hover .warning::before {
+  transform: scale(0.15) rotate(-8deg);
+}
+
+#warning-left::before {
+  bottom: -50px;
+  right: 78px;
+
+  transform: scale(0.11) rotate(-8deg);
+}
+
+#warning-right::before {
+  bottom: -50px;
+  right: -225px;
+
+  transform: scale(0.11) rotate(8deg);
+}
+
+.item-description-card:hover #warning-left::before,
+.item-description-card:hover #warning-right::before {
+  transform: scale(0.15);
 }
 
 .item-des-ul {
