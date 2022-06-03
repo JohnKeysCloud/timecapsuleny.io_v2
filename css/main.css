@@ -158,7 +158,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-
   padding-top: 13px;
 
   position: sticky;
@@ -172,6 +171,7 @@ nav {
   overflow: hidden;
   pointer-events: none;
   transition: all 0.38s ease-out;
+
 }
 
 nav ul {
@@ -299,7 +299,7 @@ nav ul {
 
 #menu-btn.open~nav a {
   font-size: 2rem;
-  letter-spacing: 1px;
+  letter-spacing: 1.8px;
 }
 /* MENU-BTN ANIMATION gameOver */
 
@@ -411,13 +411,10 @@ nav ul {
 .nav-link {
   position: relative;
 
-  font-size: 1.8rem;
-
   border-radius: 0.3em;
   padding: 0.3em 0.8em;
   text-decoration: none;
-  letter-spacing: -0.05em;
-  margin: 0 28px 0 0;
+  margin: 0 18px 0 0;
 }
 
 .nav-link::before {
