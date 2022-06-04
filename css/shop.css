@@ -1141,12 +1141,12 @@ main {
 .rocket-left::before {
   position: absolute;
   top: 55px;
-  right: 295px;
+  right: 311px;
   
   content: '🚀';
   filter: drop-shadow(0 0 3px var(--neon-red));
   
-  transform: scale(2.8) rotate(-55deg);
+  transform: scale(2.8) rotate(-51deg);
   transition: top, right, transform, 3.3s ease-in;
 
   z-index: 0;
@@ -1154,14 +1154,14 @@ main {
 
 .scent-box:hover ~ .rocket-left::before {
   top: -1700px;
-  right: 700px;
+  right: 500px;
 
-  transform: scale(4) rotate(-50deg);
+  transform: scale(4) rotate(-53deg);
 }
 
 .rocket-smoke-left::before {
   position: absolute;
-  right: 88px;
+  right: 100px;
   bottom: 211px;
   
   content: url(../imgs/misc/rocketSmoke.gif);
@@ -1169,7 +1169,7 @@ main {
   
   opacity: 0;
   
-  transform: scale(0.1) rotate(-94deg);
+  transform: scale(0.1) rotate(-92deg);
   transform-origin: bottom;
   transition: all 0.92s ease-in;
 
@@ -1177,12 +1177,12 @@ main {
 }
 
 .scent-box:hover ~ .rocket-smoke-left::before {
-  right: 77px;
+  right: 70px;
   bottom: 388px;
   
   opacity: 0.5;
 
-  transform: scale(0.55) rotate(-95deg);
+  transform: scale(0.55) rotate(-90deg);
 }
 /* rocketSh*t LEFT gameOver */
 
@@ -1190,27 +1190,27 @@ main {
 .rocket-right::before {
   position: absolute;
   top: 55px;
-  right: -21px;
+  right: -47px;
   
   content: '🚀';
   filter: drop-shadow(0 0 3px var(--neon-red));
   
-  transform: scale(2.8) rotate(-40deg);
+  transform: scale(2.8) rotate(-45deg);
   transition: top, right, transform, 3.3s ease-in;
 
   z-index: 0;
 }
 
 .scent-box:hover ~ .rocket-right::before {
-  top: -1700px;
-  right: -421px;
+  top: -2300px;
+  right: -100px;
 
-  transform: scale(4) rotate(-35deg);
+  transform: scale(4) rotate(-42deg);
 }
 
 .rocket-smoke-right::before {
   position: absolute;
-  right: -227px;
+  right: -258px;
   bottom: 211px;
   
   content: url(../imgs/misc/rocketSmoke.gif);
@@ -1218,20 +1218,20 @@ main {
   
   opacity: 0;
   
-  transform: scale(0.1) rotate(-74deg);
+  transform: scale(0.1) rotate(-85deg);
   transform-origin: bottom;
-  transition: all 0.92s ease-in;
+  transition: all 0.88s ease-in;
 
   z-index: 1;
 }
 
 .scent-box:hover ~ .rocket-smoke-right::before {
-  right: -323px;
+  right: -308px;
   bottom: 377px;
   
   opacity: 0.5;
 
-  transform: scale(0.55) rotate(-75deg);
+  transform: scale(0.55) rotate(-83deg);
 }
 /* rocketSh*t RIGHT gameOver */
 
