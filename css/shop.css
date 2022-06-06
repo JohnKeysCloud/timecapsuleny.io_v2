@@ -671,9 +671,9 @@ main {
 /* keychainCardTopPositioning gameOver */
 
 /* shovelCardTopPositioning pressStart */
-/* .item-container:nth-of-type(10):hover > .item-description > .item-description-card {
-  top: ?;
-} */
+.item-container:nth-of-type(10):hover > .item-description > .item-description-card {
+  top: 38px;
+}
 /* shovelCardTopPositioning gameOver */
 
 .item-container:hover:nth-of-type(even) > .item > img {
@@ -816,6 +816,10 @@ main {
 
 .keychain {
   width: max(5.5vw, 80px);
+}
+
+.shovel {
+  width: max(3.3vw, 55px);
 }
 
 .item-description-card {
@@ -1535,7 +1539,7 @@ footer p {
 
   /* shovelCardTopPositioning pressStart */
   .item-container:nth-of-type(10):hover > .item-description > .item-description-card {
-    /* top: ?; */
+    top: 545px;
   }
   /* shovelCardTopPositioning gameOver */
 
@@ -1646,8 +1650,8 @@ footer p {
   /* keychainCardTopPositioning gameOver */
 
   /* shovelCardTopPositioning pressStart */
-  .item-container:nth-of-type(10):hover > .item-description > .item-description-card {
-    /* top: ?; */
-  }
+  /* .item-container:nth-of-type(10):hover > .item-description > .item-description-card {
+    top: ?
+  } */
   /* shovelCardTopPositioning gameOver */
 }
