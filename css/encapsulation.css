@@ -39,6 +39,16 @@
     font-family: "PixeBoy";
 }
 
+@keyframes cs-outline-offset {
+  from {
+    outline-offset: 0.2em;
+  }
+  to {
+    outline-offset: -0.2em;
+  }
+  
+}
+
 @keyframes game-float {
   from {
     opacity: 0.8;
@@ -97,6 +107,46 @@ body {
   font-size: 1.8rem;
   min-height: 100vh;
   margin: 0;
+}
+
+#coming-soon::before {
+  content: '';
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  background-color: red;
+  height: 100vh;
+  opacity: 0.33;
+  width: 100vw;
+
+  z-index: 1;
+}
+
+#coming-soon::after {
+  content: 'UNDER CONSTRUCTION';
+
+  position: fixed;
+  top: 50%;
+  right: 50%;
+
+  background-color: var(--neon-red);
+  border-radius: 333px;
+  border: 2px solid black;
+  box-shadow: 0 0 100px yellow, inset 0 0 11px yellow;
+  color: yellow;
+  font-size: 5.5vw;
+  opacity: 1;
+  outline: 1.5px solid yellow;
+  text-align: center;
+  text-shadow: 0 0 13px black;
+  width: 70vw;
+  
+  animation: cs-outline-offset 0.8s linear alternate infinite;
+  transform: translate(50%, 50%);
+
+  z-index: 1;
 }
 
 .content-wrapper {
@@ -412,15 +462,33 @@ nav ul {
 
 @keyframes sb-hover {
   from {
-      border: 3px solid chartreuse;
+      border: 3.3px ridge var(--neon-red);
+      box-shadow: inset 0 0 18px var(--neon-green), 0 0 55px var(--neon-red);
       transform: scale(1);
   }
   50% {
-      border: 5px solid skyblue;
+      border: 3.3px ridge var(--neon-green);
+      box-shadow: inset 0 0 18px var(--neon-blue), 0 0 55px var(--neon-green);
   }
   to {
-      border: 3.3px solid rgb(255, 132, 122);
+      border: 3.3px ridge var(--neon-blue);
+      box-shadow: inset 0 0 18px var(--neon-red), 0 0 55px var(--neon-blue);
       transform: scale(0.95);
+  }
+}
+
+@keyframes sb-hover-2 {
+  from {
+      border: 5.5px ridge var(--neon-red);
+      box-shadow: inset 0 0 18px var(--neon-green), 0 0 55px var(--neon-red);
+  }
+  50% {
+      border: 5.5px ridge var(--neon-green);
+      box-shadow: inset 0 0 18px var(--neon-blue), 0 0 55px var(--neon-green);
+  }
+  to {
+      border: 5.5px ridge var(--neon-blue);
+      box-shadow: inset 0 0 18px var(--neon-red), 0 0 55px var(--neon-blue);
   }
 }
 
@@ -467,11 +535,12 @@ main {
 }
 
 table {
+  position: relative;
+
   /* background-size: cover; */
   border-spacing: 3px 8px;
   /* border-collapse: collapse; */
   border-radius: 200px;
-  box-shadow: inset 0 0 18px skyblue, 0 0 55px chartreuse;
   font-family: 'PixeBoy';
   font-style: italic;
   line-height: 0px;
@@ -486,8 +555,8 @@ table {
 }
 
 table:hover {
-  animation: none;
   border: 3px solid chartreuse;
+  animation: 1.8s linear infinite alternate sb-hover-2;  
 }
 
 td {
@@ -696,9 +765,10 @@ tr:nth-child(even) .coin_cells {
 }
 
 .text-content h3 {
-  color: var(--neon-green);
-  text-shadow: 0 0 8px var(--neon-green);
+  color: var(--neon-blue);
+  text-shadow: 0 0 8px var(--neon-blue);
   margin: 0 0 11px 0; 
+  text-transform: uppercase;
 }
 
 .text-content p {
@@ -719,12 +789,13 @@ tr:nth-child(even) .coin_cells {
   align-items: center;
   justify-content: center;
 
-  border: 2px solid red;
-  box-shadow: 0 0 50px red;
-  border-radius: 20px;
+  border: 3.3px ridge red;
+  box-shadow: 0 0 50px var(--neon-red), inset 0 0 100px var(--neon-pink);
+  border-radius: 150px;
   padding: 18px 33px;
   margin: 0 auto 33px auto;
   width: 80%;
+
 }
 
 .subscription-benefits {
@@ -732,11 +803,14 @@ tr:nth-child(even) .coin_cells {
   list-style-type: none;
   margin: 0 auto 11px auto;
   text-align: center;
+  /* transition: all 3s ease-in; */
 }
 
 .subscription-benefits > li {
-  margin-bottom: 8px;
-  text-shadow: 0 0 11px var(--neon-green);
+  margin-bottom: 13px;
+  text-shadow: 0 0 11px var(--neon-pink);
+  transition: all 1s ease-in;
+
 }
 
 .list-item {
@@ -761,6 +835,62 @@ tr:nth-child(even) .coin_cells {
 
 .subscription-benefits li:nth-child(3) .list-item::before {
   left: -20px;
+}
+
+.sign-up-btn {
+  --webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 13px;
+  border: 3px solid var(--neon-pink);
+  color: #fffce8;
+  font-family: 'PixeBoy';
+  font-size: 3rem;
+  outline-offset: 3px;
+  outline: 2px solid var(--neon-blue);
+  padding: 0 8px;
+  text-shadow: 0 0 10px var(--neon-pink);
+  transition: all 0.3s ease-in;
+}
+
+.sign-up-btn:disabled {
+  border: 3px solid #555555;
+  color: #555555;
+  outline: 2px solid #555555;
+  pointer-events: none;
+  text-shadow: 0 0 10px #555555;
+}
+
+.member-container:hover > .subscription-benefits li:first-child {
+  font-size: 2rem;
+  transform: translateX(-125px) rotate(-2deg);
+
+}
+
+.member-container:hover > .subscription-benefits li:nth-child(2) {
+  font-size: 2rem;
+
+  transition-delay: 150ms;
+  transform: translate(45px, 20px)rotate(2deg);
+
+}
+
+.member-container:hover > .subscription-benefits li:nth-child(3) {
+  font-size: 2rem;
+
+  transition-delay: 150ms;
+  transform: translate(-195px, 30px) rotate(-2deg);
+}
+
+.member-container:hover .sign-up-btn {
+  padding: 3px 21px;
+  outline-offset: -8px;
+
+  transform: scale(1.1) rotate(2deg) translateX(55px);
+}
+
+.member-container:hover .sign-up-btn:active {
+  padding: 3px 13px;
 }
 
 /* 
