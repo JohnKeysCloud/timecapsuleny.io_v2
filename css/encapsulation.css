@@ -456,6 +456,10 @@ main {
   align-items: center;
 }
 
+#scoreBoard {
+  margin-bottom: 55px;
+}
+
 #table-container {
   display: flex;
   justify-content: center;
@@ -665,13 +669,12 @@ tr:nth-child(even) .coin_cells {
 .text-content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
-  /* border: 1px solid #ff0000; */
-  
-  font-family: 'GoshaSansRegular' ;
   color: #fffce8;
-  padding: 1.5rem clamp(1rem, 5%, 3rem);
+  font-family: 'GoshaSansRegular' ;
   /* The example from SmolCSS uses the following 
+  padding: 1.5rem clamp(1rem, 5%, 3rem);
   padding definition, where the padding will grow 
   and shrink relative to the element's width. 
   It will never be less than 1rem, and never 
@@ -679,8 +682,85 @@ tr:nth-child(even) .coin_cells {
   text-align: center;
   width: min(80ch, 100vw - 2rem);
 }
+
 .text-content h1 {
+  color: var(--neon-red);
   font-size: clamp(1.75rem, 4vw + 1rem, 3rem);
+  margin: 0;
+  text-shadow: 0 0 8px var(--neon-red);
+}
+
+.text-content h2 {
+  color: gray;
+  margin: 0 0 33px 0; 
+}
+
+.text-content h3 {
+  color: var(--neon-green);
+  text-shadow: 0 0 8px var(--neon-green);
+  margin: 0 0 11px 0; 
+}
+
+.text-content p {
+  color: #fffce8;
+  font-size: 2rem;
+  text-shadow: 0 0 11px var(--neon-red);
+  margin: 0 0 11px 0;
+}
+
+/* paragraph above membership header */
+.text-content p:nth-of-type(3) {
+  margin: 0 0 30px 0;
+}
+
+.member-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid red;
+  box-shadow: 0 0 50px red;
+  border-radius: 20px;
+  padding: 18px 33px;
+  margin: 0 auto 33px auto;
+  width: 80%;
+}
+
+.subscription-benefits {
+  font-size: 1.8rem;
+  list-style-type: none;
+  margin: 0 auto 11px auto;
+  text-align: center;
+}
+
+.subscription-benefits > li {
+  margin-bottom: 8px;
+  text-shadow: 0 0 11px var(--neon-green);
+}
+
+.list-item {
+  position: relative;
+}
+
+.subscription-benefits .list-item::before {
+  position: absolute;
+  
+  content: '\1F4AD';
+  
+  transform: rotate(270deg);
+}
+
+.subscription-benefits li:first-child .list-item::before {
+  left: -20px;
+}
+
+.subscription-benefits li:nth-child(2) .list-item::before {
+  left: -20px;
+}
+
+.subscription-benefits li:nth-child(3) .list-item::before {
+  left: -20px;
 }
 
 /* 
