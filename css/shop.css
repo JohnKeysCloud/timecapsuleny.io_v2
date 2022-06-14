@@ -1562,7 +1562,7 @@ footer p {
 
 @media only screen and (max-width: 480px) {
 
-    @keyframes game-float {
+  @keyframes game-float {
     from {
       opacity: 0.8;
     }
@@ -1654,4 +1654,8 @@ footer p {
     top: ?
   } */
   /* shovelCardTopPositioning gameOver */
+
+  .item-description > h1 {
+    text-shadow: none;
+  }
 }

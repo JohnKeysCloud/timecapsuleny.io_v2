@@ -109,7 +109,7 @@ body {
   margin: 0;
 }
 
-#coming-soon::before {
+/* #coming-soon::before {
   content: '';
 
   position: fixed;
@@ -146,7 +146,7 @@ body {
   transform: translate(50%, 50%);
 
   z-index: 1;
-}
+} */
 
 .content-wrapper {
   display: flex;
