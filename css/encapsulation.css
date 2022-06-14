@@ -102,7 +102,7 @@ html {
 body {
   /* position: relative; */
 
-  background-color: black;
+  background: rgb(0, 0, 0);
   font-family: 'PixeBoy', 'GoshaSansRegular', 'Roboto Mono', 'Courier New', Courier, monospace;
   font-size: 1.8rem;
   min-height: 100vh;

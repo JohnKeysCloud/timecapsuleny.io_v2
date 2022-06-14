@@ -41,6 +41,16 @@
   --outline-color: currentColor;
 }
 
+::selection {
+  color: black;
+  background-color: silver;
+}
+
+::-moz-selection {
+  color: black;
+  background-color: silver;
+}
+
 @font-face {
   src: url(../fonts/GoshaSansRegular.woff2);
   font-family: "GoshaSansRegular";
