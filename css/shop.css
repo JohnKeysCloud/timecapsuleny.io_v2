@@ -317,6 +317,7 @@ nav ul {
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 #menu-btn {
@@ -403,7 +404,7 @@ nav ul {
 }
 
 #menu-btn.open~nav {
-  margin-right: 655px;
+  margin-right: 633px;
   opacity: 1;
   overflow: visible;
   pointer-events: auto;
@@ -556,6 +557,16 @@ nav ul {
 .nav-link:hover::before,
 .nav-link:focus::before {
   opacity: 1;
+}
+
+#cycloneMoon {
+  position: absolute;
+  height: 88px;
+  width: 88px;
+
+  top: -16px;
+  left: -108px;
+  z-index: 2;
 }
 
 /* 
