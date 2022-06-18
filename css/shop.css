@@ -1028,7 +1028,7 @@ main {
 }
 
 .bigRedButton:active {
-  background: url(../imgs/assets/btn-active.svg) no-repeat;
+  background: url('../imgs/assets/btn-active.svg') no-repeat;
   background-position: bottom;
 }
 
@@ -1038,11 +1038,12 @@ main {
 
 .bigRedButton::before {
   position: absolute;
-  content: url('../imgs/assets/send2moon-text.png');
+  left: -371px;
+  top: -73px;
+
+  content: url('../imgs/assets/send2Moon-text.png');
   filter: drop-shadow(0 0 10px gray);
   transform: scale(0.18);
-  top: -73px;
-  left: -371px;
   animation: gray2red 1s linear alternate infinite;
 }
 
