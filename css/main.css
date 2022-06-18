@@ -166,7 +166,6 @@ select {
   bottom: 0;
 
   object-fit: cover;
-  opacity: 0.78;
   
   min-height: 100vh;
   min-height: -moz-available;  /* Mozilla-based browsers */
