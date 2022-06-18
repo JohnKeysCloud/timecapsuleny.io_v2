@@ -36,9 +36,9 @@
   └──────────────────────────────────────────────────────────────────────┘
  */
 
-  --outline-size: max(2px, 0.08em);
-  --outline-style: solid;
-  --outline-color: currentColor;
+  --outline-size: max(3px, 0.08em);
+  --outline-style: dashed;
+  --outline-color: rgb(255, 255, 65);
 }
 
 ::selection {
@@ -49,6 +49,11 @@
 ::-moz-selection {
   color: black;
   background-color: silver;
+}
+
+:focus-visible {
+  color: black;
+  outline: var(--outline-color) var(--outline-size) var(--outline-style);
 }
 
 @font-face {
