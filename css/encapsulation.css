@@ -39,6 +39,11 @@
   background-color: silver;
 }
 
+:focus-visible {
+  color: black;
+  outline: var(--outline-color) var(--outline-size) var(--outline-style);
+}
+
 @font-face {
     src: url(../fonts/GoshaSansRegular.woff2);
     font-family: "GoshaSansRegular";
@@ -109,6 +114,10 @@ html {
   font-size: 62.5%;
 }
 
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
 body {
   /* position: relative; */
 
@@ -117,6 +126,14 @@ body {
   font-size: 1.8rem;
   min-height: 100vh;
   margin: 0;
+  text-rendering: optimizeSpeed;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 /* #coming-soon::before {
