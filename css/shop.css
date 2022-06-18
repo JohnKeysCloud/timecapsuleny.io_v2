@@ -1049,7 +1049,7 @@ main {
   content: url('../imgs/assets/send-to-moon.png');
   filter: drop-shadow(0 0 10px gray);
   transform: scale(0.18);
-  animation: gray2red 1s linear alternate infinite;
+  animation: gray2red 0.8s linear alternate infinite;
 }
 
 /* scentBox LEFT pressStart */
