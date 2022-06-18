@@ -69,15 +69,12 @@
     opacity: 0.8;
   }
   25% {
-    transform: scale(0.7);
     opacity: 0.55;
   }
   50% {
-    transform: scale(1);
     opacity: 1;
   }
   75% {
-    transform: scale(0.7);
     opacity: 0.55;
   }
   to {
@@ -228,7 +225,7 @@ nav ul {
 #header-logo:hover {
   animation: rgb-pulse 0.3s linear infinite alternate, hover 0s linear infinite alternate;
   opacity: 1;
-  transform: scale(1.18);
+  transform: scale(1.13);
 }
 
 /* #header-logo:active {

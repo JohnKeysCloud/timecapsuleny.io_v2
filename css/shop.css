@@ -105,22 +105,15 @@
   from {
     opacity: 0.8;
   }
-
   25% {
-    transform: scale(0.7);
     opacity: 0.55;
   }
-
   50% {
-    transform: scale(1);
     opacity: 1;
   }
-
   75% {
-    transform: scale(0.7);
     opacity: 0.55;
   }
-
   to {
     opacity: 0.8;
   }
