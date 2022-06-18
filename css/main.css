@@ -966,40 +966,9 @@ footer p:hover ~ a {
 
 @media only screen and (max-width: 768px) {
 
-  @keyframes game-float {
-    from {
-      opacity: 0.8;
-    }
-
-    25% {
-      opacity: 0.55;
-      transform: scale(0.9);
-    }
-
-    50% {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    75% {
-      opacity: 0.55;
-      transform: scale(0.9);
-    }
-
-    to {
-      opacity: 0.8;
-    }
-  }
-
   header {
     z-index: 2;
   }
-
-  #header-logo {
-    height: 7rem;
-    
-    animation: rgb-pulse 2.2s linear infinite alternate, game-float 5s linear infinite alternate;
-  } 
 
   nav {
     position: fixed;
@@ -1135,31 +1104,6 @@ footer p:hover ~ a {
  */
 
 @media only screen and (max-width: 480px) {
-
-  @keyframes game-float {
-    from {
-      opacity: 0.8;
-    }
-
-    25% {
-      opacity: 0.55;
-      transform: scale(0.55);
-    }
-
-    50% {
-      opacity: 1;
-      transform: scale(0.8);
-    }
-
-    75% {
-      opacity: 0.55;
-      transform: scale(0.55);
-    }
-
-    to {
-      opacity: 0.8;
-    }
-  }
 
   #menu-btn.open ~ nav ul {
     height: 288px;
