@@ -154,7 +154,6 @@ body {
   min-height: -moz-available;  /* Mozilla-based browsers */
   min-height: -webkit-fill-available; /* WebKit-based browsers */
   min-height: fill-available;
-  min-width: 100vw;
   z-index: -1;
 }
 

@@ -118,6 +118,18 @@
   }
 }
 
+@keyframes gray2red {
+  from {
+    filter: drop-shadow(0 0 20px silver);
+  }
+  80% {
+    filter: drop-shadow(0 0 20px black);
+  }
+  to {
+    filter: drop-shadow(0 0 10px var(--neon-red));
+  }
+}
+
 @keyframes warning-card {
   from {
     border: 2.1px solid yellow;
@@ -567,6 +579,8 @@ nav ul {
   top: -16px;
   left: -108px;
   z-index: 2;
+
+  filter: drop-shadow(0 0 10px white);
 }
 
 /* 
@@ -754,7 +768,7 @@ main {
 }
 
 .item-description > h1 {
-  color: rgb(188, 189, 190) ;
+  color: #bcbdbe ;
   font-size: 3rem;
   margin: 0;
   min-width: max-content;
@@ -985,22 +999,51 @@ main {
   text-align: center;
 }
 
-.size-and-add button {
+.item-size {
+  transition: 0.3s all ease-in;
+}
+
+.item-size:hover {
+  transform: scale(1.1);
+}
+
+.one-size {
+  pointer-events: none;
+}
+
+.bigRedButton {
+  position: relative;
+
   display: flex;
   align-items: center;
   background: url('../imgs/assets/btn-inactive.svg') no-repeat;
   background-position: bottom;
-  /* font-family: 'PixeBoy'; */
-  /* font-size: 3rem; */
   border: none;
   color: white;
+  filter: drop-shadow(0 8px 10px silver);
   height: 73px;
   width: 105px;
+
+  transition: transform 0.3s ease-out;
 }
 
-.size-and-add button:active {
+.bigRedButton:active {
   background: url(../imgs/assets/btn-active.svg) no-repeat;
   background-position: bottom;
+}
+
+.bigRedButton:hover {
+  transform: scale(1.05);
+}
+
+.bigRedButton::before {
+  position: absolute;
+  content: url('../imgs/assets/send2moon-text.png');
+  filter: drop-shadow(0 0 10px gray);
+  transform: scale(0.18);
+  top: -73px;
+  left: -371px;
+  animation: gray2red 1s linear alternate infinite;
 }
 
 /* scentBox LEFT pressStart */
