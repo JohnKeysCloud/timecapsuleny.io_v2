@@ -537,7 +537,31 @@ main {
   aspect-ratio: 16 / 9;
 
   transform: scale(1);
+  animation: movie-move 3s linear;
+
+  /* overflow: hidden; */
 }
+/* 
+@keyframes movie-move {
+  from {
+    transform: translateY(-777px) translateX(0) rotate(-180deg);
+  }
+  20% {    
+    transform: translateY(-700px) translateX(100px) rotate(180deg);
+  }
+  40% {
+    transform: translateY(-555px) translateX(-100px) rotate(-180deg);
+  }
+  60% {
+    transform: translateY(-333px) translateX(100px) rotate(180deg);
+  }
+  80% {
+    transform: translateY(-222px) translateX(-100px) rotate(-180deg);
+  }
+  to {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+} */
 
 .encapVis001 {
   position: absolute;
@@ -551,9 +575,6 @@ main {
   filter: drop-shadow(0 0 50px red);
   transform: scale(0);
   transition: all 0.8s ease-in;
-  transform-origin: center;
-
-
 }
 
 main > img {
