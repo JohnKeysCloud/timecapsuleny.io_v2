@@ -10,13 +10,14 @@
   │  COLORS                                                                  │
   └──────────────────────────────────────────────────────────────────────────┘
  */
-
+  
+  --cyclone-silver: hsl(0, 0%, 87%);
   --neon-pink: rgb(255, 10, 210);
   --neon-red: hsl(348, 100%, 51%);
   --neon-blue: hsl(175, 94%, 56%);
   --neon-green: chartreuse;
   --neon-orange: hsl(38.8,100%,50%);
-
+  --neon-yellow: hsl(60, 100%, 50%);
 /* 
   ┌──────────────────────────────────────────────────────────────────────┐
   │  RESPONSIVE OUTLINE                                                  │
@@ -73,23 +74,48 @@
 
 @keyframes pressStart {
   from {
-    opacity: 1;
-    transform: scale(0.8);
-    letter-spacing: 3px;
-  }
-  50% {
     opacity: 0.3;
-    transform: scale(0.9);
-    letter-spacing: 8px;
+    transform: scale(0.55);
+    letter-spacing: 1px;
+  }
+  25% {
+    opacity: 0.5;
+    transform: scale(0.2);
+    letter-spacing: 3px;
 
   }
-  70% {
-    opacity: 0;
+  50% {
+    opacity: 0.7;
+    transform: scale(1);
+    letter-spacing: 5px;
+  }
+  75% {
+    opacity: 0.5;
+    transform: scale(0.2);
+    letter-spacing: 3px;
   }
   to {    
-    opacity: 1;
-    transform: scale(1);    
-    letter-spacing: 5px;
+    opacity: 0.3;
+    transform: scale(0.55);    
+    letter-spacing: 1px;
+  }
+}
+
+@keyframes terminateProgram {
+  from {
+    opacity: 0.22;
+  }
+  25% {
+    opacity: 0.33;
+  }
+  50% {
+    opacity: 0.55;
+  }
+  75% {
+    opacity: 0.33;
+  }
+  to {    
+    opacity: 0.22;
   }
 }
 
@@ -493,6 +519,8 @@ main {
   justify-content: center;
   align-items: center;
 
+  gap: 33px;
+
   margin: 0 auto;
   max-width: 800px;
 
@@ -513,34 +541,59 @@ main {
 .pressStart::before {
   content: 'PRESS START';
 
-  color: var(--neon-red);
+  color: var(--cyclone-silver);
   cursor: pointer;
-  font-size: 77px;
-  filter: drop-shadow(0 0 5px var(--neon-red));
+  font-size: clamp(55px, 5.8vw, 88px);
+  text-shadow: 0 0 11px var(--cyclone-silver);
 
   animation: pressStart 2s linear alternate infinite;
+  transition: all 0.8s ease-in;
+}
+
+.pressStart:hover::before {
+  color: var(--neon-green);
+  text-shadow: 0 0 5px var(--neon-green);
+
+  animation: pressStart 0.55s linear alternate infinite;
 }
 
 .pressStart.pressed::before {
-  content: 'Close X';
+  content: 'TERMINATE PROGRAM';
 
-  color: silver;
-  font-size: 33px;
-  filter: drop-shadow(0 0 11px silver);
+  color: var(--cyclone-silver);
+  font-size: clamp(33px, 5vw, 50px);
+  text-shadow: 0 0 5px var(--neon-red);
+
+  animation: terminateProgram 3s linear alternate infinite;
 }
 
-.pressStart.pressed ~ .commercial-wrapper > .encapVis001 {
+.pressStart.pressed:hover::before {
+  color: var(--neon-yellow);
+  text-shadow: 0 0 15px var(--neon-red);
+
+  animation: terminateProgram 1.0s linear alternate infinite;
+
+}
+
+.encapVis001 {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
 
   aspect-ratio: 16 / 9;
 
+  filter: drop-shadow(0 0 50px red);
+  transform: scale(0);
+  transition: all 0.8s ease-in;
+}
+
+.pressStart.pressed ~ .commercial-wrapper > .encapVis001 {
   transform: scale(1);
   animation: movie-move 3s linear;
-
-  /* overflow: hidden; */
 }
+
 /* 
 @keyframes movie-move {
   from {
@@ -563,19 +616,7 @@ main {
   }
 } */
 
-.encapVis001 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 
-  aspect-ratio: 16 / 9;
-
-  filter: drop-shadow(0 0 50px red);
-  transform: scale(0);
-  transition: all 0.8s ease-in;
-}
 
 main > img {
   width: 70vw;
