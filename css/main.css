@@ -740,11 +740,33 @@ footer p:hover ~ a {
 
 @media only screen and (max-width: 1024px) {
   header {
+    justify-content: center;
+  }
+
+  #full-nav {
     flex-direction: column;
+  }
+
+  nav {
+    position: relative;
+  }
+  
+  nav ul {
+    position: absolute;
+    top: 0;
+    left: -450px;
+    
+    gap: 20px;
+
+    text-align: center;
+  }
+
+  .nav-link {
+    margin: 0;
   }
   
   #menu-btn.open~nav {
-    margin-right: 622px;
+    margin-right: 0px;
   }
 }
 
@@ -760,11 +782,30 @@ footer p:hover ~ a {
     z-index: 2;
   }
 
+  #header-logo {
+    padding: 0;
+  }
+
+  #menu-btn {
+    padding: 0;
+  }
+
   nav {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
+  }
+
+    nav ul {
+    position: relative;
+    top: initial;
+    left: initial;
+    
+    flex-direction: initial;
+    gap: initial;
+
+    text-align: initial;
   }
 
   #menu-btn.open ~ nav {
@@ -834,40 +875,6 @@ footer p:hover ~ a {
 
   .nav-link {
     margin: 0;
-  }
-  
-  .item-container:nth-of-type(odd), 
-  .item-container:nth-of-type(even) {
-    flex-direction: column;
-  }
-
-  .item-container:nth-of-type(odd):hover,
-  .item-container:nth-of-type(even):hover {
-    margin-right: 0;
-    margin-bottom: 375px;
-  }
-
-  .item-container:hover:nth-of-type(odd) > .item > img,
-  .item-container:hover:nth-of-type(even) > .item > img {
-    transform: rotate(0) scale(1); 
-  }
-
-  .item-container:hover > .item-header > .item_description {
-    top: 450px;
-  }
-
-  .item_description {
-    transform: scale(0.05);
-  }
-
-  .item {
-    display: flex;
-    align-items: center;
-
-    height: max-content;
-    width: max-content;
-
-    transition: all 0.8s ease-out;
   }
 }
 

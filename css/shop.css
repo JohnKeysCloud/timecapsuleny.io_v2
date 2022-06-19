@@ -1448,12 +1448,35 @@ footer p {
  */
 
 @media only screen and (max-width: 1024px) {
+  
   header {
+    justify-content: center;
+  }
+
+  #full-nav {
     flex-direction: column;
+  }
+
+  nav {
+    position: relative;
+  }
+  
+  nav ul {
+    position: absolute;
+    top: 0;
+    left: -450px;
+    
+    gap: 20px;
+
+    text-align: center;
+  }
+
+  .nav-link {
+    margin: 0;
   }
   
   #menu-btn.open~nav {
-    margin-right: 622px;
+    margin-right: 0px;
   }
 }
 
@@ -1463,10 +1486,18 @@ footer p {
   └─────────────────────────────────────────────────────────────────────────┘
  */
 
-@media only screen and (max-width: 881px) {
+@media only screen and (max-width: 768px) {
 
   header {
     z-index: 2;
+  }
+
+  #header-logo {
+    padding: 0;
+  }
+
+  #menu-btn {
+    padding: 0;
   }
 
   nav {
@@ -1474,6 +1505,17 @@ footer p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
+  }
+
+  nav ul {
+    position: relative;
+    top: initial;
+    left: initial;
+    
+    flex-direction: initial;
+    gap: initial;
+
+    text-align: initial;
   }
 
   #menu-btn.open ~ nav {
