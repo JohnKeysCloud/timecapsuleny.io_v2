@@ -478,20 +478,58 @@ nav ul {
 
 main {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   padding: 0;
   margin:0;
+  /* border: 2px solid red; */
 
-  display: none;
+  /* TODO:  */
+  /* display: none; */
+}
+
+@keyframes pressStart {
+  from {
+    opacity: 1;
+    transform: scale(0.8);
+    letter-spacing: 3px;
+
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.9);
+    letter-spacing: 8px;
+
+  }
+  to {    
+    opacity: 1;
+    transform: scale(1);    
+    letter-spacing: 5px;
+  }
+}
+
+.pressStart {
+  cursor: pointer;
+  color: red;
+  font-size: 77px;
+  filter: drop-shadow(0 0 11px red);
+
+  animation: pressStart 2s linear alternate infinite;
+}
+
+.pressStart:active ~ .encapVis001 {
+  transform: scale(1);
+
 }
 
 .encapVis001 {
   padding: 0;
-  border: 2px solid red;
   filter: drop-shadow(0 0 50px white);
   height: clamp(240px, 40vh, 700px);
   width: clamp(430px, 70vw, 1000px);
+  transform: scale(0);
+  transition: all 1s ease-out;
 }
 
 main > img {
@@ -1079,22 +1117,6 @@ footer p:hover ~ a {
 
     transition: all 0.8s ease-out;
   }
-
-  /* #scent_box {
-    transform: scale(0.73) rotate(-18deg);
-    top: 18px;
-    left: -110px;
-  }
-
-  #scent_box:hover {
-    top: 58px;
-    left: 31.5px;
-    transform: rotate(0) scale(1.2);
-  }   */
-
-  /* #scent_box:hover ~ #rocket_smoke::before {
-  
-  } */
 }
 
 /* 
