@@ -148,7 +148,6 @@ body {
   min-height: 100vh;
   margin: 0;
   text-rendering: optimizeSpeed;
-
 }
 
 input,
@@ -208,7 +207,6 @@ nav {
   overflow: hidden;
   pointer-events: none;
   transition: all 0.38s ease-out;
-
 }
 
 nav ul {
@@ -491,20 +489,25 @@ nav ul {
 
 main {
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin: 0;
-  width: 100vw;
-}
-
-.commercial-wrapper {
-  display: flex;
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
 
+  margin: 0 auto;
+  max-width: 800px;
+
+}
+
+.commercial-wrapper {
+  position: relative;
+  display: grid;
+  place-content: center;
+  height: 0;
+
+  position: relative;
   width: 100vw;
+  padding-top: 56.25%; 
+  /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
 .pressStart::before {
@@ -526,17 +529,31 @@ main {
   filter: drop-shadow(0 0 11px silver);
 }
 
-.pressStart.pressed ~ .encapVis001 {
+.pressStart.pressed ~ .commercial-wrapper > .encapVis001 {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  aspect-ratio: 16 / 9;
+
   transform: scale(1);
 }
 
 .encapVis001 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
   aspect-ratio: 16 / 9;
-  border: 2px solid red;
 
   filter: drop-shadow(0 0 50px red);
   transform: scale(0);
   transition: all 0.8s ease-in;
+  transform-origin: center;
+
+
 }
 
 main > img {
