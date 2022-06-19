@@ -72,6 +72,39 @@
   }
 }
 
+@keyframes movie-move {
+  from {
+    transform: translate(0, -488px) scale(0) rotate(-360deg);
+  }
+  20% {    
+    transform: translate(0, -380px) scale(0.1) rotate(-360deg);
+  }
+  30% {
+    transform: translate(111px, -480px) scale(0.3) rotate(360deg);
+  }
+  40% {
+    transform: translate(111px, -280px) scale(0.3) rotate(360deg);
+  }
+  50% {
+    transform: translate(-111px, -280px) scale(0.5) rotate(-360deg);
+  }
+  60% {
+    transform: translate(-111px, -180px) scale(0.5) rotate(-360deg);
+  }
+  70% {
+    transform: translate(111px, -180px) scale(0.7) rotate(360deg);
+  }
+  80% {
+    transform: translate(111px, -80px) scale(0.7) rotate(360deg);
+  }
+  90% {
+    transform: translate(0, -80px) scale(0.3) rotate(-720deg);
+  }
+  to {
+    transform: translate(0) scale(1) rotate(360deg);
+  }
+}
+
 @keyframes pressStart {
   from {
     opacity: 0.3;
@@ -101,24 +134,6 @@
   }
 }
 
-@keyframes terminateProgram {
-  from {
-    opacity: 0.22;
-  }
-  25% {
-    opacity: 0.33;
-  }
-  50% {
-    opacity: 0.55;
-  }
-  75% {
-    opacity: 0.33;
-  }
-  to {    
-    opacity: 0.22;
-  }
-}
-
 @keyframes rgb-pulse {
   from {
     filter: drop-shadow(0px 0px 0.13em var(--neon-red));
@@ -143,6 +158,24 @@
   }
   to {
     transform: rotate(1800deg);
+  }
+}
+
+@keyframes terminateProgram {
+  from {
+    opacity: 0.22;
+  }
+  25% {
+    opacity: 0.33;
+  }
+  50% {
+    opacity: 0.55;
+  }
+  75% {
+    opacity: 0.33;
+  }
+  to {    
+    opacity: 0.22;
   }
 }
 
@@ -183,10 +216,6 @@ select {
   font: inherit;
 }
 
-.content-wrapper {
-  padding-bottom: 5rem;
-}
-
 /* 
   ┌──────────────────────────────────────────────────────────────────────┐
   │ FULL HEIGHT HERO                                                     │
@@ -208,6 +237,10 @@ select {
   min-height: fill-available;
   width: 100vw;
   z-index: -1;
+}
+
+.content-wrapper {
+  padding-bottom: 5rem;
 }
 
 /* 
@@ -523,7 +556,6 @@ main {
 
   margin: 0 auto;
   max-width: 800px;
-
 }
 
 .commercial-wrapper {
@@ -547,7 +579,7 @@ main {
   text-shadow: 0 0 11px var(--cyclone-silver);
 
   animation: pressStart 2s linear alternate infinite;
-  transition: all 0.8s ease-in;
+  transition: all 0.38s ease-in;
 }
 
 .pressStart:hover::before {
@@ -591,32 +623,8 @@ main {
 
 .pressStart.pressed ~ .commercial-wrapper > .encapVis001 {
   transform: scale(1);
-  animation: movie-move 3s linear;
+  animation: movie-move 3s linear alternate;
 }
-
-/* 
-@keyframes movie-move {
-  from {
-    transform: translateY(-777px) translateX(0) rotate(-180deg);
-  }
-  20% {    
-    transform: translateY(-700px) translateX(100px) rotate(180deg);
-  }
-  40% {
-    transform: translateY(-555px) translateX(-100px) rotate(-180deg);
-  }
-  60% {
-    transform: translateY(-333px) translateX(100px) rotate(180deg);
-  }
-  80% {
-    transform: translateY(-222px) translateX(-100px) rotate(-180deg);
-  }
-  to {
-    transform: translateY(0) translateX(0) rotate(0deg);
-  }
-} */
-
-
 
 main > img {
   width: 70vw;
