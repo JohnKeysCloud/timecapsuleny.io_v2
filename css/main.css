@@ -552,7 +552,7 @@ main {
   justify-content: center;
   align-items: center;
 
-  gap: 33px;
+  gap: 30px;
 
   margin: 0 auto;
   max-width: 800px;
@@ -592,7 +592,7 @@ main {
 .pressStart.pressed::before {
   content: 'TERMINATE PROGRAM';
 
-  color: var(--cyclone-silver);
+  color: var(--neon-yellow);
   font-size: clamp(33px, 5vw, 50px);
   text-shadow: 0 0 5px var(--neon-red);
 
@@ -600,10 +600,10 @@ main {
 }
 
 .pressStart.pressed:hover::before {
-  color: var(--neon-yellow);
+  color: var(--neon-red);
   text-shadow: 0 0 15px var(--neon-red);
 
-  animation: terminateProgram 1.0s linear alternate infinite;
+  animation: terminateProgram 0.3s linear alternate infinite;
 
 }
 
