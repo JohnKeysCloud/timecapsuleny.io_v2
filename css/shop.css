@@ -597,15 +597,20 @@ nav ul {
 }
 
 #cycloneMoon {
-  position: absolute;
   height: 88px;
   width: 88px;
 
-  top: -16px;
-  left: -108px;
+  cursor: pointer;
   z-index: 2;
 
   filter: drop-shadow(0 0 10px white);
+
+  transition: all 0.3s ease-in;
+}
+
+#cycloneMoon:hover {
+  filter: drop-shadow(0 0 23px white);
+  transform: scale(1.1);
 }
 
 /* 
@@ -1453,9 +1458,6 @@ footer p {
     justify-content: center;
   }
 
-  #full-nav {
-    flex-direction: column;
-  }
 
   nav {
     position: relative;
@@ -1463,8 +1465,8 @@ footer p {
   
   nav ul {
     position: absolute;
-    top: 0;
-    left: -450px;
+    top: 43px;
+    left: -377px;
     
     gap: 20px;
 

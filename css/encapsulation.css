@@ -1040,18 +1040,14 @@ footer p {
     justify-content: center;
   }
 
-  #full-nav {
-    flex-direction: column;
-  }
-
   nav {
     position: relative;
   }
   
   nav ul {
     position: absolute;
-    top: 0;
-    left: -450px;
+    top: 43px;
+    left: -380px;
     
     gap: 20px;
 
