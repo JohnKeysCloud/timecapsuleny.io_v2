@@ -575,7 +575,7 @@ main {
 
   color: var(--cyclone-silver);
   cursor: pointer;
-  font-size: clamp(55px, 5.8vw, 88px);
+  font-size: clamp(48px, 5.8vw, 88px);
   text-shadow: 0 0 11px var(--cyclone-silver);
 
   animation: pressStart 2s linear alternate infinite;
