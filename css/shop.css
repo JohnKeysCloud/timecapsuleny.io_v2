@@ -306,7 +306,7 @@ select {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding-top: 13px;
 
   position: sticky;
@@ -354,7 +354,6 @@ nav ul {
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
 #menu-btn {
@@ -1453,20 +1452,16 @@ footer p {
  */
 
 @media only screen and (max-width: 1024px) {
-  
+
   header {
-    justify-content: center;
-  }
-
-
-  nav {
     position: relative;
   }
   
   nav ul {
     position: absolute;
-    top: 43px;
-    left: -377px;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
     
     gap: 20px;
 
@@ -1513,6 +1508,7 @@ footer p {
     position: relative;
     top: initial;
     left: initial;
+    transform: none;
     
     flex-direction: initial;
     gap: initial;
@@ -1670,8 +1666,17 @@ footer p {
     width: 288px;
   }
 
-  header {
-    justify-content: center;
+  #header-logo {
+    height: 5rem;
+  }
+
+  #cycloneMoon {
+    height: 50px;
+    width: 50px;
+  }
+
+  #menu-btn-san {
+    transform: scale(0.77);
   }
 
   #menu-btn.open ~ nav ul {
