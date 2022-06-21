@@ -1205,6 +1205,15 @@ footer p {
     justify-content: center;
   }
 
+  #header-logo {
+    height: 5rem;
+  }
+
+  #cycloneMoon {
+    height: 50px;
+    width: 50px;
+  }
+
   #menu-btn.open ~ nav ul {
     gap: 28px;
     
