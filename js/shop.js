@@ -6,7 +6,6 @@
  */
 
 const menuBtn = document.querySelector('#menu-btn');
-const themeBtn = document.querySelector('#theme-toggle');
 let menuOpen = false;
 
 menuBtn.addEventListener('click', () => {
