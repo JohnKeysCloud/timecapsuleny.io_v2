@@ -788,15 +788,12 @@ footer p:hover ~ a {
  */
 
 @media only screen and (max-width: 1024px) {
-
-  nav {
-    position: relative;
-  }
   
   nav ul {
     position: absolute;
-    top: 43px;
-    left: -377px;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
     
     gap: 20px;
 
