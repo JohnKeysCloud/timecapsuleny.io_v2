@@ -1746,53 +1746,67 @@ footer p {
   .item-description > h1 {
     text-shadow: none;
   }
-   /* sbAndRocket-LEFT pressStart */
-  .scent-box {
-    top: -110px;
-    left: 34px; 
 
-    transform: rotate(0deg) scale(0.88);
+  /* sbAndRocket-LEFT pressStart */
+  .scent-box {
+    top: -100px;
+    /* -110 */
+    left: -50px; 
+    /* 34 */
+
+    transform: rotate(-8deg) scale(0.88);
   }
 
   .scent-box:hover {
     top: -110px;
-    left: 34px;
+    left: -50px;
   
-    transform: rotate(0) scale(1);
+    transform: rotate(-8deg) scale(1);
   }    
 
   .rocket-left::before {
-    top: -82px;
-    right: 132px;
+    top: -72px;
+    right: 226px;
   
     transform: scale(2.8) rotate(-51deg);
   }
 
+  .scent-box:hover ~ .rocket-left::before {
+    top: -1920px;
+    right: 300px;
+
+    transform: scale(4) rotate(-53deg);
+  }
+
   .rocket-smoke-left::before {
-    right: -81px;
+    right: -5px;
     bottom: 348px;
 
-    transform: scale(0.1) rotate(-101deg);
+    transform: scale(0.1) rotate(-88deg);
+  }
+
+  .scent-box:hover ~ .rocket-smoke-left::before {
+    right: -25px;
+    bottom: 515px;
+  
+    transform: scale(0.55) rotate(-86deg);
   }
   /* sbAndRocket-LEFT gameOver */
 
   /* sbAndRocket-RIGHT pressStart */
   #sb-right {
-    left: 34px;
+    left: 118px;
   
-    transform: rotate(0deg) scale(0.88);
+    transform: rotate(8deg) scale(0.88);
   }
 
-  .scent-box:hover ~ .rocket-smoke-left::before {
-    right: -89px;
-    bottom: 525px;
-  
-    transform: scale(0.55) rotate(-99deg);
-  }
+  #sb-right:hover { 
+  transform: rotate(8deg) scale(1);
+}
 
   .rocket-right::before {
-    top: -82px;
-    right: 132px;
+    top: -72px;
+    right: 38px;
 
     transform: scale(2.8) rotate(-45deg);
     transition: top, right, transform, 3.3s ease-in;
@@ -1800,18 +1814,25 @@ footer p {
     z-index: 0;
   }
 
-  .rocket-smoke-right::before {
-    right: -77px;
-    bottom: 348px;
+  .scent-box:hover ~ .rocket-right::before {
+    top: -2550px;
+    right: 0px;
 
-    transform: scale(0.1) rotate(-76deg);
+    transform: scale(4) rotate(-42deg);
+  }
+
+  .rocket-smoke-right::before {
+    right: -161px;
+    bottom: 338px;
+
+    transform: scale(0.1) rotate(-82deg);
   }
 
   .scent-box:hover ~ .rocket-smoke-right::before {
-    right: -149px;
-    bottom: 525px;
+    right: -228px;
+    bottom: 515px;
 
-    transform: scale(0.55) rotate(-76deg);
+    transform: scale(0.55) rotate(-80deg);
   }
   /* sbAndRocket-RIGHT gameOver */
 }
