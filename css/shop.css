@@ -24,11 +24,12 @@
   └──────────────────────────────────────────────────────────────────────────┘
  */
 
-  --neon-pink: rgb(255, 10, 210);
-  --neon-red: #ff0537;
-  --neon-blue: #25f8e7;
-  --neon-green: #7fff00;
+  --neon-pink: hsl(311, 100%, 52%);
+  --neon-red: hsl(348, 100%, 51%);
+  --neon-blue: hsl(175, 94%, 56%);
+  --neon-green: hsl(90, 100%, 50%);
   --neon-orange: hsl(38.8, 100%, 50%);
+  --neon-yellow: hsl(60, 100%, 50%);
 
   /* 
   ┌──────────────────────────────────────────────────────────────────────┐
@@ -38,7 +39,7 @@
 
   --outline-size: max(3px, 0.08em);
   --outline-style: dashed;
-  --outline-color: rgb(255, 255, 65);
+  --outline-color: var(--neon-yellow);
 }
 
 ::selection {
@@ -1121,7 +1122,6 @@ main {
 
   background: white;
   border-radius: 100px;
-  border-top: 1px ridge silver;
   box-shadow: inset -10px 7px 2px silver, -1px -3px 7px var(--neon-red);
   color: #67e0f8;
   font-family: "GoshaSansRegular";
@@ -1209,6 +1209,7 @@ main {
   border: 1px ridge silver;
   border-radius: 20px;
   box-shadow: 0px 3px 5px red;
+  color: black;
   font-family: "GoshaSansRegular";
   font-size: 1.5rem;
   /* height: 22px; */
@@ -1661,11 +1662,39 @@ footer p {
 
 @media only screen and (max-width: 480px) {
 
+  /* removeBoxShadows pressStart */
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+  }
+
+  @keyframes warning-card {
+  from {
+    border: 2.1px solid yellow;
+    box-shadow: none;
+
+    
+  }
+  70% {
+    border: 2.1px solid rgb(188, 189, 190);
+    box-shadow: none;
+  }
+  to {
+    border: 2.1px solid yellow;
+    box-shadow: none;
+
+  }
+  }
+
+
+  /* removeBoxShadows gameOver */
+
   /* removeAnimations pressStart */
   .item > img {
     animation: none;
   }
-  
+
   .item-container:nth-of-type(odd) .warning::before,
   .item-container:nth-of-type(even) .warning::before  {
     animation: none;
@@ -1763,11 +1792,13 @@ footer p {
   }
 
   /* sbAndRocket-LEFT pressStart */
+  /* boxShadowToDropShadow pressStart */
   .scent-box {
     top: -100px;
-    /* -110 */
     left: -50px; 
-    /* 34 */
+
+    filter: drop-shadow(0 10px 5px var(--neon-red));
+    /* boxShadow replacement */
 
     transform: rotate(-8deg) scale(0.88);
   }
@@ -1777,7 +1808,24 @@ footer p {
     left: -50px;
   
     transform: rotate(-8deg) scale(1);
-  }    
+  }
+
+  .twk-scentbox {
+    filter: drop-shadow(0 -6px 4px var(--neon-red));
+    /* boxShadow replacement */
+  }
+
+  .sb-essenced-scentbox {
+    filter: drop-shadow(0 -7.5px 4px var(--neon-red));
+    /* boxShadow replacement */
+  }
+  
+  .vanilla-select {
+    filter: drop-shadow(0 0 4px var(--neon-red));
+    /* boxShadow replacement */
+  }
+  /* boxShadowToDropShadow gameOver */
+
 
   .rocket-left::before {
     top: -72px;
