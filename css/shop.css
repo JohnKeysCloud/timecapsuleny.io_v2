@@ -1802,7 +1802,7 @@ footer p {
 
   #sb-right:hover { 
   transform: rotate(8deg) scale(1);
-}
+  }
 
   .rocket-right::before {
     top: -72px;
