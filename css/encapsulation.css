@@ -186,7 +186,7 @@ select {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding-top: 13px;
   margin-bottom: 55px;
 
@@ -1035,10 +1035,6 @@ footer p {
  */
 
 @media only screen and (max-width: 1024px) {
-  
-  header {
-    justify-content: center;
-  }
 
   nav {
     position: relative;
@@ -1070,10 +1066,6 @@ footer p {
  */
 
 @media only screen and (max-width: 768px) {
-
-  header {
-    z-index: 2;
-  }
 
   #header-logo {
     padding: 0;
@@ -1199,10 +1191,6 @@ footer p {
   #menu-btn.open ~ nav ul {
     height: 288px;
     width: 288px;
-  }
-
-  header {
-    justify-content: center;
   }
 
   #header-logo {

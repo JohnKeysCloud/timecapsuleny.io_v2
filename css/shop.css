@@ -1464,10 +1464,6 @@ footer p {
  */
 
 @media only screen and (max-width: 1024px) {
-
-  header {
-    position: relative;
-  }
   
   nav ul {
     position: absolute;
@@ -1496,10 +1492,6 @@ footer p {
  */
 
 @media only screen and (max-width: 768px) {
-
-  header {
-    z-index: 2;
-  }
 
   #header-logo {
     padding: 0;

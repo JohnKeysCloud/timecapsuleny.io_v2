@@ -252,7 +252,7 @@ select {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding-top: 13px;
 
   position: sticky;
@@ -788,9 +788,6 @@ footer p:hover ~ a {
  */
 
 @media only screen and (max-width: 1024px) {
-  header {
-    justify-content: center;
-  }
 
   nav {
     position: relative;
@@ -823,10 +820,6 @@ footer p:hover ~ a {
 
 @media only screen and (max-width: 768px) {
 
-  header {
-    z-index: 2;
-  }
-
   #header-logo {
     padding: 0;
   }
@@ -842,7 +835,7 @@ footer p:hover ~ a {
     transform: translate(-50%, -50%); 
   }
 
-    nav ul {
+  nav ul {
     position: relative;
     top: initial;
     left: initial;
@@ -934,10 +927,6 @@ footer p:hover ~ a {
   #menu-btn.open ~ nav ul {
     height: 288px;
     width: 288px;
-  }
-
-  header {
-    justify-content: center;
   }
 
   #header-logo {
