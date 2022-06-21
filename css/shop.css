@@ -257,6 +257,18 @@ select {
   font: inherit;
 }
 
+h1 {
+  font-size: clamp(2.1rem, 3.5vw, 2.8rem);
+}
+
+p {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+li {
+  font-size: clamp(1.5rem, 2.8vw, 1.6rem);
+}
+
 /* 
   ┌──────────────────────────────────────────────────────────────────────┐
   │ theWonderKid                                                         │
@@ -796,14 +808,6 @@ main {
   animation: item-des-bg 1.3s linear infinite alternate;
 }
 
-h1 {
-  font-size: clamp(2.1rem, 4vw, 2.8rem);
-}
-p,
-li {
-  font-size: clamp(1.5rem, 3.3vw, 1.8rem);
-}
-
 .item-description > h1 {
   color: #bcbdbe ;
   /* font-size: 3rem; */
@@ -875,23 +879,23 @@ li {
 }
 
 .hoodie {
-  width: max(17vw, 250px);
+  width: max(18vw, 200px);
 }
 
 .beanie {
-  width: max(12vw, 200px);
+  width: max(13vw, 150px);
 }
 
 .socks {
-  width: max(8vw, 150px);
+  width: max(9vw, 100px);
 }
 
 .keychain {
-  width: max(5.5vw, 80px);
+  width: max(6vw, 50px);
 }
 
 .shovel {
-  width: max(3.3vw, 55px);
+  width: max(4vw, 44px);
 }
 
 .item-description-card {
@@ -1597,7 +1601,7 @@ footer p {
   .item-container:nth-of-type(even) {
     flex-direction: column;
     height: max-content;
-    margin: 0 0 150px 0;
+    margin: 0 0 100px 0;
   }
 
   .item-container:nth-of-type(odd):hover,
@@ -1619,14 +1623,14 @@ footer p {
   .item-container:nth-of-type(1):hover > .item-description > .item-description-card,
   .item-container:nth-of-type(2):hover > .item-description > .item-description-card,
   .item-container:nth-of-type(3):hover > .item-description > .item-description-card {
-    top: 300px;
+    top: 255px;
   }
   /* beanieCardTopPositioning pressStart */
   
   /* hoodieCardTopPositioning pressStart */
   .item-container:nth-of-type(4):hover > .item-description > .item-description-card,
   .item-container:nth-of-type(5):hover > .item-description > .item-description-card {
-    top: 458px;
+    top: 370px;
   }
   /* hoodieCardTopPositioning gameOver */
 
@@ -1634,19 +1638,19 @@ footer p {
   .item-container:nth-of-type(6):hover > .item-description > .item-description-card,
   .item-container:nth-of-type(7):hover > .item-description > .item-description-card,
   .item-container:nth-of-type(8):hover > .item-description > .item-description-card {
-    top: 388px;
+    top: 278px;
   }
   /* sockCardTopPositioning gameOver */
   
   /* keychainCardTopPositioning pressStart */
   .item-container:nth-of-type(9):hover > .item-description > .item-description-card {
-    top: 300px;
+    top: 215px;
   }
   /* keychainCardTopPositioning gameOver */
 
   /* shovelCardTopPositioning pressStart */
   .item-container:nth-of-type(10):hover > .item-description > .item-description-card {
-    top: 545px;
+    top: 433px;
   }
   /* shovelCardTopPositioning gameOver */
 
