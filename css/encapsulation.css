@@ -1088,6 +1088,8 @@ footer p {
     gap: initial;
 
     text-align: initial;
+
+    transform: translateX(0);
   }
 
   #menu-btn.open ~ nav {
