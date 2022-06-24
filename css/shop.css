@@ -356,7 +356,7 @@ nav ul {
 #header-logo:hover {
   animation: rgb-pulse 0.3s linear infinite alternate, hover 0s linear infinite alternate;
   opacity: 1;
-  transform: scale(1.18);
+  transform: scale(1.03);
 }
 
 /* #header-logo:active {
@@ -380,7 +380,15 @@ nav ul {
   width: 55px;
   transition: 0.5s all ease-in;
 
+  /* pushMoonAway */
+  margin-left: 22px;
+
   z-index: 2;
+}
+
+#menu-btn.open {
+  /* bringMoonCLose */
+  margin-left: 0;
 }
 
 #menu-btn:hover {
@@ -434,6 +442,8 @@ nav ul {
   box-shadow: none;
   transition: all 1.8s ease-out;
   transform: rotate(-360deg);
+
+  /* bringsTheMoonClose */
 }
 
 #menu-btn.open #menu-btn-san::before {
