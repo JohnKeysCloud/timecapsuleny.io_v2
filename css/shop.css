@@ -1675,12 +1675,6 @@ footer p {
 @media only screen and (max-width: 480px) {
 
   /* removeBoxShadows pressStart */
-  *,
-  *::before,
-  *::after {
-    box-shadow: none !important;
-  }
-
   @keyframes warning-card {
   from {
     border: 2.1px solid yellow;
@@ -1698,8 +1692,6 @@ footer p {
 
   }
   }
-
-
   /* removeBoxShadows gameOver */
 
   /* removeAnimations pressStart */
