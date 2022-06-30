@@ -197,12 +197,13 @@ header {
 }
 
 nav {
+  visibility: hidden;
+
   max-width: 0px;
   opacity: 0;
   overflow: hidden;
   pointer-events: none;
   transition: all 0.38s ease-out;
-
 }
 
 nav ul {
@@ -322,6 +323,8 @@ nav ul {
 }
 
 #menu-btn.open~nav {
+  visibility: visible;
+
   margin-right: 655px;
   opacity: 1;
   overflow: visible;

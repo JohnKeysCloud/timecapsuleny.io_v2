@@ -261,6 +261,8 @@ header {
 }
 
 nav {
+  visibility: hidden;
+
   max-width: 0px;
   opacity: 0;
   overflow: hidden;
@@ -385,6 +387,8 @@ nav ul {
 }
 
 #menu-btn.open~nav {
+  visibility: visible;
+
   margin-right: 655px;
   opacity: 1;
   overflow: visible;
