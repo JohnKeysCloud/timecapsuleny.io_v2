@@ -374,6 +374,8 @@ nav ul {
   justify-content: center;
   align-items: center;
 
+  background: none;
+  border: none;
   cursor: pointer;
   height: 55px;
   padding: 5px;
