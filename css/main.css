@@ -612,6 +612,8 @@ main {
 }
 
 .encapVis001 {
+  visibility: hidden;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -626,6 +628,8 @@ main {
 }
 
 .pressStart.pressed ~ .commercial-wrapper > .encapVis001 {
+  visibility: visible; 
+
   transform: scale(1);
   animation: movie-move 3s linear alternate;
 }
