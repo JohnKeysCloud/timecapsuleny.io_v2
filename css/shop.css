@@ -1426,18 +1426,18 @@ footer p {
   justify-content: center;
 
   filter: drop-shadow(0 0px 3px #fffce8);
-  opacity: 0.38;
-  padding-bottom: 13px;
+  opacity: 0.58;
+  padding-bottom: 10px;
 
   transition: all 0.8s ease-in;
 }
 
 #cyclone-container:hover {
   filter: drop-shadow(0 3px 10px #fffce8);
-  opacity: 0.88;
-  margin: 15px 0 10px 0;
+  opacity: 1;
+  margin-top: 50px;
 
-  transform: scale(1.3) rotate(-1080deg);
+  transform: translateY(-20px) scale(1.8) rotate(-1080deg);
 }
 
 #cyclone-container > p {
