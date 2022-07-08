@@ -887,25 +887,33 @@ main {
 
 }
 
+/* clickToAViewIRLImages pressStart */
 .hoodie {
   width: max(18vw, 200px);
+  cursor: pointer;
 }
 
 .beanie {
   width: max(13vw, 150px);
+  cursor: pointer;
 }
 
 .socks {
   width: max(9vw, 105px);
+  cursor: pointer;
 }
 
 .keychain {
   width: max(6vw, 65px);
+  cursor: pointer;
 }
 
 .shovel {
   width: max(4vw, 50px);
+  cursor: pointer;
 }
+/* clickToAViewIRLImages gameOver */
+
 
 .item-description-card {
   position: absolute;
@@ -1072,6 +1080,7 @@ main {
   background-position: bottom;
   border: none;
   color: white;
+  cursor: pointer;
   filter: drop-shadow(0 8px 10px silver);
   height: 73px;
   width: 105px;
