@@ -298,9 +298,12 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   animation: bg-float 7s linear infinite alternate;
   transform-origin: bottom;
+
+  /* kindaPrinterFriendly */
+  print-color-adjust:exact;
+  -webkit-print-color-adjust: exact; 
 }
 
 #page_content {
