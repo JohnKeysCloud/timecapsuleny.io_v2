@@ -105,6 +105,27 @@
   }
 }
 
+@keyframes poweredBy { 
+  from {
+    transform: translateY(0) scale(1) rotate(0);
+  }
+  10% {
+    transform: translateY(-33px) scale(1) rotate(0);
+  }
+  20% {
+    transform: translateY(-33px) scale(1.7) rotate(-1080deg);
+  }
+  80% {
+    transform: translateY(-33px) scale(1.7) rotate(-1080deg);
+  }
+  90% {
+    transform: translateY(-33px) scale(1) rotate(0);
+  }
+  to {
+    transform: translateY(0) scale(1) rotate(0);
+  }
+}
+
 @keyframes pressStart {
   from {
     opacity: 0.3;
@@ -655,22 +676,15 @@ footer {
   position: relative;
 
   display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content:flex-end;
-
-  height: 98.195px;
-  /* same height as header */
+  flex-direction: column-reverse;
   
-  transition: color 0.8s ease-in-out, background-color 0.5s ease-out;
+  align-items: center;
+  justify-content: flex-start;
+  
+  height: 98.195px;
 }
 
-footer:hover {
-  color: var(--neon-red);
-}
-
-#footer-center {
+footer #footer-text {
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -679,116 +693,125 @@ footer:hover {
   justify-content: center;
 }
 
-#footer-center:active  {
+footer #footer-text:active  {
   margin-bottom: 25px;
 
   transform: rotate(180deg);
 }
 
-#footer-center > p {
+footer #footer-text p {
   color: #fffce8;
+  font-family: var(--ff-footer);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0;
 
-  transition: all 300ms ease-out;
+  transition: all 333ms ease-out;
 }
 
-#footer-center > p:hover {
+footer #footer-text p:hover {
   color: var(--neon-green);
 
   transform: scale(1.3);
 }
 
-#footer-center > a {
-  height: 0;
-} 
+footer #footer-text p:hover ~ a {
+  color: var(--neon-red);
+  font-size: 1.5rem;
+  opacity: 1;
+  margin-bottom: 28px;
+  padding: 0;
+  text-shadow: 0px 0px 11px black;
 
-footer a {
+  transform: scale(1);
+  transition: all 5.5s ease-in;
+}
+
+footer #footer-text a {
   color: #fffce8;
-  font-weight: 800;
+  font-family: var(--ff-footer);
   font-size: 1.3rem;
+  font-weight: 700;
+  height: 0;
   text-decoration: none;
 
   transform: scale(0);
   transition: all 1.8s ease-out;
 }
 
-footer a:hover {
+footer #footer-text a:hover {
   color: var(--neon-green);
   font-size: 1.8rem;
   opacity: 1;
-  margin-bottom: 35px;
+  margin-bottom: 38px;
   text-shadow: 0px 0px 11px black;
 
   transform: scale(1.3);
 }
 
-footer p {
-  font-size: 1.5rem;
-  margin: 0;
-}
+footer #cyclone-container {
+  position: relative;
 
-footer p:hover ~ a {
-  /* border: 2px solid red; */
-  color: var(--neon-red);
-  font-size: 1.5rem;
-  opacity: 1;
-  margin-bottom: 25px;
-  padding: 0;
-  text-shadow: 0px 0px 11px black;
-
-  transform: scale(1);
-  transition: all 5.5s ease-in;
-
-}
-
-#cyclone-container {
   display: flex;
   flex-direction: column;
-  gap: 1px;
 
   align-items: center;
   justify-content: center;
 
   filter: drop-shadow(0 0px 3px #fffce8);
-  opacity: 0.58;
-  padding-bottom: 10px;
+  opacity: 0.55;
+  padding-bottom: 15px;
 
   transition: all 0.8s ease-in;
 }
 
-#cyclone-container:hover {
-  filter: drop-shadow(0 3px 10px #fffce8);
+footer #cyclone-container:hover {
   opacity: 1;
-  margin-top: 50px;
-
-  transform: translateY(-20px) scale(1.8) rotate(-1080deg);
 }
 
-#cyclone-container > p {
+footer #cyclone-container:hover ~ #footer-text {
+  opacity: 0;
+  visibility: hidden;
+}
+
+footer #cyclone-container img {
+  height: 25px;
+}
+
+footer #cyclone-container:hover img {
+  filter: drop-shadow(0 3px 10px #fffce8);
+  opacity: 1;
+
+  animation: poweredBy 3.3s ease-in infinite alternate;
+}
+
+footer #cyclone-container p {
+  position: absolute;
+  
+  top: 0;
+  right: 50%;
+
   color: var(--neon-red);
-  text-shadow: 0 0 3px black;
+  font-size: 1.3rem;
   height: 0;
   opacity: 0;
+  margin: 0;
+  pointer-events: none;
+  line-height: 0;
+  width: max-content;
 
+  text-shadow: 0 0 3px black;
+
+  transform: translateX(50%) translateY(0) scale(1.8);
+  transition: all 0.8s ease-in;
 } 
 
-#cyclone-container:hover > p {
+footer #cyclone-container:hover p {
   color: var(--neon-green);
   opacity: 1;
   height: initial;
-}
-
-#cyclone-container > p {
-  font-size: 1.3rem;
-
-  transition: all 1.3s ease-in-out;
-}
-
-#cyclone-container > img {
-  height: 22px;
-}
-
-#cyclone-container:hover > img {
-  filter: drop-shadow(0 0px 5px #fffce8);
+  visibility: visible;
+  transform: translateX(50%) translateY(-58px) scale(1.8);
 }
 
 /* 
